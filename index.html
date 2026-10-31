@@ -986,6 +986,7 @@ function logAns(kind, ok, item){
 
 /* ---------- cloud (Telegram CloudStorage) ---------- */
 const TG = window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData ? window.Telegram.WebApp : null;
+const STATS_URL = "https://hsk3-stats.mahmudovfindx.workers.dev"; // Cloudflare Worker manzili, masalan "https://hsk3-stats.USERNAME.workers.dev"
 const CS = TG && TG.CloudStorage && (!TG.isVersionAtLeast || TG.isVersionAtLeast("6.9")) ? TG.CloudStorage : null;
 const cloud = {on:false, state:"local", gen:"a", last:0};
 const CLOUD_TXT = {local:"Faqat shu qurilmada", connecting:"Telegram'ga ulanmoqda…", synced:"Telegram'da saqlangan", saving:"Saqlanmoqda…", error:"Telegram'ga saqlab boʻlmadi"};
@@ -2350,6 +2351,7 @@ function renderMore(){
     <div class="mgroup">
       <button class="mrow" data-set="font"><span class="mi2" style="--qc:#56605A">${SVG.font}</span><span><b>Ierogif shrifti</b><span class="s">楷体 — kitobdagidek, 黑体 — oddiy</span></span><span class="val" lang="zh">${P.font==="hei"?"黑体":"楷体"}</span></button>
       <button class="mrow" data-set="cloud"><span class="mi2" style="--qc:#2A7FB8">${SVG.cloud}</span><span><b>Saqlash</b><span class="s">${esc(CLOUD_TXT[cloud.state])}${cloud.last?`, ${hhmm(cloud.last)}`:""}</span></span><span class="chev">›</span></button>
+      ${STATS_URL && TG ? `<div class="mrow" style="cursor:default"><span class="mi2" style="--qc:#56605A">${SVG.stats}</span><span><b>Statistika</b><span class="s">Ilova egasi kim kirganini va qancha vaqt oʻtirganini koʻradi (ism, username, vaqt)</span></span></div>` : ""}
       ${canHome ? `<button class="mrow" data-set="home"><span class="mi2" style="--qc:#6C5BC7">${SVG.phone}</span><span><b>Telefon ekraniga qoʻshish</b><span class="s">Ilova belgisidan bitta bosishda ochiladi</span></span><span class="chev">›</span></button>` : ""}
     </div>`;
 }
@@ -2535,6 +2537,22 @@ restoreCur();
 if (P.book==="hsk5" && P.tab==="home" && S.h5.cur && STUDY.includes(S.h5.cur.mode)) DS = JSON.parse(JSON.stringify(S.h5.cur));
 applyFont(); renderChips(); renderTabs(); renderView();
 setTimeout(initCloud, 0);
+
+/* ---------- statistika: kim kirdi, qancha vaqt (server/worker.js) ---------- */
+(function(){
+  if (!STATS_URL || !TG) return;
+  const sid = (Math.random().toString(36).slice(2) + Date.now().toString(36)).slice(0, 30);
+  let vis = document.visibilityState === "visible", t0 = Date.now(), acc = 0;
+  function send(beacon){
+    const n = Date.now(); if (vis) acc += n - t0; t0 = n;
+    const d = Math.round(acc / 1000); acc -= d * 1000;
+    const body = JSON.stringify({init: TG.initData, sid, d, p: TG.platform || ""});
+    try { if (beacon && navigator.sendBeacon) navigator.sendBeacon(STATS_URL + "/ping", body); else fetch(STATS_URL + "/ping", {method:"POST", body, keepalive:true}).catch(()=>{}); } catch(_) {}
+  }
+  send(false);
+  setInterval(() => { if (vis) send(false); }, 60000);
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") { send(true); vis = false; } else { vis = true; t0 = Date.now(); } });
+})();
 </script>
 </body>
 </html>
