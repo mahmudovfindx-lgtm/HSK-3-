@@ -2,7 +2,7 @@
 <html lang="uz">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
 <title>HSK 3 ilovam: 1–18-mavzular</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
@@ -873,6 +873,42 @@ button:active:not(:disabled){transform:scale(.97);}
 .tx-here{margin-left:8px;font-size:11px;font-weight:800;color:#fff;background:#A93F55;padding:2px 7px;border-radius:999px;vertical-align:3px;}
 .tx-ex{font-family:var(--hz);font-size:16px!important;margin:6px 0 0!important;}
 .tx-px{position:absolute;top:6px;right:8px;width:32px;height:32px;border:0;background:none;font-size:24px;color:var(--ink-3);}
+
+/* telefonda kattalashib ketmasin: ikki marta bosish va input fokusi */
+html{touch-action:manipulation;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+input,textarea,select{font-size:16px!important;}
+
+/* ---------- Grammatika (yangi) ---------- */
+#v-grammar .lesson{margin-bottom:10px;}
+.gtop{display:flex;justify-content:flex-end;margin:-2px 0 8px;}
+.gcs{display:flex;flex-direction:column;gap:10px;}
+.gc{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;border-left:5px solid var(--lc);}
+.gc-h{display:flex;align-items:center;gap:12px;width:100%;padding:14px 14px 14px 12px;border:0;background:none;text-align:left;color:var(--ink);}
+.gc-n{flex:0 0 30px;height:30px;border-radius:10px;background:var(--lc);color:#fff;display:grid;place-items:center;font-weight:800;font-size:15px;}
+.gc-t{flex:1;min-width:0;display:flex;flex-direction:column;}
+.gc-t .gzh{font-family:var(--hz);font-size:19px;font-weight:700;color:var(--lc);line-height:1.3;}
+.gc-t .guz{font-size:13.5px;color:var(--ink-2);line-height:1.35;}
+.gc-p{font-size:12px;font-weight:800;color:var(--lc);background:color-mix(in srgb,var(--lc) 12%,transparent);padding:2px 8px;border-radius:999px;}
+.gc .chev{font-size:22px;color:var(--ink-3);transition:transform .2s;}
+.gc.open .chev{transform:rotate(90deg);}
+.gc.open{box-shadow:0 10px 24px -18px var(--lc);}
+.gc-b{padding:0 14px 16px;}
+.fline{display:flex;flex-wrap:wrap;align-items:center;gap:5px;padding:10px;border-radius:12px;background:color-mix(in srgb,var(--lc) 8%,transparent);margin-bottom:6px;}
+.fs{font-size:13px;font-weight:700;padding:4px 9px;border-radius:8px;background:var(--surface);border:1px solid var(--line);color:var(--ink-2);}
+.fs.k{font-family:var(--hz);font-size:17px;background:var(--lc);border-color:var(--lc);color:#fff;padding:2px 9px;}
+.fplus{font-style:normal;color:var(--ink-3);font-weight:700;}
+.gc-ex{margin:10px 0 4px;font-size:14.5px;line-height:1.5;color:var(--ink);}
+.gc-why{margin:8px 0 0;padding:10px 12px;border-radius:12px;background:var(--paper);font-size:14px;}
+.gc-why p{margin:4px 0 0;color:var(--ink-2);}
+.gc-h2{margin:16px 0 8px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--lc);}
+.glegend{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11.5px;color:var(--ink-2);margin-bottom:4px;}
+.glegend span{display:inline-flex;align-items:center;gap:4px;}
+.glegend i{width:12px;height:3px;border-radius:2px;background:var(--rc);display:inline-block;}
+.glegend .k i{height:10px;width:12px;background:color-mix(in srgb,var(--lc) 35%,transparent);border-bottom:3px solid var(--lc);border-radius:2px;}
+.gc .eg{gap:4px;}
+.gc .eg li{padding:10px 0;}
+.gc .gact{margin-top:14px;}
+.gc .gact .btn{flex:1;}
 </style>
 </head>
 <body>
@@ -896,15 +932,11 @@ button:active:not(:disabled){transform:scale(.97);}
   <section id="v-write" hidden></section>
   <section id="v-spell" hidden></section>
   <section id="v-grammar" hidden>
-    <div class="tools">
-      <p class="intro" style="margin:0;flex:1 1 260px">Har bir qoida: qolip, kitobdagi nazariya, nega shunday ekani, rangli tahlil va koʻp uchraydigan xatolar. Misolni bosib tarjimasini ochasan.</p>
-      <div class="toggles"><button class="tg" id="tgTr" aria-pressed="false">Tarjimani yashirish</button></div>
-    </div>
     <div id="rolesLegend"></div>
+    <div class="gtop"><button class="tg" id="tgTr" aria-pressed="false">Tarjimani yashirish</button></div>
     <div id="grammar"></div>
   </section>
   <section id="v-words" hidden>
-    <p class="intro">Ierogifni yashirsang, kataklar boʻsh qoladi: qogʻozga xotiradan yozib, keyin qatorni bosib tekshir.</p>
     <div class="tools">
       <input class="search" id="search" type="search" placeholder="Qidirish: 汉字, pinyin yoki oʻzbekcha" autocomplete="off">
       <div class="toggles"><span class="lbl">Yashirish:</span>
@@ -918,7 +950,6 @@ button:active:not(:disabled){transform:scale(.97);}
   <section id="v-stats" hidden></section>
   <section id="v-tips" hidden></section>
   <section id="v-texts" hidden></section>
-  <p class="foot">Natijalar Telegram hisobingga saqlanadi. Soʻzlar, grammatika va matn misollari <span lang="zh">新HSK教程3</span> darsligining 1–18-darslaridan olingan; “qoʻshimcha” belgisi bor misollar va 1–4-mavzulardagi soʻz misollari shu mavzular lugʻati bilan tuzilgan sodda gaplar.</p>
 </main>
 <nav class="nav" id="nav" aria-label="Asosiy boʻlimlar">
   <button data-tab="home" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.2 12 4.8l8 6.4V19a1 1 0 0 1-1 1h-4.5v-5.2h-5V20H5a1 1 0 0 1-1-1z"/></svg></span>Bugun</button>
@@ -1141,7 +1172,7 @@ function renderTabs(){
   $("#backBtn").hidden = !sub || !!(TG && TG.BackButton);
   try { if (TG && TG.BackButton) { if (sub) TG.BackButton.show(); else TG.BackButton.hide(); } } catch(_) {}
   $("#ctxRow").hidden = ["more","stats","tips","spell"].includes(P.tab) || dm;
-  $("#chips").hidden = (P.tab==="home" && P.book==="hsk5") || P.tab==="texts";
+  $("#chips").hidden = (P.tab==="home" && P.book==="hsk5") || P.tab==="texts" || P.tab==="grammar";
 }
 function goTab(t){ P.tab = t; if (t!=="cards") setFocus(false); save(); renderTabs(); renderView(); window.scrollTo({top:0}); }
 $("#nav").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; hap("tap"); goTab(b.dataset.tab); });
@@ -1227,32 +1258,51 @@ function extraHtml(L){
     ${x.saying ? `<div class="gsec"><span class="glbl"><span lang="zh">俗语</span> — maqol</span><p><span lang="zh" style="font-size:21px">${esc(x.saying[0])}</span> ${sayBtn(x.saying[0])}<br><b>${esc(x.saying[1])}</b><br>${esc(x.saying[2])}</p></div>` : ""}
   </article>`;
 }
+const GCOL = ["#D1495B","#2A7FB8","#3E8E5E","#B8901A","#6C5BC7","#C2477F"];
+const GR = {open:null, more:new Set(), deep:new Set()};
+function fslots(f){
+  return f.split(/\s*\+\s*/).map(x => { const zh = /\p{Script=Han}/u.test(x) && !/[a-zʻʼ']{3,}/i.test(x.replace(/[^\x00-\x7Fʻʼ]/g,"")); return `<span class="fs${zh?" k":""}"${zh?' lang="zh"':""}>${esc(x)}</span>`; }).join(`<i class="fplus">+</i>`);
+}
 function renderGrammar(){
   const box = $("#v-grammar");
-  if (P.book==="hsk5") { $("#rolesLegend").innerHTML = ""; $("#grammar").innerHTML = `<div class="dil-banner"><h2>Bu toʻplamda grammatika yoʻq</h2><p>HSK 5 boʻlimi — sof lugʻat. Yodlash usullari va soʻz oilalari “Usullar” sahifasida.</p></div><button class="btn primary" data-goto="tips">Usullarni ochish</button>`; return; }
+  if (P.book==="hsk5") { $("#rolesLegend").innerHTML = ""; $("#grammar").innerHTML = `<div class="dil-banner"><h2>Bu toʻplamda grammatika yoʻq</h2><p>HSK 5 boʻlimi — sof lugʻat.</p></div><button class="btn primary" data-goto="tips">Usullarni ochish</button>`; return; }
   box.classList.toggle("h-tr", P.tr); $("#tgTr").setAttribute("aria-pressed", String(P.tr));
-  $("#rolesLegend").innerHTML = `<div class="legendr">${Object.entries(ROLE).map(([k,v]) => `<span style="--rc:${v[1]||"var(--ink)"}"><i></i>${esc(v[0])}</span>`).join("")}<span class="sub" style="flex-basis:100%">“qolip” — shu darsda oʻrganilayotgan grammatik qism, mavzu rangida.</span></div>`;
-  let html = "";
-  LESS.forEach(L => {
-    if (!P.lessons.includes(L.n)) return;
-    html += `<section class="lesson" style="--lc:${lc(L.n)}">${lessonHead(L)}${extraHtml(L)}` + L.grammar.map((g,gi) => {
-      const gk = `${L.n}-${gi}`, a = pct(S.st.g[gk]), cnt = S.st.g[gk];
-      const egs = SENTS.filter(s => s.gk===gk);
-      return `<article class="g">
-        <h3><span class="gzh" lang="zh">${esc(g.zh)}</span><span class="guz">${esc(g.uz)}</span></h3>
-        <div class="gsec"><span class="glbl">Qolip</span>${g.f.map(f=>`<p class="formula">${esc(f)}</p>`).join("")}</div>
-        <div class="gsec"><span class="glbl">Nazariya (kitobdan)</span><p>${esc(g.ex)}</p></div>
-        ${g.why?`<div class="gsec"><span class="glbl">Nega shunday?</span><p>${esc(g.why)}</p></div>`:""}
-        <div class="gsec"><span class="glbl">Rangli tahlil</span><ol class="eg">${egs.map(s => { const k = s.id; const vw = vocabIn(s.zh, s.L); return `<li data-k="${k}" class="${openEg.has(k)?"open":""}">${sayBtn(s.zh)}<div>${taggedHtml(s.tag, s.zh)}${s.extra?`<span class="xtra">qoʻshimcha</span>`:""}<p class="etr"><span>${esc(s.uz)}</span></p>${vw.length?`<div class="ewords">${vw.map(w=>`<span><span lang="zh">${esc(w.hz)}</span>${esc(w.uz.split(/[;,(]/)[0])}</span>`).join("")}</div>`:""}</div></li>`; }).join("")}</ol></div>
-        ${g.mis && g.mis.length ? `<div class="gsec"><span class="glbl">Koʻp uchraydigan xato</span><div class="mis">${g.mis.map(m=>`<div><span class="bad"><span class="xm">✗</span><span lang="zh">${esc(m[0])}</span></span><br><span class="ok"><span class="xm">✓</span><span lang="zh">${esc(m[1])}</span></span><p>${esc(m[2])}</p></div>`).join("")}</div></div>` : ""}
-        <div class="gact"><button class="btn sm primary" data-gpr="${gk}">Shu qoidani mashq qil</button><span class="sub">${cnt ? `Natijang: ${cnt[1]} / ${cnt[0]} toʻgʻri (${a}%)` : "Hali mashq qilinmagan"}</span></div>
-      </article>`; }).join("") + `</section>`;
-  });
-  $("#grammar").innerHTML = html;
+  const Ls = LESS.filter(L => (L.book||"new")===P.book && L.grammar.length);
+  if (!Ls.some(L=>L.n===P.grL)) P.grL = (Ls.find(L=>P.lessons.includes(L.n)) || Ls[0]).n;
+  const L = Ls.find(x=>x.n===P.grL);
+  $("#rolesLegend").innerHTML = `<div class="tx-pick">${Ls.map(x => `<button class="chip" style="--lc:${lc(x.n)}" data-grl="${x.n}" aria-pressed="${x.n===L.n}">${x.d||x.n}</button>`).join("")}</div>`;
+  const legend = `<div class="glegend">${Object.entries(ROLE).filter(([k])=>k!=="K"&&k!=="N").map(([k,v]) => `<span style="--rc:${v[1]}"><i></i>${esc(v[0])}</span>`).join("")}<span class="k"><i></i>qolip</span></div>`;
+  const cards = L.grammar.map((g,gi) => {
+    const gk = `${L.n}-${gi}`, gc = GCOL[gi%GCOL.length], open = GR.open===gk, cnt = S.st.g[gk], a = pct(cnt);
+    const egs = SENTS.filter(x => x.gk===gk), book = egs.filter(x=>!x.extra), more = GR.more.has(gk);
+    const shown = more ? egs : book.slice(0,3);
+    return `<article class="gc${open?" open":""}" style="--lc:${gc}" data-gk="${gk}">
+      <button class="gc-h" data-gopen="${gk}" aria-expanded="${open}">
+        <span class="gc-n">${gi+1}</span>
+        <span class="gc-t"><span class="gzh" lang="zh">${esc(g.zh)}</span><span class="guz">${esc(g.uz)}</span></span>
+        ${a!=null?`<span class="gc-p">${a}%</span>`:""}<span class="chev">›</span>
+      </button>
+      ${open ? `<div class="gc-b">
+        ${g.f.map(f=>`<div class="fline">${fslots(f)}</div>`).join("")}
+        <p class="gc-ex">${esc(g.ex)}</p>
+        ${g.why ? (GR.deep.has(gk) ? `<div class="gc-why"><b>Nega shunday?</b><p>${esc(g.why)}</p></div>` : `<button class="linkb" data-gdeep="${gk}">Nega shunday? ›</button>`) : ""}
+        <p class="gc-h2">Tahlil</p>${legend}
+        <ol class="eg">${shown.map(x => `<li data-k="${x.id}" class="${openEg.has(x.id)?"open":""}">${sayBtn(x.zh)}<div>${taggedHtml(x.tag, x.zh)}<p class="etr"><span>${esc(x.uz)}</span></p></div></li>`).join("")}</ol>
+        ${egs.length>shown.length ? `<button class="linkb" data-gmore="${gk}">Yana ${egs.length-shown.length} ta misol ›</button>` : ""}
+        ${g.mis && g.mis.length ? `<p class="gc-h2">Xato / toʻgʻri</p><div class="mis">${g.mis.map(m=>`<div><span class="bad"><span class="xm">✗</span><span lang="zh">${esc(m[0])}</span></span><br><span class="ok"><span class="xm">✓</span><span lang="zh">${esc(m[1])}</span></span><p>${esc(m[2])}</p></div>`).join("")}</div>` : ""}
+        <div class="gact"><button class="btn primary" data-gpr="${gk}">Mashq qilish</button>${cnt?`<span class="sub">${cnt[1]}/${cnt[0]} toʻgʻri</span>`:""}</div>
+      </div>` : ""}
+    </article>`;
+  }).join("");
+  $("#grammar").innerHTML = `<section class="lesson" style="--lc:${lc(L.n)}">${lessonHead(L)}</section>${extraHtml(L)}<div class="gcs">${cards}</div>`;
 }
 $("#tgTr").addEventListener("click", () => { P.tr=!P.tr; openEg.clear(); save(); renderGrammar(); });
+$("#rolesLegend").addEventListener("click", e => { const b = e.target.closest("[data-grl]"); if (!b) return; hap("tap"); P.grL = +b.dataset.grl; GR.open = null; save(); renderGrammar(); });
 $("#grammar").addEventListener("click", e => {
   const pr = e.target.closest("[data-gpr]"); if (pr) { goTab("ex"); startEx("order", pr.dataset.gpr); return; }
+  const op = e.target.closest("[data-gopen]"); if (op) { hap("tap"); const k = op.dataset.gopen; GR.open = GR.open===k ? null : k; renderGrammar(); if (GR.open) { const el = document.querySelector(`.gc[data-gk="${k}"]`); el && el.scrollIntoView({block:"start", behavior:"smooth"}); } return; }
+  const mo = e.target.closest("[data-gmore]"); if (mo) { GR.more.add(mo.dataset.gmore); renderGrammar(); return; }
+  const dp = e.target.closest("[data-gdeep]"); if (dp) { GR.deep.add(dp.dataset.gdeep); renderGrammar(); return; }
   const li = e.target.closest(".eg li"); if (!li || e.target.closest(".say")) return;
   const k = li.dataset.k; if (openEg.has(k)) openEg.delete(k); else openEg.add(k); li.classList.toggle("open");
 });
@@ -1375,7 +1425,7 @@ function renderCard(){
   const v = $("#v-cards"); v.classList.add("play"); setFocus(true);
   v.innerHTML = `<div class="card-top" style="--lc:${lc(c.L)}"><span class="cnt">${s.done} / ${s.total}</span><span class="prog"><i style="width:${s.done/s.total*100}%"></i></span><button class="stop" data-act="stop">Toʻxtatish</button></div>
     <div class="hstage"><div class="hcard enter${s.revealed?" flipped":""}" id="hcard" style="--lc:${lc(c.L)}"><div class="inner">
-      <div class="face hfront">${band(c.L)}<div class="hf-body">${front}<p class="hint">${hint}, keyin kartani bos.</p></div><span class="fhint">Bosib aylantir ↻</span></div>
+      <div class="face hfront">${band(c.L)}<div class="hf-body">${front}<p class="hint">${hint}</p></div><span class="fhint">Bosib aylantir ↻</span></div>
       <div class="face hback">${band(c.L)}<div class="hb-body"><div class="hb-head">${head}${sayBtn(isW?c.tts:c.zh)}</div>${extra}</div><span class="fhint">← Bilmadim · Bildim →</span></div>
     </div></div></div>
     <div class="hctl" id="hctl">${cardCtl()}</div>`;
@@ -1423,7 +1473,6 @@ function renderDone(){
   const s = session, isW = s.deck==="w", list = [...s.missed.values()];
   $("#v-cards").innerHTML = `<div class="done">
     <h2>Raund tugadi</h2>
-    <p class="intro">Birinchi urinishdagi natijalar. Xato qilganlaring keyingi takrorda birinchi boʻlib chiqadi.</p>
     <div class="sum"><div class="s-again"><b>${s.res.again}</b>Bilmadim</div><div class="s-hard"><b>${s.res.hard}</b>Qiynaldim</div><div class="s-good"><b>${s.res.good}</b>Bildim</div></div>
     ${list.length ? `<h3>Shu raundda adashtirganlaring</h3><ul class="mlist">${list.map(c => isW
       ? `<li style="--lc:${lc(c.L)}"><span class="dz" lang="zh">${esc(c.hz)}</span><span><b>${esc(c.py)}</b><br>${esc(c.uz)}</span></li>`
@@ -1520,7 +1569,7 @@ function renderEx(){
   const v = $("#v-ex");
   if (!X) {
     const nw = wpool().length, ns = spool().filter(s=>s.tag).length;
-    v.innerHTML = `<p class="intro">Bir mashq turini tanla. Savollar yuqorida tanlangan mavzulardan olinadi; koʻp xato qilgan soʻzlaring koʻproq chiqadi.</p>
+    v.innerHTML = `
       <div class="row"><span class="lbl">Savollar soni</span><div class="seg" data-p="exn">${["5","10","20","30"].map(n=>`<button data-v="${n}" aria-pressed="${P.exn===n}">${n}</button>`).join("")}</div></div>
       <div class="hub">${EXT.filter(t => P.book!=="hsk5" || (t.k!=="order" && t.k!=="fill")).map(t=>{ const a = pct(S.st.ty[t.k]); return `<button class="hubc" data-ex="${t.k}" ${t.k==="order"&&!ns || nw<4 ? "disabled":""}><span class="zh">${t.zh}</span><b>${t.uz}</b><span>${t.d}</span><span class="acc">${a===null?"Hali bajarilmagan":`Natijang: ${a}%`}</span></button>`; }).join("")}</div>
       ${S.hist.length ? `<h2 class="h2">Oxirgi mashqlaring</h2>${S.hist.slice(0,8).map(h=>`<div class="hw"><span class="sub">${String(new Date(h.t).getDate()).padStart(2,"0")}.${String(new Date(h.t).getMonth()+1).padStart(2,"0")}, ${hhmm(h.t)}</span><div><b style="color:var(--ink)">${esc(TYPE_UZ[h.type]||h.type)}</b>${h.gk&&GMAP[h.gk]?` <span lang="zh">${esc(GMAP[h.gk].g.zh)}</span>`:""}</div><div class="er" style="color:${h.score/h.total>=0.8?"var(--good)":h.score/h.total>=0.6?"var(--hard)":"var(--again)"}">${h.score}/${h.total}<small>${Math.round(h.score/h.total*100)}%</small></div></div>`).join("")}` : ""}
@@ -1664,7 +1713,6 @@ function renderWrite(){
   const mode = P.wmode;
   $("#v-write").innerHTML = `
     <h2 class="h2"><span class="zh">记字</span>Ierogifni yodlash va yozish</h2>
-    <p class="intro">“5 qadam” rejimi har bir soʻzni koʻrish, boʻlaklash, ustidan yozish, xotiradan yozish va gapda ishlatish orqali oʻrgatadi. Erkin rejimlarda istalgan soʻzni mashq qilasan.</p>
     <div class="row" style="justify-content:center"><div class="seg" data-p="wmode"><button data-v="learn" aria-pressed="${mode==="learn"}">5 qadam</button><button data-v="trace" aria-pressed="${mode==="trace"}">Ustidan <span class="hzi">描红</span></button><button data-v="memory" aria-pressed="${mode==="memory"}">Xotiradan <span class="hzi">默写</span></button></div></div>
     ${mode==="learn" ? renderLearn() : renderFree()}
     <h2 class="h2"><span class="zh">笔画</span>Asosiy chiziqlar</h2>
@@ -2113,7 +2161,7 @@ function rDStats(v){
   <div class="dchart">${days.map(([d,n]) => `<div class="dcol"><i style="height:${n/mx*100}%" title="${n}"></i><span>${d}</span></div>`).join("")}</div>
   <h3 class="sect">Rejimlar boʻyicha aniqlik</h3>
   <div class="dbars">${["fc","learn","write","spell","test","match"].map(m => { const a = H.ans[m]; const p = a && a[0] ? Math.round(a[1]/a[0]*100) : null; return `<div class="dbar"><span>${DMODES[m]}</span><span class="track"><i style="width:${p||0}%"></i></span><b>${p===null?"—":p+"%"}</b><small>${a?a[0]:0}</small></div>`; }).join("")}</div>
-  <h3 class="sect">Toʻplamlar</h3><p class="sub" style="margin:-4px 0 10px">Foiz — “Bilaman” darajasidagi soʻzlar. Toʻplamni bossang, oʻsha toʻplam tanlanadi.</p>
+  <h3 class="sect">Toʻplamlar</h3>
   <div class="sets dsets">${tiles}</div>
   ${H.tests.length ? `<h3 class="sect">Test tarixi</h3><ul class="thist">${H.tests.slice(0,10).map(t => `<li><span>${dmy(t.t)} ${hhmm(t.t)}</span><span>${h5setName(t.set)}</span><b class="${t.score/t.total>=.8?"g":""}">${t.score}/${t.total}</b></li>`).join("")}</ul>` : ""}
   ${bests.length ? `<h3 class="sect">Juftlash rekordlari</h3><ul class="thist">${bests.map(([k,ms]) => `<li><span>${h5setName(/^\d+$/.test(k)?+k:k)}</span><span></span><b class="g">${mtime(ms)}</b></li>`).join("")}</ul>` : ""}
@@ -2219,7 +2267,7 @@ function renderHome(){
       ${!H5 && P.book==="new" ? `<button data-go="texts" class="qa-wide" style="--qc:#C2477F"><span class="qi">${SVG.texts}</span><b>Kitob matnlari</b><span>课文 dialoglari: tinglash, yangi soʻzlar, grammatika tahlili</span></button>` : ""}
     </div>
     ${w ? `<h3 class="sect">Kun soʻzi</h3><div class="wod" style="--lc:${lc(w.L)}">${tzg(w.hz,"")}<div><div class="py">${esc(w.py)}</div><div class="uz">${esc(w.uz)}</div>${w.hook?`<p>${esc(w.hook)}</p>`:""}<div style="margin-top:8px;display:flex;gap:8px;align-items:center">${sayBtn(w.tts)}<span class="sub">${lname(w.L)}</span></div></div></div>` : ""}
-    ${H5 ? `<h3 class="sect">Toʻplamlar xaritasi</h3><p class="sub" style="margin:-4px 0 10px">Toʻplamni bossang, faqat oʻsha 50 soʻz tanlanadi. 80% mustahkam boʻlgani oltin rangga kiradi.</p>${setGrid()}` : `<h3 class="sect">Darslar boʻyicha</h3>
+    ${H5 ? `<h3 class="sect">Toʻplamlar xaritasi</h3>${setGrid()}` : `<h3 class="sect">Darslar boʻyicha</h3>
     <div class="lp">${Ls.map(L => { const ws = WORDS.filter(x=>x.L===L.n), t = ws.length||1, so = ws.filter(x=>level(x.id)>=3).length, le = ws.filter(x=>{const v=level(x.id); return v>0&&v<3;}).length; return `<div class="row1" style="--lc:${lc(L.n)}"><span class="dot"></span><span class="nm">${lname(L.n)}<span lang="zh">${esc(L.zh)}</span></span><span class="pc">${so} / ${ws.length}</span><span class="bar"><i class="b-solid" style="width:${so/t*100}%"></i><i class="b-learn" style="width:${le/t*100}%"></i></span></div>`; }).join("")}</div>`}
     ${wk.length ? `<h3 class="sect">Eng koʻp adashtirganlaring</h3><section class="weak"><ul class="wk">${wk.map(x=>`<li style="--lc:${lc(x.w.L)}">${tzg(x.w.hz,"sm")}<span>${esc(x.w.py)}</span><span class="x">×${x.n}</span></li>`).join("")}</ul><button class="btn sm" data-act="copyWeak">Chat uchun nusxalash</button><div class="copyOut"></div></section>` : ""}`;
 }
@@ -2379,7 +2427,6 @@ function renderSpell(){
   const list = words.filter(w => { const m = Math.max(...hanzi(w.hz).map(c=>D.chars[c][0])); return m>=f[0] && m<=f[1]; });
   v.innerHTML = `<div style="--lc:${lc(L.n)}">
     <h2 class="h2"><span class="zh">写法</span>${lname(L.n)}: soʻzlar qanday yoziladi</h2>
-    <p class="intro">Har bir ierogif uchun: chiziqlar soni, tuzilishi, qaysi qismlardan iboratligi, qismlar qaysi tartibda yozilishi va eslatma. “Mashq” tugmasi shu soʻzni “Yodlash” boʻlimida ustidan yozish uchun ochadi.</p>
     ${Ls.length>1?`<div class="row"><span class="lbl">Mavzu</span><div class="seg" data-p="spellL">${Ls.map(x=>`<button data-v="${x.n}" aria-pressed="${x.n===L.n}">${x.n}</button>`).join("")}</div></div>`:""}
     <div class="tiles"><div><b>${words.length}</b>soʻz</div><div><b>${chars.length}</b>ierogif</div><div><b>${avg}</b>oʻrtacha chiziq</div><div><b lang="zh">${top.join("")}</b>eng murakkablari</div></div>
     <div class="row"><span class="lbl">Saralash</span><div class="seg" data-p="spellF">${[["all","Hammasi"],["easy","Oson (≤6)"],["mid","Oʻrta (7–10)"],["hard","Murakkab (11+)"]].map(([k,t])=>`<button data-v="${k}" aria-pressed="${(P.spellF||"all")===k}">${t}</button>`).join("")}</div></div>
@@ -2413,7 +2460,6 @@ function cabinetHtml(){
   const learned = WORDS.filter(w => level(w.id) >= 3).length, days = S.days.length;
   return `<div class="cab"><div class="av">${u.photo_url ? `<img src="${esc(u.photo_url)}" alt="">` : esc(name[0])}</div>
     <div><b>${esc(name)}</b>${u.username ? `<span class="sub">@${esc(u.username)}</span>` : ""}
-    <span class="sub">Shaxsiy kabinet: natijalaring faqat seniki va Telegram hisobingda saqlanadi.</span>
     <span class="sub">${S.first ? `Birinchi mashgʻulot: ${dmy(S.first)}. ` : ""}Shugʻullangan kunlar: ${days}. Mustahkam soʻzlar: ${learned}.</span></div></div>`;
 }
 function renderStats(){
@@ -2440,7 +2486,6 @@ function renderStats(){
     <div class="chart">${days.map(d=>`<div title="${d.k}: ${d.n} ta"><i class="${d.n?"":"zero"}" style="height:${d.n/mx*100}%"></i></div>`).join("")}</div>
     <div class="chartx">${days.map(d=>`<span>${d.d}</span>`).join("")}</div>
     <h2 class="h2">Mashq turlari boʻyicha</h2>
-    <p class="intro">Eng pastdagi qatorlar — eng koʻp xato qilayotgan turlaring.</p>
     ${Object.entries(ty).map(([k,p])=>({k,p})).sort((a,b)=>pct(b.p)-pct(a.p)).map(x=>hbar(esc(TYPE_UZ[x.k]||x.k), pct(x.p), x.p[0], "var(--primary)")).join("")}
     <h2 class="h2">Mavzular boʻyicha</h2>
     ${LESS.filter(L=>S.st.L[L.n]).map(L=>hbar(`${lname(L.n)}`, pct(S.st.L[L.n]), S.st.L[L.n][0], lc(L.n))).join("") || `<p class="sub">Hali maʼlumot yoʻq.</p>`}
