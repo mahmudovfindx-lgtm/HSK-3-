@@ -1098,6 +1098,51 @@ main{padding-top:6px;}
 .h2 .zh{color:var(--acc);}
 .en{display:block;font-size:13.5px;line-height:1.35;color:var(--ink-3);margin-top:2px;font-weight:400;}
 .hb-head .en,.fback .en{font-size:15px;text-align:center;}
+
+/* ---------- XP va reyting ---------- */
+#xpFloat{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:50%;transform:translate(-50%,-10px);z-index:300;background:#B8901A;color:#fff;font-weight:800;font-size:14px;padding:6px 14px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 6px 16px -6px rgba(0,0,0,.4);}
+#xpFloat.on{opacity:1;transform:translate(-50%,0);}
+.xprow{display:flex;align-items:center;gap:12px;width:100%;margin-top:14px;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:var(--paper);text-align:left;}
+.lvl{flex:none;width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:17px;color:#fff;background:linear-gradient(135deg,#C9A227,#9C7410);}
+.xpm{flex:1;min-width:0;display:grid;grid-template-columns:auto 1fr;align-items:baseline;column-gap:8px;}
+.xpm b{font-size:15px;}
+.xpm small{font-size:12px;color:var(--ink-3);}
+.xbar{grid-column:1/-1;display:block;height:5px;border-radius:3px;background:var(--mask);overflow:hidden;margin-top:6px;}
+.xbar i{display:block;height:100%;background:linear-gradient(90deg,#C9A227,#E0B93A);border-radius:3px;}
+.xgo{flex:none;font-size:13px;font-weight:700;color:var(--ink-2);}
+.rk-me{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:16px;}
+.rk-lvl{flex:none;width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,#C9A227,#9C7410);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;}
+.rk-lvl span{font-size:26px;font-weight:800;}
+.rk-lvl small{font-size:10.5px;opacity:.9;margin-top:3px;}
+.rk-sum{flex:1;min-width:0;}
+.rk-sum b{font-size:22px;letter-spacing:-.02em;}
+.rk-sum small{display:block;font-size:12px;color:var(--ink-3);margin-top:6px;}
+.rk-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0 18px;}
+.rk-tiles div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center;}
+.rk-tiles b{display:block;font-size:20px;}
+.rk-tiles span{font-size:12px;color:var(--ink-3);}
+.rk-seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;padding:3px;background:var(--mask);border-radius:12px;margin-bottom:12px;}
+.rk-seg button{height:36px;border:0;border-radius:9px;background:none;font-weight:700;font-size:14px;color:var(--ink-2);}
+.rk-seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1);}
+.rk-list{list-style:none;margin:0;padding:4px 12px;background:var(--surface);border:1px solid var(--line);border-radius:18px;}
+.rk-list li,.rk-mine{display:grid;grid-template-columns:30px 40px 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);}
+.rk-list li:last-child{border-bottom:0;}
+.rk-list li.me{background:color-mix(in srgb,#C9A227 12%,transparent);margin:0 -12px;padding:10px 12px;}
+.rk-n{text-align:center;font-weight:800;color:var(--ink-3);font-size:15px;}
+.rk-list li.top1 .rk-n,.rk-list li.top2 .rk-n,.rk-list li.top3 .rk-n{font-size:20px;}
+.rav{position:relative;width:40px;height:40px;border-radius:50%;overflow:hidden;background:var(--mask);display:grid;place-items:center;font-weight:700;color:var(--ink-2);}
+.rav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.rk-nm{min-width:0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.rk-nm small{display:block;font-size:11.5px;font-weight:500;color:var(--ink-3);}
+.rk-xp{font-variant-numeric:tabular-nums;font-size:15px;}
+.rk-mine{grid-template-columns:30px 1fr auto;margin-top:8px;padding:10px 12px;border:1px dashed var(--line);border-radius:14px;}
+.rk-foot{text-align:center;font-size:12px;color:var(--ink-3);margin:10px 0 0;}
+.rk-empty{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:28px 16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;color:var(--ink-2);font-size:14px;}
+.rk-empty b{color:var(--ink);font-size:16px;}
+.rk-how{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:0 14px;font-size:14px;}
+.rk-how summary{cursor:pointer;padding:13px 0;font-weight:700;}
+.rk-how ul{padding-left:18px;margin:6px 0;}
+.rk-how li{margin:3px 0;}
 </style>
 </head>
 <body>
@@ -1139,6 +1184,7 @@ main{padding-top:6px;}
   <section id="v-stats" hidden></section>
   <section id="v-tips" hidden></section>
   <section id="v-texts" hidden></section>
+  <section id="v-rank" hidden></section>
 </main>
 <nav class="nav" id="nav" aria-label="Asosiy boʻlimlar">
   <button data-tab="home" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.2 12 4.8l8 6.4V19a1 1 0 0 1-1 1h-4.5v-5.2h-5V20H5a1 1 0 0 1-1-1z"/></svg></span>Bugun</button>
@@ -1173,8 +1219,8 @@ const LONGW = WORDS.filter(w => [...w.hz].length >= 2).sort((a,b)=>b.hz.length-a
 
 /* ---------- storage ---------- */
 const KEY = "hsk3-tg-1-7-v1";
-const S = {srs:{}, prefs:{}, exw:{}, days:[], st:{ty:{},L:{},g:{},d:{},w:{}}, lr:{}, t:0, cur:null, hist:[]};
-try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); } } } catch(e) {}
+const S = {srs:{}, prefs:{}, exw:{}, days:[], st:{ty:{},L:{},g:{},d:{},w:{}}, lr:{}, t:0, cur:null, hist:[], xp:{}};
+try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); S.xp = (p.xp && typeof p.xp==="object") ? p.xp : {}; } } } catch(e) {}
 if (!S.h5) S.h5 = H5DEF();
 const ALL = LESS.map(L=>L.n);
 const BOOKS = [{k:"new", zh:"新HSK教程3", uz:"Yangi HSK 3", v:"3.0"}, {k:"old", zh:"HSK标准教程3", uz:"Eski HSK 3", v:"2.0"}, {k:"hsk5", zh:"HSK 5", uz:"Dilobar 老师 uchun"}];
@@ -1189,13 +1235,39 @@ if (!Array.isArray(P.lessons) || !P.lessons.length || P.lessons.some(n=>!ALL.inc
   if (P.book!=="old" && P.book!=="hsk5") P.book = "new"; if (P.lessons.some(n=>bookOf(n)!==P.book)) P.lessons = bookLessons(P.book);
 if (P.wmode!=="learn" && P.wmode!=="trace" && P.wmode!=="memory") P.wmode = "learn";
 let dirty = false;
-function body(){ return {v:3, t:S.t, srs:S.srs, exw:S.exw, days:S.days, st:S.st, lr:S.lr, prefs:P, cur:S.cur, hist:S.hist, seeded:!!S.seeded, first:S.first||0, h5:S.h5}; }
+function body(){ return {v:3, t:S.t, srs:S.srs, exw:S.exw, days:S.days, st:S.st, lr:S.lr, prefs:P, cur:S.cur, hist:S.hist, seeded:!!S.seeded, first:S.first||0, h5:S.h5, xp:S.xp}; }
 function writeLocal(){ try { localStorage.setItem(KEY, JSON.stringify(body())); } catch(e) {} }
 function save(){ S.prefs = P; S.t = Date.now(); S.cur = serCur(); dirty = true; writeLocal(); scheduleCloud(); }
 function dkey(t){ const d = new Date(t); return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
 function touchDay(){ const k = dkey(Date.now()); if (!S.days.includes(k)) { S.days.push(k); S.days = S.days.slice(-120); } }
 function streak(){ let n = 0; for (let i=0;i<400;i++){ const k = dkey(Date.now()-i*DAY); if (S.days.includes(k)) n++; else if (i>0) break; } return n; }
+/* ---------- XP: har bir javob uchun ochko (qiyinlikka qarab) ---------- */
+const XPB = {card:4, cardS:6, mean:5, hanzi:6, tone:6, listen:7, fill:8, order:10, match:4, write:12, h5:6, rad:5};
+function isoDay(t){ const d = new Date(t); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function xpDiff(item){
+  if (!item) return 1;
+  if (item.hz) { const n = Math.max(1, hanzi(item.hz).length); return (1 + 0.25*(n-1)) * (bookOf(item.L)==="hsk5" ? 1.6 : 1); }
+  if (item.zh) return 1 + Math.min(1.5, hanzi(item.zh).length / 20);
+  return 1;
+}
+function xpGain(kind, ok, item){ return ok ? Math.max(1, Math.round((XPB[kind]||4) * xpDiff(item))) : 1; }
+function xpAdd(n){
+  if (!(n > 0)) return; const k = isoDay(Date.now()); S.xp[k] = (S.xp[k]||0) + n;
+  xpFloat(n);
+}
+function xpPayload(){ const d = {}; for (let i=0;i<8;i++) { const k = isoDay(Date.now()-i*DAY); if (S.xp[k]) d[k] = S.xp[k]; } return {t: xpTotal(), d}; }
+function xpTotal(){ let t = 0; for (const k in S.xp) t += +S.xp[k]||0; return t; }
+function xpToday(){ return S.xp[isoDay(Date.now())]||0; }
+function xpWeek(){ let t = 0; for (let i=0;i<7;i++) t += S.xp[isoDay(Date.now()-i*DAY)]||0; return t; }
+function xpLevel(x){ const l = Math.floor(Math.sqrt(x/60)) + 1, a = 60*(l-1)*(l-1), b = 60*l*l; return {l, cur:x-a, need:b-a}; }
+let xpFT, xpFN = 0;
+function xpFloat(n){
+  let el = document.getElementById("xpFloat"); if (!el) { el = document.createElement("div"); el.id = "xpFloat"; document.body.appendChild(el); }
+  xpFN += n; el.textContent = `+${xpFN} XP`; el.classList.remove("on"); void el.offsetWidth; el.classList.add("on");
+  clearTimeout(xpFT); xpFT = setTimeout(() => { el.classList.remove("on"); xpFN = 0; }, 1400);
+}
 function logAns(kind, ok, item){
+  xpAdd(xpGain(kind, ok, item));
   if (!S.first) S.first = Date.now();
   const st = S.st; const inc = (o,k) => { const v = (o[k]||[0,0]).slice(); v[0]++; if (ok) v[1]++; o[k] = v; };
   inc(st.ty, kind); if (item) { inc(st.L, String(item.L)); if (item.gk) inc(st.g, item.gk); if (item.hz) inc(st.w, item.id); }
@@ -1228,6 +1300,7 @@ function mergeIn(r){
   const rl = r.lr || {}; for (const k in rl) S.lr[k] = Math.max(S.lr[k]||0, rl[k]);
   if (r.first && (!S.first || r.first < S.first)) S.first = r.first;
   mergeH5(r.h5);
+  const rx = r.xp || {}; for (const k in rx) if (/^\d{4}-\d{2}-\d{2}$/.test(k)) S.xp[k] = Math.max(S.xp[k]||0, +rx[k]||0);
   const hs = (S.hist||[]).concat(r.hist||[]), seen = new Set(); S.hist = hs.filter(h => h && !seen.has(h.t) && seen.add(h.t)).sort((a,b)=>b.t-a.t).slice(0,30);
   if ((r.t||0) > (S.t||0)) { if (r.prefs && typeof r.prefs === "object") Object.assign(P, r.prefs); S.cur = r.cur || null; S.t = r.t; }
   if (!Array.isArray(P.lessons) || !P.lessons.length || P.lessons.some(n=>!ALL.includes(n))) P.lessons = ALL.slice();
@@ -1346,9 +1419,9 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-say]
 /* ---------- header ---------- */
 function applyFont(){ document.documentElement.classList.toggle("hei", P.font==="hei"); $("#fontBtn").innerHTML = `Shrift:<span class="hzi">${P.font==="hei"?"黑体":"楷体"}</span>`; }
 $("#fontBtn").addEventListener("click", () => { P.font = P.font==="hei" ? "kai" : "hei"; save(); applyFont(); if (P.tab==="write") renderWrite(); toast(P.font==="hei" ? "Oddiy shrift (黑体) yoqildi." : "Kitobdagidek shrift (楷体) yoqildi."); });
-const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts"};
-const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashqlar", write:"Yodlash", more:"Koʻproq", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar"};
-const SUBTABS = ["grammar","words","spell","stats","tips","texts"];
+const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts", rank:"#v-rank"};
+const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashqlar", write:"Yodlash", more:"Koʻproq", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar", rank:"Reyting"};
+const SUBTABS = ["grammar","words","spell","stats","tips","texts","rank"];
 function hap(k){ try { const h = TG && TG.HapticFeedback; if (!h) return; if (k==="ok") h.notificationOccurred("success"); else if (k==="bad") h.notificationOccurred("error"); else h.selectionChanged(); } catch(_) {} }
 function renderTabs(){
   if (!VIEWS[P.tab]) P.tab = "home";
@@ -1360,7 +1433,7 @@ function renderTabs(){
   const sub = SUBTABS.includes(P.tab) || dm;
   $("#backBtn").hidden = !sub || !!(TG && TG.BackButton);
   try { if (TG && TG.BackButton) { if (sub) TG.BackButton.show(); else TG.BackButton.hide(); } } catch(_) {}
-  $("#ctxRow").hidden = ["more","stats","tips","spell"].includes(P.tab) || dm;
+  $("#ctxRow").hidden = ["more","stats","tips","spell","rank"].includes(P.tab) || dm;
   $("#chips").hidden = (P.tab==="home" && P.book==="hsk5") || P.tab==="texts" || P.tab==="grammar" || (P.tab==="write" && P.wtop==="rad");
   $("#lessBtn").hidden = $("#chips").hidden;
 }
@@ -1402,7 +1475,7 @@ $("#chips").addEventListener("click", e => {
   W.i = 0; W.ci = 0; W.check = false; LN.id = null; LN.step = 1;
   save(); renderChips(); renderView();
 });
-function renderView(){ ({home:renderHome, more:renderMore, cards:renderPractice, ex:renderEx, write:renderWrite, spell:renderSpell, grammar:renderGrammar, words:renderWords, stats:renderStats, tips:renderTips, texts:renderTexts})[P.tab](); }
+function renderView(){ ({home:renderHome, more:renderMore, cards:renderPractice, ex:renderEx, write:renderWrite, spell:renderSpell, grammar:renderGrammar, words:renderWords, stats:renderStats, tips:renderTips, texts:renderTexts, rank:renderRank})[P.tab](); }
 
 /* ================= LUG'AT ================= */
 const openRows = new Set();
@@ -1980,7 +2053,7 @@ $("#v-write").addEventListener("click", e => {
 });
 
 
-const SVG = {home:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.2 12 4.8l8 6.4V19a1 1 0 0 1-1 1h-4.5v-5.2h-5V20H5a1 1 0 0 1-1-1z"/></svg>',cards:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.5" y="3.5" width="12" height="15.5" rx="2.2"/><path d="M4.5 7v11.8a2.2 2.2 0 0 0 2.2 2.2h9.3"/></svg>',ex:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',write:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4.2 19.8 9 9.8 19H5v-4.8z"/><path d="M12.8 6.4l4.8 4.8"/></svg>',more:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.6" height="6.6" rx="1.8"/><rect x="13.4" y="4" width="6.6" height="6.6" rx="1.8"/><rect x="4" y="13.4" width="6.6" height="6.6" rx="1.8"/><rect x="13.4" y="13.4" width="6.6" height="6.6" rx="1.8"/></svg>',grammar:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14M5 10h9M5 14.5h14M5 19h7"/></svg>',words:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5A3.5 3.5 0 0 1 19 8v11.5H8.5A3.5 3.5 0 0 1 5 16z"/><path d="M5 16a3.5 3.5 0 0 1 3.5-3.5H19"/></svg>',spell:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14"/><path d="M8 15.5 15.5 6l2.5 2-7.5 9.5H8z"/></svg>',stats:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V11M10 19V6M15 19v-5M20 19V9"/></svg>',tips:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.8.6 1.1 1.4 1.1 2.2h5c0-.8.3-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg>',font:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 10.5 5h1L17 19M7.3 13.5h7.4"/></svg>',cloud:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-9 6 6 0 0 1 11.4 1.6A3.8 3.8 0 0 1 17.2 18.5z"/></svg>',texts:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v6.5a2.5 2.5 0 0 1-2.5 2.5h-6l-4.5 4v-4A2.5 2.5 0 0 1 4.5 13z"/><path d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>',phone:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 17.5h2"/></svg>'};
+const SVG = {home:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.2 12 4.8l8 6.4V19a1 1 0 0 1-1 1h-4.5v-5.2h-5V20H5a1 1 0 0 1-1-1z"/></svg>',cards:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.5" y="3.5" width="12" height="15.5" rx="2.2"/><path d="M4.5 7v11.8a2.2 2.2 0 0 0 2.2 2.2h9.3"/></svg>',ex:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>',write:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4.2 19.8 9 9.8 19H5v-4.8z"/><path d="M12.8 6.4l4.8 4.8"/></svg>',more:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.6" height="6.6" rx="1.8"/><rect x="13.4" y="4" width="6.6" height="6.6" rx="1.8"/><rect x="4" y="13.4" width="6.6" height="6.6" rx="1.8"/><rect x="13.4" y="13.4" width="6.6" height="6.6" rx="1.8"/></svg>',grammar:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14M5 10h9M5 14.5h14M5 19h7"/></svg>',words:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10.5A3.5 3.5 0 0 1 19 8v11.5H8.5A3.5 3.5 0 0 1 5 16z"/><path d="M5 16a3.5 3.5 0 0 1 3.5-3.5H19"/></svg>',spell:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19h14"/><path d="M8 15.5 15.5 6l2.5 2-7.5 9.5H8z"/></svg>',stats:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V11M10 19V6M15 19v-5M20 19V9"/></svg>',tips:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.8.6 1.1 1.4 1.1 2.2h5c0-.8.3-1.6 1.1-2.2A6 6 0 0 0 12 3z"/></svg>',font:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 10.5 5h1L17 19M7.3 13.5h7.4"/></svg>',cloud:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18.5a4.5 4.5 0 0 1-.6-9 6 6 0 0 1 11.4 1.6A3.8 3.8 0 0 1 17.2 18.5z"/></svg>',texts:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6.5A2.5 2.5 0 0 1 7 4h10a2.5 2.5 0 0 1 2.5 2.5v6.5a2.5 2.5 0 0 1-2.5 2.5h-6l-4.5 4v-4A2.5 2.5 0 0 1 4.5 13z"/><path d="M8.5 8.5h7M8.5 11.5h4.5"/></svg>',rank:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h8v4.5a4 4 0 0 1-8 0z"/><path d="M8 6H5a2.5 2.5 0 0 0 3 3.5M16 6h3a2.5 2.5 0 0 1-3 3.5M12 13v3.5M8.5 20h7l-.8-3.5H9.3z"/></svg>',phone:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2.5"/><path d="M11 17.5h2"/></svg>'};
 
 $("#grammar").addEventListener("click", e => { const b = e.target.closest("[data-goto]"); if (b) { e.stopPropagation(); goTab(b.dataset.goto); } }, true);
 
@@ -2068,7 +2141,7 @@ function h5mark(w, ok, kind, mode){
   const H = S.h5, k = H.k[w.id]||0, prev = {k, wr:H.wr[w.id]||0};
   if (ok) H.k[w.id] = kind==="mc" ? Math.max(k,2) : (k>=2 ? 3 : 2);
   else { H.k[w.id] = 1; H.wr[w.id] = (H.wr[w.id]||0) + 1; }
-  h5log(mode, ok); hap(ok ? "ok" : "bad"); return prev;
+  h5log(mode, ok); xpAdd(xpGain("h5", ok, w)); hap(ok ? "ok" : "bad"); return prev;
 }
 function h5override(w, prev, mode){
   const H = S.h5; H.wr[w.id] = prev.wr; if (!prev.wr) delete H.wr[w.id];
@@ -2450,6 +2523,7 @@ function renderHome(){
   $("#v-home").innerHTML = `${H5 ? dilBanner() : ""}
     <section class="hero">
       <div class="h-top"><div><p class="greet">${greetWord()}${u&&u.first_name?", "+esc(u.first_name):""}</p><p class="ctx">${esc(ctx)}</p></div><span class="streak" title="Ketma-ket kunlar"><b>${streak()}</b> kun</span></div>
+      ${(() => { const x = xpTotal(), L = xpLevel(x); return `<button class="xprow" data-go="rank"><span class="lvl">${L.l}</span><span class="xpm"><b>${x.toLocaleString("ru-RU")} XP</b><small>bugun +${xpToday()}</small><span class="xbar"><i style="width:${L.cur/L.need*100}%"></i></span></span><span class="xgo">Reyting ›</span></button>`; })()}
       <div class="hstats"><div><b>${c.due}</b><span>takror</span></div><div><b>${c.fresh}</b><span>yangi</span></div><div><b>${solid}</b><span>mustahkam</span></div></div>
       <button class="go" data-go="due" ${c.due||c.fresh?"":"disabled"}>${c.due ? `Takrorni boshlash: ${c.due} ta` : c.fresh ? "Yangi kartalarni boshlash" : "Bugun takror yoʻq"}</button>
     </section>
@@ -2483,6 +2557,7 @@ $("#v-home").addEventListener("click", e => {
   else if (k==="tips") goTab("tips");
   else if (k==="grammar") goTab("grammar");
   else if (k==="texts") goTab("texts");
+  else if (k==="rank") goTab("rank");
   else if (k==="rads") { P.wtop = "rad"; goTab("write"); }
 });
 /* ================= MATNLAR (课文) ================= */
@@ -2581,7 +2656,7 @@ $("#v-texts").addEventListener("click", e => {
 const RADS = D.rads.map(r => ({n:r[0], c:r[1], v:r[2], py:r[3], s:r[4], uz:r[5], ex:r[6], nm:r[7]})), RKEY = new Set(D.radkey);
 const RK = {open:null, i:0, flip:false, t:null};
 function rkKnown(n){ return !!(P.rk && P.rk[n]); }
-function rkSet(n, on){ P.rk = P.rk || {}; if (on) P.rk[n] = 1; else delete P.rk[n]; save(); }
+function rkSet(n, on){ P.rk = P.rk || {}; if (on && !P.rk[n]) xpAdd(XPB.rad); if (on) P.rk[n] = 1; else delete P.rk[n]; save(); }
 function radList(){ const f = P.rf || "key"; return RADS.filter(r => f==="key" ? RKEY.has(r.n) : f==="all" ? true : r.s===+f); }
 function radWords(ch){ return WORDS.filter(w => bookOf(w.L)==="new" && w.hz.includes(ch)).slice(0,2); }
 function radEx(r){ return [...r.ex].map(ch => { const w = radWords(ch)[0]; return `<span class="rex"><b lang="zh">${esc(ch)}</b>${w?`<small>${esc(w.hz)} · ${esc(w.uz.split(/[;,(]/)[0])}</small>`:""}</span>`; }).join(""); }
@@ -2651,6 +2726,55 @@ function radClick(e){
   if (g("data-rnext")) { const T = RK.t; T.i++; T.a = null; if (T.i>=T.q.length) T.done = true; renderRads(); return; }
 }
 
+/* ================= REYTING (XP, server/worker.js /top) ================= */
+const RKG = {per:"week", data:{}, err:{}, busy:false};
+function rankName(u){ return [u.first_name, u.last_name ? u.last_name[0] + "." : ""].filter(Boolean).join(" ") || (u.username ? "@"+u.username : "Foydalanuvchi"); }
+function rankAv(u){ const n = rankName(u); return u.photo ? `<span class="rav"><img src="${esc(u.photo)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">${esc(n[0]||"?")}</span>` : `<span class="rav">${esc(n[0]||"?")}</span>`; }
+async function rankLoad(force){
+  const per = RKG.per;
+  if (!STATS_URL || !TG || !TG.initData) { RKG.err[per] = "tg"; renderRank(); return; }
+  if (RKG.busy || (!force && RKG.data[per] && Date.now() - RKG.data[per].at < 60000)) return;
+  RKG.busy = true;
+  try {
+    const r = await fetch(STATS_URL + "/top", {method:"POST", body: JSON.stringify({init: TG.initData, per, xp: xpPayload()})});
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || r.status);
+    RKG.data[per] = Object.assign(j, {at: Date.now()}); delete RKG.err[per];
+  } catch (e) { RKG.err[per] = String(e.message || e); }
+  RKG.busy = false; if (P.tab==="rank") renderRank();
+}
+function renderRank(){
+  const v = $("#v-rank"), x = xpTotal(), L = xpLevel(x), per = RKG.per, D = RKG.data[per], er = RKG.err[per];
+  const me = TG && TG.initDataUnsafe && TG.initDataUnsafe.user;
+  const mine = per==="day" ? xpToday() : per==="week" ? xpWeek() : x;
+  let list;
+  if (er==="tg") list = `<div class="rk-empty"><b>Reyting Telegram ichida ishlaydi</b><span>Ilovani bot orqali och, shunda natijang reytingga qoʻshiladi.</span></div>`;
+  else if (er) list = `<div class="rk-empty"><b>Server bilan aloqa yoʻq</b><span>${er==="bad signature" ? "Serverdagi BOT_TOKEN eskirgan. Cloudflare’da yangi tokenni qoʻy." : er==="not found" ? "Server kodi eski. Cloudflare’da yangi worker.js ni joyla." : esc(er)}</span><button class="btn sm" data-rkre="1">Qayta urinish</button></div>`;
+  else if (!D) list = `<div class="rk-empty"><span>Yuklanmoqda…</span></div>`;
+  else if (!D.list.length) list = `<div class="rk-empty"><b>Hali hech kim yoʻq</b><span>Birinchi boʻl!</span></div>`;
+  else list = `<ol class="rk-list">${D.list.map((u,i) => `<li class="${me && u.id===me.id ? "me" : ""}${i<3 ? " top"+(i+1) : ""}"><span class="rk-n">${i<3 ? ["🥇","🥈","🥉"][i] : i+1}</span>${rankAv(u)}<span class="rk-nm">${esc(rankName(u))}<small>${xpLevel(u.total||u.xp).l}-daraja</small></span><b class="rk-xp">${(+u.xp).toLocaleString("ru-RU")}</b></li>`).join("")}</ol>
+    ${D.me && D.me.rank > D.list.length ? `<div class="rk-mine"><span class="rk-n">${D.me.rank}</span><span class="rk-nm">Sen</span><b class="rk-xp">${(+D.me.xp).toLocaleString("ru-RU")}</b></div>` : ""}
+    <p class="rk-foot">${D.count} ishtirokchi · ${per==="day" ? "bugun" : per==="week" ? "oxirgi 7 kun" : "umumiy"}</p>`;
+  v.innerHTML = `
+    <section class="rk-me">
+      <div class="rk-lvl"><span>${L.l}</span><small>daraja</small></div>
+      <div class="rk-sum"><b>${x.toLocaleString("ru-RU")} XP</b><span class="xbar"><i style="width:${L.cur/L.need*100}%"></i></span><small>Keyingi darajagacha ${L.need-L.cur} XP</small></div>
+    </section>
+    <div class="rk-tiles"><div><b>${xpToday()}</b><span>bugun</span></div><div><b>${xpWeek()}</b><span>7 kun</span></div><div><b>${D && D.me && D.me.rank ? "#"+D.me.rank : "—"}</b><span>oʻrning</span></div></div>
+    <div class="rk-seg">${[["day","Bugun"],["week","Hafta"],["all","Umumiy"]].map(([k,l]) => `<button data-rkp="${k}" aria-pressed="${per===k}">${l}</button>`).join("")}</div>
+    ${list}
+    <details class="rk-how"><summary>XP qanday yigʻiladi?</summary>
+      <p>Har bir toʻgʻri javob XP beradi, xato javob esa 1 XP. Soʻz qanchalik qiyin boʻlsa, XP shuncha koʻp:</p>
+      <ul><li>Kartochka: <b>4</b>, gap kartasi: <b>6</b></li><li>Maʼnosini top: <b>5</b>, ierogifini top va pinyin: <b>6</b>, tinglab top: <b>7</b></li><li>Boʻsh joyni toʻldir: <b>8</b>, gap tuzish: <b>10</b>, juftlash: <b>4</b></li><li>Xotiradan yozish: <b>12</b>, yangi kalit: <b>5</b></li><li>Har bir qoʻshimcha ierogif <b>+25%</b>, HSK 5 soʻzlari <b>×1.6</b></li></ul>
+      <p class="sub">Reytingda ismingiz va Telegram rasmingiz boshqalarga koʻrinadi.</p>
+    </details>`;
+  if (!D && !er) rankLoad(false);
+}
+$("#v-rank").addEventListener("click", e => {
+  const b = e.target.closest("[data-rkp]"); if (b) { hap("tap"); RKG.per = b.dataset.rkp; renderRank(); rankLoad(false); return; }
+  if (e.target.closest("[data-rkre]")) { delete RKG.err[RKG.per]; renderRank(); rankLoad(true); }
+});
+
 /* ================= KO'PROQ ================= */
 function renderMore(){
   const canHome = !!(TG && TG.addToHomeScreen && (!TG.isVersionAtLeast || TG.isVersionAtLeast("8.0")));
@@ -2667,7 +2791,7 @@ function renderMore(){
     </div>
     ${P.book==="hsk5" ? "" : `<div class="mgroup dmore"><button class="mrow" data-book5="1"><span class="mi2" style="--qc:linear-gradient(135deg,#B3124F,#FF6FA3)">${HEART}</span><span><b>Special for DILOBAR <span lang="zh">老师</span></b><span class="s">HSK 5 lugʻati: 1071 soʻz, 22 toʻplam</span></span><span class="chev">›</span></button></div>`}
     <p class="mhead">Natijalar</p>
-    <div class="mgroup">${row("stats","stats","#1F6B52","Statistika va kabinet","Qaysi turda, qaysi darsda xato koʻp")}</div>
+    <div class="mgroup">${row("rank","rank","#B8901A","Reyting","XP, daraja va umumiy reyting")}${row("stats","stats","#1F6B52","Statistika va kabinet","Qaysi turda, qaysi darsda xato koʻp")}</div>
     <p class="mhead">Sozlamalar</p>
     <div class="mgroup">
       <button class="mrow" data-set="font"><span class="mi2" style="--qc:#56605A">${SVG.font}</span><span><b>Ierogif shrifti</b><span class="s">楷体 — kitobdagidek, 黑体 — oddiy</span></span><span class="val" lang="zh">${P.font==="hei"?"黑体":"楷体"}</span></button>
@@ -2865,7 +2989,7 @@ setTimeout(initCloud, 0);
   function send(beacon){
     const n = Date.now(); if (vis) acc += n - t0; t0 = n;
     const d = Math.round(acc / 1000); acc -= d * 1000;
-    const body = JSON.stringify({init: TG.initData, sid, d, p: TG.platform || ""});
+    const body = JSON.stringify({init: TG.initData, sid, d, p: TG.platform || "", xp: xpPayload()});
     try { if (beacon && navigator.sendBeacon) navigator.sendBeacon(STATS_URL + "/ping", body); else fetch(STATS_URL + "/ping", {method:"POST", body, keepalive:true}).catch(()=>{}); } catch(_) {}
   }
   send(false);
