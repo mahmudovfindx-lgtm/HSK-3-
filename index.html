@@ -984,6 +984,118 @@ input,textarea,select{font-size:16px!important;}
 .rres{display:flex;flex-direction:column;align-items:center;padding:24px 0 4px;}
 .rres b{font-size:44px;}
 .rres span{color:var(--ink-2);}
+
+/* ================= REBRAND: tinch, yetuk dizayn ================= */
+:root:not(.dilobar){--paper:#F5F4F0;--surface:#FFFFFF;--ink:#1A1D1B;--ink-2:#5E6560;--ink-3:#9AA09B;--line:#E6E4DE;--mask:#ECEAE4;--primary:#1A1D1B;--primary-ink:#FFFFFF;--acc:#C8452F;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not(.dilobar){--paper:#111312;--surface:#1A1D1B;--ink:#ECECE7;--ink-2:#A8ADA9;--ink-3:#727874;--line:#2A2E2B;--mask:#242826;--primary:#ECECE7;--primary-ink:#111312;--acc:#E0705B;}}
+:root[data-theme="dark"]:not(.dilobar){--paper:#111312;--surface:#1A1D1B;--ink:#ECECE7;--ink-2:#A8ADA9;--ink-3:#727874;--line:#2A2E2B;--mask:#242826;--primary:#ECECE7;--primary-ink:#111312;--acc:#E0705B;}
+:root{--acc:#C8452F;}
+.top{border-bottom:0;background:var(--paper);}
+.appbar{padding:14px 0 10px;}
+.ttl{flex-direction:row;align-items:center;gap:8px;}
+.ttl h1{font-size:24px;letter-spacing:-.03em;}
+.ttl .cloud{margin:0;font-size:0;gap:0;padding:6px;}
+.ttl .cloud::before{width:7px;height:7px;}
+.fontbtn{height:34px;border-radius:999px;padding:0 12px;font-size:12px;}
+.ctxrow{flex-wrap:wrap;overflow:visible;gap:8px;padding-bottom:12px;}
+.ctxrow .books{flex:1 1 0;min-width:0;display:grid;grid-template-columns:1fr 1fr;background:var(--mask);border:0;padding:3px;border-radius:12px;}
+.ctxrow .books.dbooks{display:flex;}
+.ctxrow .books button{border-radius:9px;padding:7px 4px;font-size:13px;min-width:0;overflow:hidden;text-overflow:ellipsis;font-weight:700;text-align:center;white-space:nowrap;}
+.ctxrow .books button small{display:none;font-size:10.5px;font-weight:600;color:var(--ink-3);margin-left:4px;}
+.ctxrow .books button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1);}
+.lessbtn{flex:none;display:flex;align-items:center;gap:6px;height:38px;padding:0 12px;border:1px solid var(--line);background:var(--surface);border-radius:12px;font-size:13px;color:var(--ink-2);}
+.lessbtn b{color:var(--ink);font-size:13.5px;max-width:22vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.lessbtn i{font-style:normal;font-size:11px;transition:transform .2s;}
+.lessbtn[aria-expanded="true"] i{transform:rotate(180deg);}
+.ctxrow .chips{display:none;flex:1 1 100%;flex-wrap:wrap;gap:6px;padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;}
+.ctxrow .chips.open{display:flex;}
+.ctxrow .chip,.chip{border:1px solid var(--line);color:var(--ink-2);background:var(--surface);height:34px;min-width:34px;border-radius:10px;font-weight:600;}
+.ctxrow .chip[aria-pressed="true"],.chip[aria-pressed="true"]{background:var(--lc);border-color:var(--lc);color:#fff;}
+.ctxrow .chip.all{color:var(--ink);}
+.ctxrow .chip.all[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper);}
+main{padding-top:6px;}
+/* hero */
+.hero{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.03);}
+.hero::after{display:none;}
+.h-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;}
+.hero .greet{font-size:17px;font-weight:700;opacity:1;padding:0;color:var(--ink);}
+.hero .ctx{font-size:13px;color:var(--ink-3);opacity:1;padding:0;margin-top:2px;}
+.streak{flex:none;font-size:12px;color:var(--acc);border:1px solid color-mix(in srgb,var(--acc) 35%,transparent);border-radius:999px;padding:3px 10px;white-space:nowrap;}
+.streak b{font-size:14px;}
+.hstats{gap:0;margin:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.hstats div{background:none;border-radius:0;padding:12px 4px;text-align:center;opacity:1;}
+.hstats div + div{border-left:1px solid var(--line);}
+.hstats b{font-size:26px;font-weight:700;letter-spacing:-.02em;}
+.hstats span{font-size:12px;color:var(--ink-3);}
+.hero .go{background:var(--primary);color:var(--primary-ink);border-radius:14px;min-height:52px;font-size:15.5px;}
+.hero .go:disabled{background:var(--mask);color:var(--ink-3);opacity:1;}
+/* Dilobar kartasi: ixcham */
+.dspecial{padding:12px 14px;border-radius:16px;animation:none;background:linear-gradient(120deg,#8E1747,#C23C76);box-shadow:none;}
+.dspecial b{font-size:18px;}
+.dspecial small{font-size:10.5px;}
+.dspecial .ds-go{width:36px;height:36px;font-size:16px;animation:none;}
+.ds-hearts{display:none;}
+/* section heads */
+.sect{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);margin:26px 2px 10px;}
+/* quick actions */
+.qa{gap:8px;}
+.qa button{min-height:0;padding:14px;border-radius:16px;gap:10px;flex-direction:row;align-items:center;flex-wrap:wrap;}
+.qa .qi{width:36px;height:36px;border-radius:10px;background:color-mix(in srgb,var(--qc) 13%,transparent);color:var(--qc);}
+.qa svg{width:20px;height:20px;}
+.qa button b{font-size:14.5px;flex:1;min-width:0;line-height:1.25;}
+.qa button > span:not(.qi){display:none;}
+.qa .qa-wide > span:not(.qi){display:block;flex-basis:auto;font-size:12.5px;color:var(--ink-3);}
+.qa .qa-rad .qi{font-size:19px;}
+.wod,.lp{border-radius:18px;}
+/* more menu */
+.mgroup{border-radius:16px;}
+.mrow .mi2{width:34px;height:34px;background:color-mix(in srgb,var(--qc) 13%,transparent);color:var(--qc);}
+.mrow .mi2 b[lang="zh"]{color:var(--qc) !important;}
+.mrow svg{width:20px;height:20px;}
+.mhead{text-transform:uppercase;letter-spacing:.07em;font-size:12px;color:var(--ink-3);}
+/* nav */
+.nav button[aria-current="page"]{color:var(--ink);}
+.nav button[aria-current="page"] .ic{background:var(--mask);}
+/* flashcard */
+.hcard .face{border-radius:22px;box-shadow:0 18px 40px -32px rgba(0,0,0,.5);}
+.hcard .face .fc-band{background:none;color:var(--ink-3);border-bottom:1px solid var(--line);padding:10px 16px;font-size:12px;}
+.hcard .face .fc-band::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--lc);margin-right:-4px;align-self:center;}
+.hcard .face .fc-band span:first-of-type{margin-right:auto;}
+.hcard .face .fc-band [lang="zh"]{font-size:13px;color:var(--ink-3);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:55%;}
+.hf-body .hint{font-size:13px;color:var(--ink-3);}
+.hb-head .py,.hcard .py{color:var(--ink);}
+.fc-sec{background:none;border-top:1px solid var(--line);border-radius:0;padding:12px 2px 0;margin-top:12px;}
+.fc-lbl{color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-size:11px;}
+.grades{grid-template-columns:1fr 1fr !important;gap:10px;}
+.hctl .gb{min-height:56px;font-size:16px;}
+.gb small{font-size:11.5px;font-weight:600;opacity:.8;}
+.card-top .prog i{background:var(--ink);}
+.btn{border-radius:12px;}
+/* exercise hub */
+.exn{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;}
+.exn > span{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);}
+.exn .seg{border-radius:12px;background:var(--mask);border:0;}
+.exn .seg button{min-width:42px;padding:7px 10px;border-radius:9px;}
+.exn .seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1);}
+.hub{grid-template-columns:1fr 1fr;gap:10px;}
+.hubc{border-radius:18px;padding:12px;gap:6px;position:relative;}
+.hubc .pv{height:74px;border-radius:12px;background:var(--paper);display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;color:var(--ink-2);margin-bottom:4px;}
+.hubc .pv b{font-family:var(--hz);font-weight:400;font-size:34px;color:var(--ink);line-height:1;}
+.hubc .pv em{font-style:normal;font-weight:700;font-size:16px;color:var(--ink);}
+.hubc .pv em u{text-decoration:none;color:var(--acc);}
+.hubc .pv i{font-style:normal;color:var(--ink-3);}
+.hubc .pv i.gap{width:30px;border-bottom:2px solid var(--acc);height:26px;}
+.hubc .pv .pc{font-family:var(--hz);font-size:20px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:2px 8px;}
+.hubc .pv svg{width:34px;height:34px;fill:none;stroke:var(--ink);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+.hubc b{font-size:14.5px;line-height:1.25;}
+.hubc .acc{position:absolute;top:18px;right:18px;font-size:11.5px;font-weight:700;color:var(--ink-3);margin:0;}
+.hubc .abar{height:3px;border-radius:2px;background:var(--mask);overflow:hidden;}
+.hubc .abar i{display:block;height:100%;background:var(--good);}
+/* yodlash / kalitlar */
+.wtop{background:var(--mask);}
+.rmodes button[aria-pressed="true"]{background:var(--surface);color:var(--ink);border-color:var(--ink);}
+.rs-py{color:var(--acc);}
+.h2 .zh{color:var(--acc);}
 </style>
 </head>
 <body>
@@ -994,7 +1106,7 @@ input,textarea,select{font-size:16px!important;}
       <div class="ttl"><h1 id="ttl">Bugun</h1><button class="cloud" id="cloudSt" type="button">Ulanmoqda…</button></div>
       <button class="fontbtn" id="fontBtn" type="button">Shrift</button>
     </div>
-    <div class="ctxrow" id="ctxRow"><div class="books" id="books" aria-label="Kitob"></div><div class="chips" id="chips" aria-label="Mavzular"></div></div>
+    <div class="ctxrow" id="ctxRow"><div class="books" id="books" aria-label="Kitob"></div><button class="lessbtn" id="lessBtn" type="button" aria-expanded="false"></button><div class="chips" id="chips" aria-label="Mavzular"></div></div>
     <div class="homebar" id="homeBar" hidden><span>Ilovani telefon ekraniga qoʻsh: bitta bosishda ochiladi.</span><button class="btn sm primary" id="homeBtn" type="button">Ekranga qoʻshish</button></div>
   </div>
 </header>
@@ -1063,7 +1175,7 @@ const S = {srs:{}, prefs:{}, exw:{}, days:[], st:{ty:{},L:{},g:{},d:{},w:{}}, lr
 try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); } } } catch(e) {}
 if (!S.h5) S.h5 = H5DEF();
 const ALL = LESS.map(L=>L.n);
-const BOOKS = [{k:"new", zh:"新HSK教程3", uz:"Yangi (HSK 3.0)"}, {k:"old", zh:"HSK标准教程3", uz:"Eski (HSK 2.0)"}, {k:"hsk5", zh:"HSK 5", uz:"Dilobar 老师 uchun"}];
+const BOOKS = [{k:"new", zh:"新HSK教程3", uz:"Yangi HSK 3", v:"3.0"}, {k:"old", zh:"HSK标准教程3", uz:"Eski HSK 3", v:"2.0"}, {k:"hsk5", zh:"HSK 5", uz:"Dilobar 老师 uchun"}];
 function lessonOf(n){ return LESS.find(x=>x.n===n); }
 function bookOf(n){ const L = lessonOf(n); return (L && L.book) || "new"; }
 function lname(n){ const L = lessonOf(n); return L && L.book==="old" ? `Standart ${L.d}-dars` : L && L.book==="hsk5" ? `${L.d}-toʻplam` : n + "-mavzu"; }
@@ -1248,19 +1360,26 @@ function renderTabs(){
   try { if (TG && TG.BackButton) { if (sub) TG.BackButton.show(); else TG.BackButton.hide(); } } catch(_) {}
   $("#ctxRow").hidden = ["more","stats","tips","spell"].includes(P.tab) || dm;
   $("#chips").hidden = (P.tab==="home" && P.book==="hsk5") || P.tab==="texts" || P.tab==="grammar" || (P.tab==="write" && P.wtop==="rad");
+  $("#lessBtn").hidden = $("#chips").hidden;
 }
 function goTab(t){ P.tab = t; RK.open = null; const rsh = document.getElementById("radSheet"); if (rsh) rsh.innerHTML = ""; if (t!=="cards") setFocus(false); save(); renderTabs(); renderView(); window.scrollTo({top:0}); }
 $("#nav").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; hap("tap"); goTab(b.dataset.tab); });
 $("#backBtn").addEventListener("click", () => backAct());
 try { if (TG && TG.BackButton) TG.BackButton.onClick(() => backAct()); } catch(_) {}
+let CHO = false;
+$("#lessBtn").addEventListener("click", () => { hap("tap"); CHO = !CHO; renderChips(); });
 function renderChips(){
   const BL = bookLessons(P.book), all = P.lessons.length === BL.length;
   $("#books").innerHTML = P.book==="hsk5"
     ? `<button data-book="new" class="dback">‹ HSK 3</button><span class="dtag">${HEART}Special for DILOBAR <span lang="zh">老师</span></span>`
-    : BOOKS.filter(b => b.k!=="hsk5").map(b => `<button data-book="${b.k}" aria-pressed="${P.book===b.k}"><span lang="zh">${b.zh}</span><small>${b.uz}</small></button>`).join("");
+    : BOOKS.filter(b => b.k!=="hsk5").map(b => `<button data-book="${b.k}" aria-pressed="${P.book===b.k}">${b.uz}<small>${b.v}</small></button>`).join("");
+  const sel = LESS.filter(L => P.lessons.includes(L.n));
+  $("#lessBtn").innerHTML = `<span>${P.book==="hsk5"?"Toʻplam":"Dars"}</span><b>${all ? "Hammasi" : sel.length<=3 ? sel.map(L=>L.d||L.n).join(", ") : sel.length+" ta"}</b><i>▾</i>`;
+  $("#lessBtn").setAttribute("aria-expanded", String(CHO));
+  $("#chips").classList.toggle("open", CHO);
   $("#books").classList.toggle("dbooks", P.book==="hsk5");
   document.documentElement.classList.toggle("dilobar", P.book==="hsk5");
-  $("#chips").innerHTML = `<span class="lbl">${P.book==="old"?"Dars":P.book==="hsk5"?"Toʻplam":"Mavzu"}:</span>` + LESS.filter(L=>(L.book||"new")===P.book).map(L => `<button class="chip" style="--lc:${lc(L.n)}" data-l="${L.n}" aria-pressed="${P.lessons.includes(L.n)}" aria-label="${lname(L.n)}">${L.d||L.n}</button>`).join("") + `<button class="chip all" data-l="all" aria-pressed="${all}">Hammasi</button>`;
+  $("#chips").innerHTML = `<span class="lbl">${P.book==="old"?"Dars":P.book==="hsk5"?"Toʻplam":"Mavzu"}:</span>` + LESS.filter(L=>(L.book||"new")===P.book).map(L => `<button class="chip" style="--lc:${lc(L.n)}" data-l="${L.n}" aria-pressed="${!all && P.lessons.includes(L.n)}" aria-label="${lname(L.n)}">${L.d||L.n}</button>`).join("") + `<button class="chip all" data-l="all" aria-pressed="${all}">Hammasi</button>`;
 }
 $("#books").addEventListener("click", e => {
   const b = e.target.closest("[data-book]"); if (!b || b.dataset.book===P.book) return;
@@ -1473,7 +1592,7 @@ function band(n, label){ return `<div class="fc-band"><span>${lname(n)}${label?`
 function cardCtl(){
   const s = session, c = s.q[s.i], pv = preview(c.id, s.dir);
   return s.revealed
-    ? `<div class="grades"><button class="gb again" data-g="again">Bilmadim<small>${dayLabel(pv.again)}</small></button><button class="gb hard" data-g="hard">Qiynaldim<small>${dayLabel(pv.hard)}</small></button><button class="gb good" data-g="good">Bildim<small>${dayLabel(pv.good)}</small></button></div>`
+    ? `<div class="grades"><button class="gb again" data-g="again">Bilmadim<small>${dayLabel(pv.again)}</small></button><button class="gb good" data-g="good">Bildim<small>${dayLabel(pv.good)}</small></button></div>`
     : `<button class="btn primary reveal" data-act="reveal">Javobni ochish</button>`;
 }
 function fitPlay(){
@@ -1501,7 +1620,7 @@ function renderCard(){
   v.innerHTML = `<div class="card-top" style="--lc:${lc(c.L)}"><span class="cnt">${s.done} / ${s.total}</span><span class="prog"><i style="width:${s.done/s.total*100}%"></i></span><button class="stop" data-act="stop">Toʻxtatish</button></div>
     <div class="hstage"><div class="hcard enter${s.revealed?" flipped":""}" id="hcard" style="--lc:${lc(c.L)}"><div class="inner">
       <div class="face hfront">${band(c.L)}<div class="hf-body">${front}<p class="hint">${hint}</p></div><span class="fhint">Bosib aylantir ↻</span></div>
-      <div class="face hback">${band(c.L)}<div class="hb-body"><div class="hb-head">${head}${sayBtn(isW?c.tts:c.zh)}</div>${extra}</div><span class="fhint">← Bilmadim · Bildim →</span></div>
+      <div class="face hback">${band(c.L)}<div class="hb-body"><div class="hb-head">${head}${sayBtn(isW?c.tts:c.zh)}</div>${extra}</div></div>
     </div></div></div>
     <div class="hctl" id="hctl">${cardCtl()}</div>`;
   fitPlay(); hcSwipe();
@@ -1567,6 +1686,7 @@ function copyWeak(box){ const wk = weakList(); if (!wk.length) return; copyText(
 
 /* ================= MASHQLAR ================= */
 let X = null;
+const EXPV = {mean:'<b lang="zh">叶</b><i>→</i><em>?</em>', hanzi:'<em>barg</em><i>→</i><b lang="zh">?</b>', tone:'<em>y<u>è</u></em>', listen:'<svg viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>', fill:'<b lang="zh">我</b><i class="gap"></i><b lang="zh">你</b>', order:'<span class="pc">词</span><span class="pc">句</span><span class="pc">子</span>', match:'<b lang="zh">字</b><i>—</i><em>soʻz</em>'};
 const EXT = [
   {k:"mean", zh:"看字选义", uz:"Maʼnosini top", d:"Ierogifga qarab toʻgʻri maʼnoni tanla."},
   {k:"hanzi", zh:"看义选字", uz:"Ierogifini top", d:"Oʻzbekcha maʼnoga mos ierogifni tanla."},
@@ -1645,10 +1765,10 @@ function renderEx(){
   if (!X) {
     const nw = wpool().length, ns = spool().filter(s=>s.tag).length;
     v.innerHTML = `
-      <div class="row"><span class="lbl">Savollar soni</span><div class="seg" data-p="exn">${["5","10","20","30"].map(n=>`<button data-v="${n}" aria-pressed="${P.exn===n}">${n}</button>`).join("")}</div></div>
-      <div class="hub">${EXT.filter(t => P.book!=="hsk5" || (t.k!=="order" && t.k!=="fill")).map(t=>{ const a = pct(S.st.ty[t.k]); return `<button class="hubc" data-ex="${t.k}" ${t.k==="order"&&!ns || nw<4 ? "disabled":""}><span class="zh">${t.zh}</span><b>${t.uz}</b><span>${t.d}</span><span class="acc">${a===null?"Hali bajarilmagan":`Natijang: ${a}%`}</span></button>`; }).join("")}</div>
-      ${S.hist.length ? `<h2 class="h2">Oxirgi mashqlaring</h2>${S.hist.slice(0,8).map(h=>`<div class="hw"><span class="sub">${String(new Date(h.t).getDate()).padStart(2,"0")}.${String(new Date(h.t).getMonth()+1).padStart(2,"0")}, ${hhmm(h.t)}</span><div><b style="color:var(--ink)">${esc(TYPE_UZ[h.type]||h.type)}</b>${h.gk&&GMAP[h.gk]?` <span lang="zh">${esc(GMAP[h.gk].g.zh)}</span>`:""}</div><div class="er" style="color:${h.score/h.total>=0.8?"var(--good)":h.score/h.total>=0.6?"var(--hard)":"var(--again)"}">${h.score}/${h.total}<small>${Math.round(h.score/h.total*100)}%</small></div></div>`).join("")}` : ""}
-      <p class="tip" style="margin-top:22px">Har kuni 2 xil mashq yetarli: biri soʻz uchun (masalan, “Ierogifini top”), biri grammatika uchun (“Gap tuz” yoki “Boʻsh joyni toʻldir”). Qaysi turda xato koʻpligini “Statistika”da koʻrasan.</p>`;
+      <div class="exn"><span>Savollar</span><div class="seg" data-p="exn">${["5","10","20","30"].map(n=>`<button data-v="${n}" aria-pressed="${P.exn===n}">${n}</button>`).join("")}</div></div>
+      <div class="hub">${EXT.filter(t => P.book!=="hsk5" || (t.k!=="order" && t.k!=="fill")).map(t=>{ const a = pct(S.st.ty[t.k]); return `<button class="hubc" data-ex="${t.k}" ${t.k==="order"&&!ns || nw<4 ? "disabled":""}><span class="pv">${EXPV[t.k]}</span><b>${t.uz}</b>${a===null?"":`<span class="acc">${a}%</span>`}${a===null?"":`<span class="abar"><i style="width:${a}%"></i></span>`}</button>`; }).join("")}</div>
+      ${S.hist.length ? `<h3 class="sect">Oxirgi natijalar</h3>${S.hist.slice(0,8).map(h=>`<div class="hw"><span class="sub">${String(new Date(h.t).getDate()).padStart(2,"0")}.${String(new Date(h.t).getMonth()+1).padStart(2,"0")}, ${hhmm(h.t)}</span><div><b style="color:var(--ink)">${esc(TYPE_UZ[h.type]||h.type)}</b>${h.gk&&GMAP[h.gk]?` <span lang="zh">${esc(GMAP[h.gk].g.zh)}</span>`:""}</div><div class="er" style="color:${h.score/h.total>=0.8?"var(--good)":h.score/h.total>=0.6?"var(--hard)":"var(--again)"}">${h.score}/${h.total}<small>${Math.round(h.score/h.total*100)}%</small></div></div>`).join("")}` : ""}
+`;
     return;
   }
   if (X.done) return renderExDone();
@@ -2325,12 +2445,9 @@ function renderHome(){
   const wk = weakList(8);
   const H5 = P.book==="hsk5";
   $("#v-home").innerHTML = `${H5 ? dilBanner() : ""}
-    <section class="hero" data-hz="${w?esc(hanzi(w.hz)[0]):"学"}">
-      <p class="greet">${greetWord()}${u&&u.first_name?",":""}</p>
-      <h2>${u&&u.first_name ? esc(u.first_name) : "Bugungi mashgʻulot"}</h2>
-      <p class="ctx">${esc(ctx)}</p>
-      <div class="seal" title="Ketma-ket kunlar"><div><b>${streak()}</b><small>天</small></div></div>
-      <div class="hstats"><div><b>${c.due}</b>takror</div><div><b>${c.fresh}</b>yangi</div><div><b>${solid}</b>mustahkam</div></div>
+    <section class="hero">
+      <div class="h-top"><div><p class="greet">${greetWord()}${u&&u.first_name?", "+esc(u.first_name):""}</p><p class="ctx">${esc(ctx)}</p></div><span class="streak" title="Ketma-ket kunlar"><b>${streak()}</b> kun</span></div>
+      <div class="hstats"><div><b>${c.due}</b><span>takror</span></div><div><b>${c.fresh}</b><span>yangi</span></div><div><b>${solid}</b><span>mustahkam</span></div></div>
       <button class="go" data-go="due" ${c.due||c.fresh?"":"disabled"}>${c.due ? `Takrorni boshlash: ${c.due} ta` : c.fresh ? "Yangi kartalarni boshlash" : "Bugun takror yoʻq"}</button>
     </section>
     ${H5 ? "" : `<button class="dspecial" data-dil="1"><span class="ds-hearts" aria-hidden="true">${[0,1,2,3,4,5].map(i=>`<i style="--i:${i}">${HEART}</i>`).join("")}</span><span class="ds-tx"><small>Special for</small><b>DILOBAR <span lang="zh">老师</span></b><span>HSK 5 · 1071 soʻz · 22 toʻplam</span></span><span class="ds-go">${HEART}</span></button>`}
