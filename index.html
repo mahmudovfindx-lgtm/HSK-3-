@@ -10,7 +10,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Ma+Shan+Zheng&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Ma+Shan+Zheng&display=swap">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23111113'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-size='22' font-family='KaiTi,STKaiti,serif' fill='%23fff'%3E%E6%B1%89%3C/text%3E%3Ccircle cx='31.5' cy='8.5' r='3.4' fill='%23E5484D'/%3E%3C/svg%3E">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 :root{
@@ -1143,6 +1144,190 @@ main{padding-top:6px;}
 .rk-how summary{cursor:pointer;padding:13px 0;font-weight:700;}
 .rk-how ul{padding-left:18px;margin:6px 0;}
 .rk-how li{margin:3px 0;}
+
+/* =================================================================
+   V3 — MINIMAL: Inter, yumaloq shakllar, bitta urg'u rangi (qizil)
+   ================================================================= */
+:root:not(.dilobar){--paper:#F6F6F3;--surface:#FFFFFF;--ink:#111113;--ink-2:#5E6066;--ink-3:#A0A2A8;--line:#EAEAE6;--mask:#EFEFEB;--primary:#111113;--primary-ink:#FFFFFF;--acc:#E5484D;--good:#2F9E6E;--good-soft:#E7F5EE;--again:#E5484D;--again-soft:#FDECEC;--hard:#D9822B;--hard-soft:#FBF1E4;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not(.dilobar){--paper:#0C0C0D;--surface:#17171A;--ink:#F2F2F0;--ink-2:#A7A8AD;--ink-3:#6C6E74;--line:#252529;--mask:#1F1F23;--primary:#F2F2F0;--primary-ink:#0C0C0D;--acc:#FF6369;--good:#3DD68C;--good-soft:#14281F;--again:#FF6369;--again-soft:#2C1517;--hard:#F2A44B;--hard-soft:#2A1F12;}}
+:root[data-theme="dark"]:not(.dilobar){--paper:#0C0C0D;--surface:#17171A;--ink:#F2F2F0;--ink-2:#A7A8AD;--ink-3:#6C6E74;--line:#252529;--mask:#1F1F23;--primary:#F2F2F0;--primary-ink:#0C0C0D;--acc:#FF6369;--good:#3DD68C;--good-soft:#14281F;--again:#FF6369;--again-soft:#2C1517;--hard:#F2A44B;--hard-soft:#2A1F12;}
+:root{--ui:"Inter","Noto Sans",var(--hz),system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:24px;--r-sm:16px;--sh:0 1px 2px rgba(17,17,19,.04),0 10px 30px -18px rgba(17,17,19,.14);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--sh:0 0 0 1px var(--line);}}
+:root[data-theme="dark"]{--sh:0 0 0 1px var(--line);}
+body{font-feature-settings:"cv11","ss01";-webkit-font-smoothing:antialiased;letter-spacing:-.006em;}
+/* header + logo */
+.appbar{padding:16px 0 12px;gap:12px;}
+.logo{display:flex;align-items:center;gap:8px;flex:none;}
+.logo svg{width:36px;height:36px;display:block;}
+.logo .lg-bg{fill:var(--ink);}
+.logo .lg-hz{fill:var(--paper);font-family:var(--kai);font-size:22px;}
+.logo .lg-dot{fill:var(--acc);}
+.logo b{display:none;}
+.ttl h1{font-size:26px;font-weight:800;letter-spacing:-.035em;}
+.back{width:36px;height:36px;border:0;background:var(--surface);box-shadow:var(--sh);}
+.fontbtn{border:0;background:var(--surface);box-shadow:var(--sh);height:36px;}
+.ctxrow .books{background:var(--mask);border-radius:999px;padding:4px;}
+.ctxrow .books button{border-radius:999px;padding:8px 6px;}
+.lessbtn{border:0;box-shadow:var(--sh);border-radius:999px;height:40px;padding:0 14px;}
+.ctxrow .chips{border:0;box-shadow:var(--sh);border-radius:var(--r);padding:12px;}
+.ctxrow .chip,.chip{border-radius:999px;border-color:transparent;background:var(--mask);}
+/* generic */
+.sect{font-size:12px;letter-spacing:.08em;margin:28px 4px 12px;color:var(--ink-3);}
+.btn{border-radius:999px;border:0;background:var(--mask);font-weight:600;min-height:48px;}
+.btn.primary{background:var(--primary);color:var(--primary-ink);}
+.btn.sm{min-height:38px;}
+.tg{border:0;background:var(--mask);}
+.seg{border:0;background:var(--mask);border-radius:999px;padding:4px;}
+.seg button{border-radius:999px;}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.search,.dsearch{border:0 !important;background:var(--surface) !important;box-shadow:var(--sh);border-radius:999px !important;height:46px;padding:0 18px !important;}
+.say{border:0;background:var(--mask);}
+/* cards everywhere */
+.hero,.wod,.lp,.mgroup,.qa button,.hubc,.rk-hero,.rk-stats div,.rk-list,.rk-how,.basics,.tx-card,.gc,.weak,.rc,.rsheet,.dgoal,.dwod,.dquote,.dxp,.dsum,.dmode,.set{border:0 !important;box-shadow:var(--sh);}
+.hero{border-radius:28px;padding:20px;}
+.hero .greet{font-size:20px;font-weight:800;letter-spacing:-.03em;}
+.streak{border:0;background:color-mix(in srgb,var(--acc) 10%,transparent);font-weight:700;}
+.xprow{border:0;background:var(--paper);border-radius:20px;}
+.lvl{border-radius:50%;background:var(--ink);color:var(--paper);font-size:15px;}
+.xbar i{background:var(--acc);}
+.hstats{border:0;margin:14px 0;gap:8px;}
+.hstats div{background:var(--paper);border-radius:18px;}
+.hstats div + div{border-left:0;}
+.hero .go{border-radius:999px;min-height:54px;}
+.qa button{border-radius:22px;padding:14px;}
+.qa .qi{border-radius:50%;}
+.wod,.lp{border-radius:var(--r);}
+.mgroup{border-radius:var(--r);}
+.mrow{border-bottom-color:var(--mask);padding:14px 16px;}
+.mrow .mi2{border-radius:50%;}
+.hubc{border-radius:var(--r);}
+.hubc .pv{border-radius:18px;}
+.exn .seg{border-radius:999px;}
+.hcard .face{border:0;border-radius:30px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 24px 48px -28px rgba(0,0,0,.25);}
+.gb{border-radius:999px !important;border:0 !important;}
+.card-top .prog{height:6px;border-radius:999px;}
+.card-top .prog i{background:var(--acc);border-radius:999px;}
+.wtop{border-radius:999px;}
+.wtop button{border-radius:999px;}
+.rmodes button{border-radius:999px;border:0;background:var(--mask);}
+.rc{border-radius:20px;}
+.rcard .rf{border:0;border-radius:30px;box-shadow:var(--sh);}
+.rk-seg,.rfil .chip{border-radius:999px;}
+#xpFloat{background:var(--ink);color:var(--paper);}
+/* floating bottom nav */
+.nav{grid-template-columns:repeat(6,1fr);left:10px;right:10px;bottom:calc(8px + env(safe-area-inset-bottom,0px));padding:6px 4px;border-radius:28px;border:0;background:color-mix(in srgb,var(--surface) 86%,transparent);box-shadow:0 10px 30px -10px rgba(0,0,0,.22),0 0 0 1px color-mix(in srgb,var(--line) 70%,transparent);max-width:560px;}
+.nav button{font-size:10.5px;gap:2px;padding:4px 0;color:var(--ink-3);}
+.nav .ic{width:44px;height:30px;}
+.nav svg{width:22px;height:22px;}
+.nav button[aria-current="page"]{color:var(--ink);}
+.nav button[aria-current="page"] .ic{background:var(--mask);}
+.nav button[data-tab="rank"][aria-current="page"] .ic{background:color-mix(in srgb,#F5B700 22%,transparent);color:#B88400;}
+main{padding-bottom:110px;}
+/* ---------- REYTING v3 ---------- */
+.rk-hero{display:flex;align-items:center;gap:18px;background:var(--ink);color:var(--paper);border-radius:30px;padding:20px;box-shadow:0 20px 40px -24px rgba(0,0,0,.5) !important;}
+.rk-ringbox{position:relative;flex:none;width:108px;height:108px;}
+.ring .rg-bg{fill:none;stroke:color-mix(in srgb,var(--paper) 14%,transparent);stroke-width:8;}
+.ring .rg-fg{fill:none;stroke:#F5B700;stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset .6s ease;}
+.rk-lv{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;}
+.rk-lv b{font-size:34px;font-weight:800;letter-spacing:-.04em;}
+.rk-lv small{font-size:11px;opacity:.6;margin-top:3px;}
+.rk-hx{min-width:0;display:flex;flex-direction:column;gap:4px;}
+.rk-cap{font-size:12px;opacity:.55;text-transform:uppercase;letter-spacing:.08em;font-weight:700;}
+.rk-hx > b{font-size:30px;font-weight:800;letter-spacing:-.04em;line-height:1.05;}
+.rk-hx > b small{font-size:15px;opacity:.6;font-weight:700;}
+.rk-next{font-size:12.5px;opacity:.7;}
+.rk-next b{opacity:1;}
+.rk-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 18px;}
+.rk-stats div{background:var(--surface);border-radius:20px;padding:12px 8px;text-align:center;}
+.rk-stats b{display:block;font-size:19px;font-weight:800;letter-spacing:-.03em;}
+.rk-stats span{font-size:11.5px;color:var(--ink-3);}
+.rk-seg{background:var(--mask);border-radius:999px;padding:4px;margin-bottom:18px;}
+.rk-seg button{border-radius:999px;height:38px;}
+.podium{display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:end;gap:8px;margin:28px 0 14px;}
+.pd{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0;position:relative;}
+.pd .rav{width:54px;height:54px;font-size:20px;box-shadow:0 0 0 3px var(--paper),0 0 0 5px var(--mc,#ccc);}
+.pd.p1 .rav{width:70px;height:70px;font-size:26px;}
+.pd.p1{--mc:#F5B700;} .pd.p2{--mc:#A9B1BA;} .pd.p3{--mc:#D08A4E;}
+.crown{position:absolute;top:-24px;font-size:22px;}
+.pd-nm{margin-top:10px;font-size:13.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.pd-xp{font-size:12px;color:var(--ink-3);font-weight:600;font-variant-numeric:tabular-nums;}
+.pd-base{width:100%;margin-top:10px;border-radius:20px 20px 8px 8px;background:color-mix(in srgb,var(--mc) 18%,var(--surface));display:flex;align-items:flex-start;justify-content:center;padding-top:10px;}
+.pd-base span{font-size:22px;font-weight:800;color:var(--mc);}
+.pd.p1 .pd-base{height:96px;} .pd.p2 .pd-base{height:70px;} .pd.p3 .pd-base{height:54px;}
+.pd.me .pd-nm{color:var(--acc);}
+.rk-list{padding:6px 14px;border-radius:var(--r);}
+.rk-list li{border-bottom-color:var(--mask);}
+.rk-list li.me{background:color-mix(in srgb,var(--acc) 8%,transparent);border-radius:16px;margin:2px -8px;padding:10px 8px;}
+.rk-mine{border:0;background:var(--ink);color:var(--paper);border-radius:999px;padding:10px 18px;}
+.rk-mine .rk-n{color:inherit;opacity:.6;}
+.rk-empty{border:0;box-shadow:var(--sh);border-radius:var(--r);padding:36px 20px;}
+.rk-ei{width:56px;height:56px;border-radius:50%;background:var(--mask);display:grid;place-items:center;margin-bottom:6px;}
+.rk-ei svg{width:26px;height:26px;fill:none;stroke:var(--ink-2);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.rk-skel{display:grid;gap:8px;}
+.rk-skel i{height:62px;border-radius:20px;background:linear-gradient(90deg,var(--mask),var(--surface),var(--mask));background-size:200% 100%;animation:skel 1.2s linear infinite;}
+@keyframes skel{to{background-position:-200% 0;}}
+.rk-how{border-radius:var(--r);}
+.rk-rules{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:4px 0 8px;}
+.rk-rules div{display:flex;justify-content:space-between;align-items:center;background:var(--paper);border-radius:12px;padding:8px 12px;font-size:13px;}
+.rk-rules b{font-weight:800;}
+/* ---------- DILOBAR 老师 v3: nafis atirgul-oltin ---------- */
+:root.dilobar{--paper:#FBF6F7;--surface:#FFFFFF;--ink:#2A1420;--ink-2:#7A5565;--ink-3:#B4919F;--line:#F2E2E8;--mask:#F6EBEF;--primary:#8E1F52;--primary-ink:#fff;--acc:#C2477F;--gold:#C9A04E;--sh:0 1px 2px rgba(142,31,82,.05),0 14px 34px -20px rgba(142,31,82,.28);}
+@media (prefers-color-scheme: dark){:root.dilobar:not([data-theme="light"]){--paper:#140A10;--surface:#1F1118;--ink:#F8E9EF;--ink-2:#CFA9B8;--ink-3:#8F6C7B;--line:#3A2230;--mask:#2A1621;--primary:#F28AB7;--primary-ink:#2A0A18;--acc:#F28AB7;--gold:#E2BE6E;--sh:0 0 0 1px var(--line);}}
+:root.dilobar .logo .lg-bg{fill:var(--primary);}
+:root.dilobar .logo .lg-dot{fill:var(--gold);}
+:root.dilobar .dh{background:radial-gradient(120% 140% at 100% 0%,#C2477F 0%,#8E1F52 45%,#3A0C24 100%);border:0;border-radius:32px;padding:22px 20px;box-shadow:0 24px 50px -28px rgba(90,10,45,.85);}
+:root.dilobar .dh::before{content:"";position:absolute;inset:8px;border-radius:26px;border:1px solid rgba(226,190,110,.35);pointer-events:none;}
+:root.dilobar .dh::after{color:rgba(226,190,110,.10);}
+:root.dilobar .dh-only{background:none;border:1px solid rgba(226,190,110,.55);color:#F1D9A0;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;}
+:root.dilobar .dh h2{font-size:30px;font-weight:800;letter-spacing:-.03em;}
+:root.dilobar .dh h2 [lang="zh"]{color:#F1D9A0;}
+:root.dilobar .dh-float i{opacity:.5;}
+.dtoday{display:grid;gap:12px;margin:0 0 6px;}
+.dcap{display:block;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold,#C9A04E);margin-bottom:8px;}
+.dgoal{display:flex;gap:16px;align-items:center;background:var(--surface);border-radius:var(--r);padding:16px;}
+.dg-ring{position:relative;flex:none;width:84px;height:84px;}
+.dg-ring svg{width:84px;height:84px;}
+.dg-bg{fill:none;stroke:var(--mask);stroke-width:8;}
+.dg-fg{fill:none;stroke:url(#dgGrad);stroke:var(--acc);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset .6s;}
+.dg-ring div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;}
+.dg-ring b{font-size:22px;font-weight:800;}
+.dg-ring small{font-size:11px;color:var(--ink-3);margin-top:2px;}
+.dg-tx{min-width:0;display:flex;flex-direction:column;gap:2px;}
+.dg-tx > b{font-size:16px;}
+.dg-tx > span{font-size:12.5px;color:var(--ink-2);}
+.dg-pick{display:flex;gap:6px;margin-top:8px;}
+.dg-pick button{height:30px;min-width:40px;padding:0 10px;border:0;border-radius:999px;background:var(--mask);font-size:12.5px;font-weight:700;color:var(--ink-2);}
+.dg-pick button[aria-pressed="true"]{background:var(--primary);color:var(--primary-ink);}
+.dwod{background:var(--surface);border-radius:var(--r);padding:16px;}
+.dw-main{display:flex;align-items:center;gap:14px;}
+.dw-hz{font-family:var(--hz);font-size:44px;line-height:1;color:var(--ink);flex:none;}
+.dw-tx{flex:1;min-width:0;display:flex;flex-direction:column;}
+.dw-tx b{color:var(--acc);font-size:16px;}
+.dw-tx > span:not(.en){font-size:14.5px;}
+.dw-act{display:flex;gap:6px;align-items:center;}
+.dw-act .star{width:36px;height:36px;border-radius:50%;border:0;background:var(--mask);color:var(--ink-3);font-size:16px;}
+.dw-act .star[aria-pressed="true"]{color:var(--gold,#C9A04E);}
+.dw-ex{margin:12px 0 0;padding-top:12px;border-top:1px solid var(--mask);font-size:13.5px;color:var(--ink-2);}
+.dw-ex [lang="zh"]{font-size:17px;color:var(--ink);}
+.dquote{position:relative;background:linear-gradient(160deg,color-mix(in srgb,var(--gold,#C9A04E) 14%,var(--surface)),var(--surface));border-radius:var(--r);padding:18px 18px 16px;}
+.dquote .say{position:absolute;top:14px;right:14px;}
+.dq-zh{margin:0;font-family:var(--hz);font-size:24px;line-height:1.35;color:var(--ink);padding-right:40px;}
+.dq-py{margin:4px 0 0;font-size:13px;color:var(--acc);font-weight:600;}
+.dq-uz{margin:6px 0 0;font-size:14px;color:var(--ink-2);}
+.dxp{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border-radius:999px;padding:8px 16px 8px 8px;}
+.dxp .lvl{width:40px;height:40px;background:linear-gradient(135deg,var(--gold,#C9A04E),#9C7410);color:#fff;}
+.dxp > span:nth-child(2){flex:1;display:flex;flex-direction:column;line-height:1.25;}
+.dxp small{font-size:12px;color:var(--ink-3);}
+.dxp .chev{font-size:22px;color:var(--ink-3);}
+:root.dilobar .dmodes{gap:10px;}
+:root.dilobar .dmode{border-radius:22px;background:var(--surface);}
+:root.dilobar .dmi{border-radius:50%;background:color-mix(in srgb,var(--acc) 12%,transparent);color:var(--acc);}
+:root.dilobar .dsel button{border-radius:999px;border:0;background:var(--mask);}
+:root.dilobar .dsel button[aria-pressed="true"]{background:var(--primary);color:var(--primary-ink);}
+:root.dilobar .set{border-radius:18px;}
+:root.dilobar .dcont{border:0;border-radius:999px;box-shadow:var(--sh);background:var(--surface);}
+:root.dilobar .dlist li{border-bottom-color:var(--mask);}
+:root.dilobar .dspecial,.dspecial{border-radius:24px;background:radial-gradient(120% 160% at 100% 0%,#C2477F,#8E1F52 55%,#3A0C24);box-shadow:0 18px 36px -22px rgba(90,10,45,.8);}
 </style>
 </head>
 <body>
@@ -1150,6 +1335,7 @@ main{padding-top:6px;}
   <div class="wrap">
     <div class="appbar">
       <button class="back" id="backBtn" type="button" aria-label="Orqaga" hidden>‹</button>
+      <span class="logo" id="logo" aria-label="HSK"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="13" class="lg-bg"/><text x="20" y="28.2" text-anchor="middle" class="lg-hz">汉</text><circle cx="31.6" cy="8.4" r="3.4" class="lg-dot"/></svg><b>HSK</b></span>
       <div class="ttl"><h1 id="ttl">Bugun</h1><button class="cloud" id="cloudSt" type="button">Ulanmoqda…</button></div>
       <button class="fontbtn" id="fontBtn" type="button">Shrift</button>
     </div>
@@ -1191,6 +1377,7 @@ main{padding-top:6px;}
   <button data-tab="cards" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7.5" y="3.5" width="12" height="15.5" rx="2.2"/><path d="M4.5 7v11.8a2.2 2.2 0 0 0 2.2 2.2h9.3"/></svg></span>Kartalar</button>
   <button data-tab="ex" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.2"/><circle cx="12" cy="12" r="4.3"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></span>Mashq</button>
   <button data-tab="write" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4.2 19.8 9 9.8 19H5v-4.8z"/><path d="M12.8 6.4l4.8 4.8"/></svg></span>Yodlash</button>
+  <button data-tab="rank" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h8v4.5a4 4 0 0 1-8 0z"/><path d="M8 6H5.2a2.6 2.6 0 0 0 3.1 3.6M16 6h2.8a2.6 2.6 0 0 1-3.1 3.6M12 13v3.5M8.5 20h7l-.8-3.5H9.3z"/></svg></span>Reyting</button>
   <button data-tab="more" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6.6" height="6.6" rx="1.8"/><rect x="13.4" y="4" width="6.6" height="6.6" rx="1.8"/><rect x="4" y="13.4" width="6.6" height="6.6" rx="1.8"/><rect x="13.4" y="13.4" width="6.6" height="6.6" rx="1.8"/></svg></span>Koʻproq</button>
 </nav>
 <div class="toast" id="toast" role="status" hidden></div>
@@ -1421,7 +1608,7 @@ function applyFont(){ document.documentElement.classList.toggle("hei", P.font===
 $("#fontBtn").addEventListener("click", () => { P.font = P.font==="hei" ? "kai" : "hei"; save(); applyFont(); if (P.tab==="write") renderWrite(); toast(P.font==="hei" ? "Oddiy shrift (黑体) yoqildi." : "Kitobdagidek shrift (楷体) yoqildi."); });
 const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts", rank:"#v-rank"};
 const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashqlar", write:"Yodlash", more:"Koʻproq", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar", rank:"Reyting"};
-const SUBTABS = ["grammar","words","spell","stats","tips","texts","rank"];
+const SUBTABS = ["grammar","words","spell","stats","tips","texts"];
 function hap(k){ try { const h = TG && TG.HapticFeedback; if (!h) return; if (k==="ok") h.notificationOccurred("success"); else if (k==="bad") h.notificationOccurred("error"); else h.selectionChanged(); } catch(_) {} }
 function renderTabs(){
   if (!VIEWS[P.tab]) P.tab = "home";
@@ -1432,6 +1619,7 @@ function renderTabs(){
   $("#ttl").textContent = P.tab==="home" && P.book==="hsk5" ? "Dilobar 老师" : (TITLES[P.tab] || "");
   const sub = SUBTABS.includes(P.tab) || dm;
   $("#backBtn").hidden = !sub || !!(TG && TG.BackButton);
+  $("#logo").hidden = !$("#backBtn").hidden;
   try { if (TG && TG.BackButton) { if (sub) TG.BackButton.show(); else TG.BackButton.hide(); } } catch(_) {}
   $("#ctxRow").hidden = ["more","stats","tips","spell","rank"].includes(P.tab) || dm;
   $("#chips").hidden = (P.tab==="home" && P.book==="hsk5") || P.tab==="texts" || P.tab==="grammar" || (P.tab==="write" && P.wtop==="rad");
@@ -2067,6 +2255,37 @@ function dilBanner(){
     <div class="dil-stats"><div><b>${seen}</b>koʻrilgan</div><div><b>${solid}</b>mustahkam</div><div><b>${left ? days : 0}</b>kun qoldi*</div></div>
     <p class="dil-note">* kuniga 15 ta yangi soʻz bilan</p></section>`;
 }
+/* ---------- Dilobar: kunlik maqsad, kun soʻzi, hikmat ---------- */
+const DQUOTES = [
+  ["学而不厌，诲人不倦","xué ér bú yàn, huì rén bú juàn","Oʻrganishdan toʻyma, oʻrgatishdan charchama"],
+  ["一日为师，终身为父","yí rì wéi shī, zhōngshēn wéi fù","Bir kun ustoz boʻlgan — umrbod ota kabi aziz"],
+  ["桃李满天下","táo lǐ mǎn tiānxià","Shogirdlari butun dunyoga tarqalgan (yaxshi ustoz haqida)"],
+  ["千里之行，始于足下","qiān lǐ zhī xíng, shǐ yú zú xià","Ming chaqirimlik yoʻl bir qadamdan boshlanadi"],
+  ["熟能生巧","shú néng shēng qiǎo","Mashq mahorat keltiradi"],
+  ["温故而知新","wēn gù ér zhī xīn","Eskini takrorlab, yangini bilasan"],
+  ["活到老，学到老","huó dào lǎo, xué dào lǎo","Umr boʻyi oʻrgan"],
+  ["有志者事竟成","yǒu zhì zhě shì jìng chéng","Irodasi borning ishi bitadi"],
+  ["滴水穿石","dī shuǐ chuān shí","Tomchi tosh teshar"],
+  ["师者，传道授业解惑也","shī zhě, chuán dào shòu yè jiě huò yě","Ustoz — yoʻl koʻrsatadi, bilim beradi, shubhani yechadi"],
+  ["书山有路勤为径","shū shān yǒu lù qín wéi jìng","Bilim togʻiga yoʻl — mehnat"],
+  ["春风化雨","chūnfēng huà yǔ","Bahor shabadasi va yomgʻiri kabi (ustozning mehrli tarbiyasi)"],
+];
+function dilToday(){
+  const day = Math.floor((Date.now() - new Date().getTimezoneOffset()*60000) / DAY), all = H5W();
+  const goal = +P.dgoal || 30, done = S.h5.days[dkey(Date.now())] || 0, f = Math.min(1, done/goal), r = 34, c = 2*Math.PI*r;
+  const w = all.length ? all[(day*7919) % all.length] : null, q = DQUOTES[day % DQUOTES.length], x = xpTotal(), L = xpLevel(x);
+  return `<div class="dtoday">
+    <section class="dgoal">
+      <div class="dg-ring"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="${r}" class="dg-bg"/><circle cx="40" cy="40" r="${r}" class="dg-fg" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-f)}" transform="rotate(-90 40 40)"/></svg><div><b>${done}</b><small>/ ${goal}</small></div></div>
+      <div class="dg-tx"><b>${f>=1 ? "Maqsad bajarildi!" : "Bugungi maqsad"}</b><span>${f>=1 ? "Zoʻr, Dilobar 老师 ✦" : `Yana ${goal-done} ta javob`} · ${h5streak()} kun ketma-ket</span>
+        <div class="dg-pick">${[10,30,50,100].map(n => `<button data-dgoal="${n}" aria-pressed="${goal===n}">${n}</button>`).join("")}</div></div>
+    </section>
+    ${w ? `<section class="dwod"><span class="dcap">Kun soʻzi</span><div class="dw-main"><span class="dw-hz" lang="zh">${esc(w.hz)}</span><div class="dw-tx"><b>${esc(w.py)}</b><span>${esc(w.uz)}</span>${enL(w)}</div><div class="dw-act">${sayBtn(w.tts)}<button class="star" data-star="${w.id}" aria-pressed="${isStar(w.id)}" aria-label="Yulduzcha">★</button></div></div>${w.ex?`<p class="dw-ex"><span lang="zh">${esc(w.ex)}</span><br>${esc(w.exu)}</p>`:""}</section>` : ""}
+    <section class="dquote"><span class="dcap">Kun hikmati</span><p class="dq-zh" lang="zh">${esc(q[0])}</p><p class="dq-py">${esc(q[1])}</p><p class="dq-uz">${esc(q[2])}</p>${sayBtn(q[0].replace(/[，。]/g,""))}</section>
+    <button class="dxp" data-go="rank"><span class="lvl">${L.l}</span><span><b>${x.toLocaleString("ru-RU")} XP</b><small>Reytingdagi oʻrningni koʻr</small></span><span class="chev">›</span></button>
+  </div>`;
+}
+
 function setGrid(){
   return `<div class="sets">${LESS.filter(L=>L.book==="hsk5").map(L => { const ws = WORDS.filter(w=>w.L===L.n), so = ws.filter(w=>level(w.id)>=3).length, le = ws.filter(w=>{const v=level(w.id); return v>0&&v<3;}).length, p = Math.round(so/ws.length*100);
     return `<button class="set ${p>=80?"gold":""} ${P.lessons.length===1&&P.lessons[0]===L.n?"on":""}" data-set="${L.n}" style="--lc:${lc(L.n)}"><b>${L.d}</b><small>${p}%</small><span class="bar"><i class="b-solid" style="width:${so/ws.length*100}%"></i><i class="b-learn" style="width:${le/ws.length*100}%"></i></span></button>`; }).join("")}</div>`;
@@ -2205,6 +2424,7 @@ function renderDil(){
     <p class="dh-sub">New HSK 5 lugʻati · ${all.length} soʻz · 22 toʻplam</p>
     <div class="dh-row">${donut(ca)}<ul class="dh-leg">${[3,2,1,0].map(i => `<li><i style="background:${KCOL[i]}"></i>${KLBL[i]}<b>${ca[i]}</b></li>`).join("")}</ul></div>
   </section>
+  ${dilToday()}
   ${cur ? `<button class="dcont" data-d="resume"><span class="dci" lang="zh">续</span><span><b>Davom ettirish</b><span class="s">${DMODES[cur.mode]} · ${h5setName(cur.set)} · ${curProg(cur)}</span></span><span class="chev">›</span></button>` : ""}
   <h3 class="sect">Toʻplam</h3>
   <div class="dsel">
@@ -2459,6 +2679,7 @@ $("#v-home").addEventListener("click", e => {
   if (P.book !== "hsk5") return;
   const t = e.target;
   const st = t.closest("[data-star]"); if (st) { e.stopPropagation(); const id = st.dataset.star, on = !isStar(id); S.h5.star[id] = [on?1:0, Date.now()]; st.setAttribute("aria-pressed", String(on)); hap("tap"); h5save(); return; }
+  const dg = t.closest("[data-dgoal]"); if (dg) { P.dgoal = +dg.dataset.dgoal; save(); hap("tap"); renderDil(); return; }
   const ds = t.closest("[data-dset]"); if (ds) { const s = ds.dataset.dset; if (ds.dataset.dgo) { DS = null; } setDil(/^\d+$/.test(s) ? +s : s); return; }
   const dm = t.closest("[data-dm]"); if (dm) { h5start(dm.dataset.dm); return; }
   const fr = t.closest("[data-dfront] button"); if (fr) { S.h5.front = fr.dataset.v; DS.fl = false; h5save(); rFc($("#v-home")); return; }
@@ -2743,30 +2964,38 @@ async function rankLoad(force){
   } catch (e) { RKG.err[per] = String(e.message || e); }
   RKG.busy = false; if (P.tab==="rank") renderRank();
 }
+function lvlRing(L, size){
+  const r = 42, c = 2*Math.PI*r, f = L.cur/L.need;
+  return `<svg class="ring" viewBox="0 0 100 100" width="${size}" height="${size}" aria-hidden="true"><circle cx="50" cy="50" r="${r}" class="rg-bg"/><circle cx="50" cy="50" r="${r}" class="rg-fg" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-f)}" transform="rotate(-90 50 50)"/></svg>`;
+}
 function renderRank(){
   const v = $("#v-rank"), x = xpTotal(), L = xpLevel(x), per = RKG.per, D = RKG.data[per], er = RKG.err[per];
   const me = TG && TG.initDataUnsafe && TG.initDataUnsafe.user;
-  const mine = per==="day" ? xpToday() : per==="week" ? xpWeek() : x;
-  let list;
-  if (er==="tg") list = `<div class="rk-empty"><b>Reyting Telegram ichida ishlaydi</b><span>Ilovani bot orqali och, shunda natijang reytingga qoʻshiladi.</span></div>`;
-  else if (er) list = `<div class="rk-empty"><b>Server bilan aloqa yoʻq</b><span>${er==="bad signature" ? "Serverdagi BOT_TOKEN eskirgan. Cloudflare’da yangi tokenni qoʻy." : er==="not found" ? "Server kodi eski. Cloudflare’da yangi worker.js ni joyla." : esc(er)}</span><button class="btn sm" data-rkre="1">Qayta urinish</button></div>`;
-  else if (!D) list = `<div class="rk-empty"><span>Yuklanmoqda…</span></div>`;
-  else if (!D.list.length) list = `<div class="rk-empty"><b>Hali hech kim yoʻq</b><span>Birinchi boʻl!</span></div>`;
-  else list = `<ol class="rk-list">${D.list.map((u,i) => `<li class="${me && u.id===me.id ? "me" : ""}${i<3 ? " top"+(i+1) : ""}"><span class="rk-n">${i<3 ? ["🥇","🥈","🥉"][i] : i+1}</span>${rankAv(u)}<span class="rk-nm">${esc(rankName(u))}<small>${xpLevel(u.total||u.xp).l}-daraja</small></span><b class="rk-xp">${(+u.xp).toLocaleString("ru-RU")}</b></li>`).join("")}</ol>
-    ${D.me && D.me.rank > D.list.length ? `<div class="rk-mine"><span class="rk-n">${D.me.rank}</span><span class="rk-nm">Sen</span><b class="rk-xp">${(+D.me.xp).toLocaleString("ru-RU")}</b></div>` : ""}
-    <p class="rk-foot">${D.count} ishtirokchi · ${per==="day" ? "bugun" : per==="week" ? "oxirgi 7 kun" : "umumiy"}</p>`;
+  const fmt = n => (+n||0).toLocaleString("ru-RU");
+  let body;
+  if (er==="tg") body = `<div class="rk-empty"><span class="rk-ei">${SVG.rank}</span><b>Reyting Telegram ichida ishlaydi</b><span>Ilovani bot orqali och — natijang reytingga qoʻshiladi.</span></div>`;
+  else if (er) body = `<div class="rk-empty"><span class="rk-ei">${SVG.rank}</span><b>Server bilan aloqa yoʻq</b><span>${esc(er)}</span><button class="btn sm" data-rkre="1">Qayta urinish</button></div>`;
+  else if (!D) body = `<div class="rk-skel">${[0,1,2,3].map(()=>`<i></i>`).join("")}</div>`;
+  else if (!D.list.length) body = `<div class="rk-empty"><span class="rk-ei">${SVG.rank}</span><b>Hali hech kim yoʻq</b><span>Birinchi boʻl — bitta mashq yetarli.</span></div>`;
+  else {
+    const top = D.list.slice(0,3), rest = D.list.slice(3), isMe = u => me && u.id===me.id;
+    const pod = [top[1], top[0], top[2]].map((u, k) => { if (!u) return `<div class="pd empty"></div>`; const place = [2,1,3][k]; return `<div class="pd p${place}${isMe(u)?" me":""}">${place===1?`<span class="crown" aria-hidden="true">👑</span>`:""}${rankAv(u)}<b class="pd-nm">${esc(rankName(u))}</b><span class="pd-xp">${fmt(u.xp)} XP</span><div class="pd-base"><span>${place}</span></div></div>`; }).join("");
+    body = `<div class="podium">${pod}</div>
+      ${rest.length ? `<ol class="rk-list" start="4">${rest.map((u,i) => `<li class="${isMe(u)?"me":""}"><span class="rk-n">${i+4}</span>${rankAv(u)}<span class="rk-nm">${esc(rankName(u))}<small>${xpLevel(u.total||u.xp).l}-daraja</small></span><b class="rk-xp">${fmt(u.xp)}</b></li>`).join("")}</ol>` : ""}
+      ${D.me && D.me.rank > 3 && !D.list.slice(3).some(isMe) ? `<div class="rk-mine"><span class="rk-n">${D.me.rank}</span><span class="rk-nm">Sen</span><b class="rk-xp">${fmt(D.me.xp)}</b></div>` : ""}
+      <p class="rk-foot">${D.count} ishtirokchi</p>`;
+  }
   v.innerHTML = `
-    <section class="rk-me">
-      <div class="rk-lvl"><span>${L.l}</span><small>daraja</small></div>
-      <div class="rk-sum"><b>${x.toLocaleString("ru-RU")} XP</b><span class="xbar"><i style="width:${L.cur/L.need*100}%"></i></span><small>Keyingi darajagacha ${L.need-L.cur} XP</small></div>
+    <section class="rk-hero">
+      <div class="rk-ringbox">${lvlRing(L, 108)}<div class="rk-lv"><b>${L.l}</b><small>daraja</small></div></div>
+      <div class="rk-hx"><span class="rk-cap">Jami</span><b>${fmt(x)} <small>XP</small></b><span class="rk-next">Keyingi darajagacha <b>${fmt(L.need-L.cur)}</b> XP</span></div>
     </section>
-    <div class="rk-tiles"><div><b>${xpToday()}</b><span>bugun</span></div><div><b>${xpWeek()}</b><span>7 kun</span></div><div><b>${D && D.me && D.me.rank ? "#"+D.me.rank : "—"}</b><span>oʻrning</span></div></div>
-    <div class="rk-seg">${[["day","Bugun"],["week","Hafta"],["all","Umumiy"]].map(([k,l]) => `<button data-rkp="${k}" aria-pressed="${per===k}">${l}</button>`).join("")}</div>
-    ${list}
+    <div class="rk-stats"><div><b>+${fmt(xpToday())}</b><span>bugun</span></div><div><b>${fmt(xpWeek())}</b><span>7 kun</span></div><div><b>${D && D.me && D.me.rank ? "#"+D.me.rank : "—"}</b><span>oʻrning</span></div></div>
+    <div class="rk-seg" role="tablist">${[["day","Bugun"],["week","Hafta"],["all","Umumiy"]].map(([k,l]) => `<button data-rkp="${k}" aria-pressed="${per===k}">${l}</button>`).join("")}</div>
+    ${body}
     <details class="rk-how"><summary>XP qanday yigʻiladi?</summary>
-      <p>Har bir toʻgʻri javob XP beradi, xato javob esa 1 XP. Soʻz qanchalik qiyin boʻlsa, XP shuncha koʻp:</p>
-      <ul><li>Kartochka: <b>4</b>, gap kartasi: <b>6</b></li><li>Maʼnosini top: <b>5</b>, ierogifini top va pinyin: <b>6</b>, tinglab top: <b>7</b></li><li>Boʻsh joyni toʻldir: <b>8</b>, gap tuzish: <b>10</b>, juftlash: <b>4</b></li><li>Xotiradan yozish: <b>12</b>, yangi kalit: <b>5</b></li><li>Har bir qoʻshimcha ierogif <b>+25%</b>, HSK 5 soʻzlari <b>×1.6</b></li></ul>
-      <p class="sub">Reytingda ismingiz va Telegram rasmingiz boshqalarga koʻrinadi.</p>
+      <div class="rk-rules">${[["Kartochka","4"],["Gap kartasi","6"],["Maʼnosini top","5"],["Ierogifini top · Pinyin","6"],["Tinglab top","7"],["Boʻsh joy","8"],["Gap tuzish","10"],["Xotiradan yozish","12"],["Yangi kalit","5"],["Xato javob","1"]].map(([a,b]) => `<div><span>${a}</span><b>${b}</b></div>`).join("")}</div>
+      <p class="sub">Har bir qoʻshimcha ierogif +25%, HSK 5 soʻzlari ×1.6. Reytingda ismingiz va Telegram rasmingiz koʻrinadi.</p>
     </details>`;
   if (!D && !er) rankLoad(false);
 }
@@ -2791,7 +3020,7 @@ function renderMore(){
     </div>
     ${P.book==="hsk5" ? "" : `<div class="mgroup dmore"><button class="mrow" data-book5="1"><span class="mi2" style="--qc:linear-gradient(135deg,#B3124F,#FF6FA3)">${HEART}</span><span><b>Special for DILOBAR <span lang="zh">老师</span></b><span class="s">HSK 5 lugʻati: 1071 soʻz, 22 toʻplam</span></span><span class="chev">›</span></button></div>`}
     <p class="mhead">Natijalar</p>
-    <div class="mgroup">${row("rank","rank","#B8901A","Reyting","XP, daraja va umumiy reyting")}${row("stats","stats","#1F6B52","Statistika va kabinet","Qaysi turda, qaysi darsda xato koʻp")}</div>
+    <div class="mgroup">${row("stats","stats","#1F6B52","Statistika va kabinet","Qaysi turda, qaysi darsda xato koʻp")}</div>
     <p class="mhead">Sozlamalar</p>
     <div class="mgroup">
       <button class="mrow" data-set="font"><span class="mi2" style="--qc:#56605A">${SVG.font}</span><span><b>Ierogif shrifti</b><span class="s">楷体 — kitobdagidek, 黑体 — oddiy</span></span><span class="val" lang="zh">${P.font==="hei"?"黑体":"楷体"}</span></button>
