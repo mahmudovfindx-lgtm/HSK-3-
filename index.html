@@ -1363,6 +1363,68 @@ main{padding-bottom:110px;}
 :root.dilobar .dcont{border:0;border-radius:999px;box-shadow:var(--sh);background:var(--surface);}
 :root.dilobar .dlist li{border-bottom-color:var(--mask);}
 :root.dilobar .dspecial,.dspecial{border-radius:24px;background:radial-gradient(120% 160% at 100% 0%,#C2477F,#8E1F52 55%,#3A0C24);box-shadow:0 18px 36px -22px rgba(90,10,45,.8);}
+
+/* MOCK */
+.mk-hero{background:linear-gradient(135deg,#1B1B1F,#3A1418);color:#fff;border-radius:var(--r,24px);padding:20px 18px;box-shadow:var(--sh)}
+.mk-hero h2{margin:8px 0 6px;font-size:26px;letter-spacing:-.02em}.mk-hero p{margin:0;color:rgba(255,255,255,.75);font-size:14px;line-height:1.45}
+.mk-badge{font-size:12px;font-weight:700;background:rgba(229,72,77,.25);color:#FF9A9D;border-radius:999px;padding:4px 10px}
+.mk-hs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}.mk-hs div{background:rgba(255,255,255,.08);border-radius:14px;padding:10px;text-align:center}
+.mk-hs b{display:block;font-size:20px}.mk-hs span{font-size:11.5px;color:rgba(255,255,255,.65)}
+.mk-tg{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;width:100%;text-align:left;margin-top:12px;border:0;border-radius:var(--r,24px);padding:14px;background:linear-gradient(135deg,#2AABEE,#229ED9);color:#fff;box-shadow:var(--sh)}
+.mk-tg b{display:block;font-size:15px}.mk-tg small{color:rgba(255,255,255,.85);font-size:12.5px}.mk-tgi{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center}.mk-tgi svg{width:22px}
+.mk-modes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mk-modes button{border:0;background:var(--surface);box-shadow:var(--sh);border-radius:20px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:4px;min-height:84px}
+.mk-modes button.main{grid-column:1/-1;background:var(--acc,#E5484D);color:#fff}.mk-modes button.main span{color:rgba(255,255,255,.85)}
+.mk-modes b{font-size:15.5px}.mk-modes span{font-size:12.5px;color:var(--ink-2)}
+.mk-how{margin-top:12px;background:var(--surface);border-radius:20px;box-shadow:var(--sh);padding:12px 14px}.mk-how summary{font-weight:700;cursor:pointer}
+.mk-rules{display:grid;gap:6px;margin:10px 0}.mk-rules div{display:grid;grid-template-columns:96px 1fr auto;gap:8px;font-size:13px;align-items:center}.mk-rules small{color:var(--ink-3)}
+.mk-hist{background:var(--surface);border-radius:20px;box-shadow:var(--sh);padding:14px}
+.mk-chart{position:relative;display:flex;align-items:flex-end;gap:6px;height:110px;margin-bottom:10px}
+.mk-chart i{flex:1;max-width:36px;border-radius:6px 6px 3px 3px;position:relative;min-height:4px}.mk-chart em{position:absolute;top:-16px;left:0;right:0;text-align:center;font-style:normal;font-size:10px;color:var(--ink-3)}
+.mk-line{position:absolute;left:0;right:0;border-top:1.5px dashed var(--ink-3);opacity:.5}
+.mk-hr{display:grid;grid-template-columns:1fr auto auto;gap:4px 10px;padding:8px 0;border-top:1px solid var(--line);font-size:13px}.mk-hr small{grid-column:1/-1;color:var(--ink-3)}
+.mk-top{display:flex;justify-content:space-between;align-items:center}.mk-sec{font-weight:800;font-size:15px}
+.mk-clock{font-variant-numeric:tabular-nums;font-weight:800;background:var(--surface);box-shadow:var(--sh);border-radius:999px;padding:6px 12px}.mk-clock.low{color:#fff;background:#E5484D}
+.mk-prog{height:6px;border-radius:9px;background:var(--line);margin:12px 0 6px;overflow:hidden}.mk-prog i{display:block;height:100%;background:var(--acc,#E5484D);border-radius:9px}
+.mk-meta{display:flex;justify-content:space-between;font-size:12.5px;color:var(--ink-3)}
+.mk-q{background:var(--surface);border-radius:var(--r,24px);box-shadow:var(--sh);padding:18px 16px;margin:12px 0}
+.mk-part{margin:0;font-size:12px;font-weight:700;color:var(--acc,#E5484D)}.mk-ins{margin:4px 0 14px;font-size:17px}
+.mk-play{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:12px;align-items:center;width:100%;text-align:left;border:0;border-radius:18px;padding:12px 14px;background:color-mix(in srgb,var(--acc,#E5484D) 12%,var(--surface));margin-bottom:12px}
+.mk-play span{grid-row:1/3;width:44px;height:44px;border-radius:50%;background:var(--acc,#E5484D);color:#fff;display:grid;place-items:center}.mk-play small{color:var(--ink-3)}.mk-play[disabled]{opacity:.5}
+.mk-show{font-size:15px;background:var(--paper);border-radius:14px;padding:10px 12px}
+.mk-text{font-size:22px;line-height:1.6;background:var(--paper);border-radius:14px;padding:12px 14px}
+.mk-opts{display:grid;gap:8px}
+.mk-opt{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:center;text-align:left;border:1.5px solid var(--line);background:var(--surface);border-radius:16px;padding:11px 12px;font-size:15px}
+.mk-opt [lang="zh"]{font-size:20px}.mk-l{width:30px;height:30px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-weight:800;font-size:13px}
+.mk-opt.sel{border-color:var(--acc,#E5484D);background:color-mix(in srgb,var(--acc,#E5484D) 8%,var(--surface))}.mk-opt.sel .mk-l{background:var(--acc,#E5484D);color:#fff}
+.mk-ord{display:flex;flex-wrap:wrap;gap:8px;min-height:52px;padding:10px;border-radius:16px;background:var(--paper);align-items:center}.mk-ord.pool{background:none;padding:10px 0}
+.mk-chip{border:1.5px solid var(--line);background:var(--surface);border-radius:12px;padding:8px 12px;font-size:20px}.mk-chip.on{border-color:var(--acc,#E5484D)}.mk-chip.ghost{opacity:.25}
+.mk-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}.mk-nav .btn{border-radius:16px}
+.mk-map{margin-top:12px}.mk-map summary{font-size:13px;color:var(--ink-2);cursor:pointer}
+.mk-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-top:10px}.mk-grid button{border:0;border-radius:10px;background:var(--surface);box-shadow:var(--sh);height:34px;font-size:12px;font-weight:700}
+.mk-grid .done{background:color-mix(in srgb,var(--acc,#E5484D) 18%,var(--surface))}.mk-grid .cur{outline:2px solid var(--acc,#E5484D)}
+.mk-quit{display:block;margin:16px auto 0;border:0;background:none;color:var(--ink-3);font-size:13px;text-decoration:underline}
+.mk-res{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--surface);border-radius:var(--r,24px);box-shadow:var(--sh);padding:18px}
+.mk-rbox{position:relative;width:118px;height:118px}.mk-ring{width:100%;height:100%}.mk-ring .rg-bg{fill:none;stroke:var(--line);stroke-width:9}
+.mk-rv{position:absolute;inset:0;display:grid;place-content:center;text-align:center}.mk-rv b{font-size:30px;line-height:1}.mk-rv small{color:var(--ink-3)}
+.mk-verdict{margin:0 0 4px;font-size:20px;font-weight:800}.mk-res .sub{margin:2px 0}
+.mk-secs{display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:10px;margin-top:12px}
+.mk-secs>div{background:var(--surface);border-radius:20px;box-shadow:var(--sh);padding:12px 8px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:2px}
+.mk-sbox{position:relative;width:64px;height:64px}.mk-sbox b{position:absolute;inset:0;display:grid;place-items:center;font-size:17px}.mk-secs span{font-size:12px;font-weight:700}.mk-secs small{font-size:11.5px;color:var(--ink-3)}
+.mk-parts{background:var(--surface);border-radius:20px;box-shadow:var(--sh);padding:6px 14px}
+.mk-pr{display:grid;grid-template-columns:1fr 70px 42px;gap:4px 10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}.mk-pr:first-child{border-top:0}
+.mk-pr>span:first-child b{display:block;font-size:13px}.mk-pr>span:first-child small{font-size:11.5px;color:var(--ink-3)}
+.mk-pb{height:8px;border-radius:9px;background:var(--line);overflow:hidden}.mk-pb i{display:block;height:100%;border-radius:9px}.mk-pc{text-align:right;font-size:14px}.mk-pt{grid-column:1/-1;font-size:11px;color:var(--ink-3)}
+.mk-adv{display:grid;gap:10px}.mk-a{display:grid;grid-template-columns:36px 1fr;gap:10px;background:var(--surface);border-radius:20px;box-shadow:var(--sh);padding:12px 14px}
+.mk-ai{font-size:22px}.mk-a p{margin:4px 0 8px;font-size:13.5px;color:var(--ink-2);line-height:1.45}
+.mk-les{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mk-les button{border:0;border-left:4px solid var(--lc);background:var(--surface);box-shadow:var(--sh);border-radius:16px;padding:12px;text-align:left;display:flex;flex-direction:column;gap:2px}
+.mk-les span{font-size:13px;color:#E5484D;font-weight:700}.mk-les small{font-size:11.5px;color:var(--ink-3)}
+.mk-ww{background:var(--surface);border-radius:20px;box-shadow:var(--sh);padding:4px 14px}.mk-ww div{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}.mk-ww div:first-child{border-top:0}
+.mk-ww [lang="zh"]{font-size:22px}.mk-ww span:nth-child(2){font-size:13.5px}
+.mk-wrong details{background:var(--surface);border-radius:16px;box-shadow:var(--sh);padding:10px 14px;margin-bottom:8px}.mk-wrong summary{display:flex;gap:10px;align-items:center;cursor:pointer;font-size:13.5px}
+.mk-wn{width:26px;height:26px;border-radius:50%;background:#E5484D;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800}
+.mk-wrong p{margin:8px 0 0;font-size:14px}.mk-ex{font-size:18px!important;line-height:1.6}
+.qa-mock .qi{font-size:20px;color:#fff;font-weight:700}
 </style>
 </head>
 <body>
@@ -1406,6 +1468,7 @@ main{padding-bottom:110px;}
   <section id="v-tips" hidden></section>
   <section id="v-texts" hidden></section>
   <section id="v-rank" hidden></section>
+  <section id="v-mock" hidden></section>
 </main>
 <nav class="nav" id="nav" aria-label="Asosiy boʻlimlar">
   <button data-tab="home" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.2 12 4.8l8 6.4V19a1 1 0 0 1-1 1h-4.5v-5.2h-5V20H5a1 1 0 0 1-1-1z"/></svg></span>Bugun</button>
@@ -1442,7 +1505,7 @@ const LONGW = WORDS.filter(w => [...w.hz].length >= 2).sort((a,b)=>b.hz.length-a
 /* ---------- storage ---------- */
 const KEY = "hsk3-tg-1-7-v1";
 const S = {srs:{}, prefs:{}, exw:{}, days:[], st:{ty:{},L:{},g:{},d:{},w:{}}, lr:{}, t:0, cur:null, hist:[], xp:{}, xb:{}};
-try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); S.xp = (p.xp && typeof p.xp==="object") ? p.xp : {}; S.xb = (p.xb && typeof p.xb==="object") ? p.xb : {}; } } } catch(e) {}
+try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); S.xp = (p.xp && typeof p.xp==="object") ? p.xp : {}; S.xb = (p.xb && typeof p.xb==="object") ? p.xb : {}; S.mock = Array.isArray(p.mock) ? p.mock : []; } } } catch(e) {}
 if (!S.h5) S.h5 = H5DEF();
 const ALL = LESS.map(L=>L.n);
 const BOOKS = [{k:"new", zh:"新HSK教程3", uz:"Yangi HSK 3", v:"3.0"}, {k:"old", zh:"HSK标准教程3", uz:"Eski HSK 3", v:"2.0"}, {k:"hsk5", zh:"HSK 5", uz:"Dilobar 老师 uchun"}];
@@ -1457,7 +1520,7 @@ if (!Array.isArray(P.lessons) || !P.lessons.length || P.lessons.some(n=>!ALL.inc
   if (P.book!=="old" && P.book!=="hsk5") P.book = "new"; if (P.lessons.some(n=>bookOf(n)!==P.book)) P.lessons = bookLessons(P.book);
 if (P.wmode!=="learn" && P.wmode!=="trace" && P.wmode!=="memory") P.wmode = "learn";
 let dirty = false;
-function body(){ return {v:3, t:S.t, srs:S.srs, exw:S.exw, days:S.days, st:S.st, lr:S.lr, prefs:P, cur:S.cur, hist:S.hist, seeded:!!S.seeded, first:S.first||0, h5:S.h5, xp:S.xp, xb:S.xb}; }
+function body(){ return {v:3, t:S.t, srs:S.srs, exw:S.exw, days:S.days, st:S.st, lr:S.lr, prefs:P, cur:S.cur, hist:S.hist, seeded:!!S.seeded, first:S.first||0, h5:S.h5, xp:S.xp, xb:S.xb, mock:S.mock||[]}; }
 function writeLocal(){ try { localStorage.setItem(KEY, JSON.stringify(body())); } catch(e) {} }
 function save(){ S.prefs = P; S.t = Date.now(); S.cur = serCur(); dirty = true; writeLocal(); scheduleCloud(); }
 function dkey(t){ const d = new Date(t); return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
@@ -1541,6 +1604,7 @@ function mergeIn(r){
   if (r.first && (!S.first || r.first < S.first)) S.first = r.first;
   mergeH5(r.h5);
   const rx = r.xp || {}; for (const k in rx) if (/^\d{4}-\d{2}-\d{2}$/.test(k)) S.xp[k] = Math.max(S.xp[k]||0, +rx[k]||0);
+  if (Array.isArray(r.mock)) { const mm = new Map((S.mock||[]).map(m => [m.t, m])); r.mock.forEach(m => m && m.t && mm.set(m.t, m)); S.mock = [...mm.values()].sort((a,b) => a.t-b.t).slice(-30); }
   const rb = r.xb || {}; for (const k of XBK) if (rb[k]) S.xb[k] = Math.max(S.xb[k]||0, +rb[k]||0);
   const hs = (S.hist||[]).concat(r.hist||[]), seen = new Set(); S.hist = hs.filter(h => h && !seen.has(h.t) && seen.add(h.t)).sort((a,b)=>b.t-a.t).slice(0,30);
   if ((r.t||0) > (S.t||0)) { if (r.prefs && typeof r.prefs === "object") Object.assign(P, r.prefs); S.cur = r.cur || null; S.t = r.t; }
@@ -1660,9 +1724,9 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-say]
 /* ---------- header ---------- */
 function applyFont(){ document.documentElement.classList.toggle("hei", P.font==="hei"); $("#fontBtn").innerHTML = `Shrift:<span class="hzi">${P.font==="hei"?"黑体":"楷体"}</span>`; }
 $("#fontBtn").addEventListener("click", () => { P.font = P.font==="hei" ? "kai" : "hei"; save(); applyFont(); if (P.tab==="write") renderWrite(); toast(P.font==="hei" ? "Oddiy shrift (黑体) yoqildi." : "Kitobdagidek shrift (楷体) yoqildi."); });
-const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts", rank:"#v-rank"};
-const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashqlar", write:"Yodlash", more:"Koʻproq", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar", rank:"Reyting"};
-const SUBTABS = ["grammar","words","spell","stats","tips","texts"];
+const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts", rank:"#v-rank", mock:"#v-mock"};
+const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashqlar", write:"Yodlash", more:"Koʻproq", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar", rank:"Reyting", mock:"Mock"};
+const SUBTABS = ["grammar","words","spell","stats","tips","texts","mock"];
 function hap(k){ try { const h = TG && TG.HapticFeedback; if (!h) return; if (k==="ok") h.notificationOccurred("success"); else if (k==="bad") h.notificationOccurred("error"); else h.selectionChanged(); } catch(_) {} }
 function renderTabs(){
   if (!VIEWS[P.tab]) P.tab = "home";
@@ -1675,7 +1739,7 @@ function renderTabs(){
   $("#backBtn").hidden = !sub || !!(TG && TG.BackButton);
   $("#logo").hidden = !$("#backBtn").hidden;
   try { if (TG && TG.BackButton) { if (sub) TG.BackButton.show(); else TG.BackButton.hide(); } } catch(_) {}
-  $("#ctxRow").hidden = ["more","stats","tips","spell","rank"].includes(P.tab) || dm;
+  $("#ctxRow").hidden = ["more","stats","tips","spell","rank","mock"].includes(P.tab) || dm;
   $("#chips").hidden = (P.tab==="home" && P.book==="hsk5") || P.tab==="texts" || P.tab==="grammar" || (P.tab==="write" && P.wtop==="rad");
   $("#lessBtn").hidden = $("#chips").hidden;
 }
@@ -1717,7 +1781,7 @@ $("#chips").addEventListener("click", e => {
   W.i = 0; W.ci = 0; W.check = false; LN.id = null; LN.step = 1;
   save(); renderChips(); renderView();
 });
-function renderView(){ ({home:renderHome, more:renderMore, cards:renderPractice, ex:renderEx, write:renderWrite, spell:renderSpell, grammar:renderGrammar, words:renderWords, stats:renderStats, tips:renderTips, texts:renderTexts, rank:renderRank})[P.tab](); }
+function renderView(){ ({home:renderHome, more:renderMore, cards:renderPractice, ex:renderEx, write:renderWrite, spell:renderSpell, grammar:renderGrammar, words:renderWords, stats:renderStats, tips:renderTips, texts:renderTexts, rank:renderRank, mock:renderMock})[P.tab](); }
 
 /* ================= LUG'AT ================= */
 const openRows = new Set();
@@ -2810,6 +2874,7 @@ function renderHome(){
       <button data-go="hanzi" style="--qc:#B8901A"><span class="qi">${SVG.ex}</span><b>Ierogifini top</b><span>Tez test</span></button>
       ${H5 ? `<button data-go="tips" style="--qc:#A67C00"><span class="qi">${SVG.tips}</span><b>Metodika</b><span>Reja</span></button>` : `<button data-go="grammar" style="--qc:#A93F55"><span class="qi">${SVG.words}</span><b>Grammatika</b><span>Rangli tahlil</span></button>`}
       ${!H5 && P.book==="new" ? `<button data-go="texts" class="qa-wide" style="--qc:#C2477F"><span class="qi">${SVG.texts}</span><b>Kitob matnlari</b><span>课文 dialoglari</span></button>` : ""}
+      ${H5 ? "" : `<button data-go="mock" class="qa-wide qa-mock" style="--qc:#E5484D"><span class="qi" lang="zh">考</span><b>Mock imtihon · HSK 3</b><span>${(S.mock||[]).length ? `Oxirgi natija: ${S.mock[S.mock.length-1].tot}/300` : "Tinglash, oʻqish, yozish — 300 ballik baho"}</span></button>`}
       <button data-go="rads" class="qa-wide qa-rad" style="--qc:#8C5A3C"><span class="qi" lang="zh">部</span><b>Kalitlar · 214</b><span>${RADS.filter(r=>rkKnown(r.n)).length} / 214 bilaman</span></button>
     </div>
     ${w ? `<h3 class="sect">Kun soʻzi</h3><div class="wod" style="--lc:${lc(w.L)}">${tzg(w.hz,"")}<div><div class="py">${esc(w.py)}</div><div class="uz">${esc(w.uz)}</div>${enL(w)}${w.hook?`<p>${esc(w.hook)}</p>`:""}<div style="margin-top:8px;display:flex;gap:8px;align-items:center">${sayBtn(w.tts)}<span class="sub">${lname(w.L)}</span></div></div></div>` : ""}
@@ -2833,6 +2898,7 @@ $("#v-home").addEventListener("click", e => {
   else if (k==="grammar") goTab("grammar");
   else if (k==="texts") goTab("texts");
   else if (k==="rank") goTab("rank");
+  else if (k==="mock") goTab("mock");
   else if (k==="rads") { P.wtop = "rad"; goTab("write"); }
 });
 /* ================= MATNLAR (课文) ================= */
@@ -3069,6 +3135,197 @@ $("#v-rank").addEventListener("click", e => {
   if (e.target.closest("[data-rkre]")) { delete RKG.err[RKG.per]; renderRank(); rankLoad(true); }
 });
 
+/* ================= MOCK (HSK 3 imtihoni formatida) =================
+   O'z mock: ilovadagi so'zlar, misollar, 课文 dialoglari va grammatika gaplaridan har safar yangi savollar.
+   Bo'limlar haqiqiy HSK 3 kabi: 听力 (4 qism), 阅读 (3 qism), 书写 (2 qism); har biri 100 ball, o'tish — 180/300.
+   Natijalar S.mock da (oxirgi 30 ta), tahlil: qism, dars, so'z, vaqt bo'yicha. */
+const MOCK_CHANNEL = "";  // Telegram kanal: "https://t.me/kanal_nomi" (bo'sh bo'lsa tugma ko'rinmaydi)
+const MOCK_LINKS = [
+  ["Rasmiy HSK sayti (chinesetest.cn)", "Namuna testlar, rasmiy maʼlumot", "https://www.chinesetest.cn/"],
+  ["Improve Mandarin — HSK 3", "Toʻliq onlayn mocklar: tinglash, oʻqish, yozish", "https://improvemandarin.com/category/hsk/"],
+  ["Mandarin Temple — HSK 3 Mock", "Avtomatik tekshiriladigan onlayn mock", "https://mandarintemple.com/learning-materials/mock-tests/3"],
+];
+const MK_PARTS = {
+  L1: ["听力 · 1-qism", "Gapni tinglang va maʼnosini tanlang"],
+  L2: ["听力 · 2-qism", "Tinglang: yozilgan maʼno gapga mosmi?"],
+  L3: ["听力 · 3-qism", "Qisqa suhbat: ikkinchi kishi nima dedi?"],
+  L4: ["听力 · 4-qism", "Suhbat: bu qayerda / nima haqida?"],
+  R1: ["阅读 · 1-qism", "Gapga mos javobni toping"],
+  R2: ["阅读 · 2-qism", "Boʻsh joyga mos soʻzni qoʻying"],
+  R3: ["阅读 · 3-qism", "Matnni oʻqing va toʻgʻri tarjimani toping"],
+  W1: ["书写 · 1-qism", "Boʻlaklardan gap tuzing"],
+  W2: ["书写 · 2-qism", "Pinyinga mos ierogifni tanlang"],
+};
+const MK_SEC = {L:"Tinglash 听力", R:"Oʻqish 阅读", W:"Yozish 书写"};
+const MK_MODES = {
+  full: {name:"Toʻliq mock", sub:"80 savol · 90 daqiqa · haqiqiy HSK 3 kabi", min:90, n:{L1:10,L2:10,L3:10,L4:10,R1:10,R2:10,R3:10,W1:5,W2:5}},
+  mini: {name:"Mini mock", sub:"25 savol · 25 daqiqa · tez tekshiruv", min:25, n:{L1:3,L2:3,L3:2,L4:2,R1:3,R2:4,R3:3,W1:3,W2:2}},
+  L: {name:"Faqat tinglash", sub:"20 savol · 15 daqiqa", min:15, n:{L1:5,L2:5,L3:5,L4:5}},
+  R: {name:"Faqat oʻqish", sub:"20 savol · 20 daqiqa", min:20, n:{R1:7,R2:7,R3:6}},
+  W: {name:"Faqat yozish", sub:"15 savol · 15 daqiqa", min:15, n:{W1:8,W2:7}},
+};
+let MK = null, mkTimer = null;
+const mkT = ms => { const s = Math.max(0, Math.ceil(ms / 1000)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+const mkWords = () => WORDS.filter(w => bookOf(w.L) !== "hsk5");
+const mkTexts = () => LESS.filter(L => L.texts).flatMap(L => L.texts.map(t => ({...t, L:L.n})));
+const pick = (a, n) => shuffle(a.slice()).slice(0, n);
+function mkOpts(right, pool, key, n = 4){ const seen = new Set([key(right)]), o = [right]; for (const x of shuffle(pool.slice())) { if (o.length >= n) break; const k = key(x); if (!k || seen.has(k)) continue; seen.add(k); o.push(x); } return shuffle(o); }
+function mkBuild(mode){
+  const M = MK_MODES[mode], W = mkWords(), EXW = W.filter(w => w.ex && w.exu && w.ex.includes(w.hz)), TX = mkTexts();
+  const lines = TX.flatMap(t => t.lines.map((l, i) => ({t, i, spk:l[0], zh:l[1], uz:l[2]})));
+  const pairs = TX.flatMap(t => t.lines.slice(1).map((l, i) => ({t, a:t.lines[i], b:l})).filter(p => p.a[0] && p.b[0]));
+  const ORD = SENTS.filter(s => bookOf(s.L) !== "hsk5" && s.tag && chunksOf(s.tag).length >= 3 && chunksOf(s.tag).length <= 7);
+  const ONE = EXW.filter(w => [...w.hz].length === 1 && hanzi(w.hz).length === 1);
+  const q = [], G = {
+    L1: () => { const w = pick(EXW,1)[0]; const o = mkOpts(w, EXW, x => x.exu); return {audio:w.ex, opts:o.map(x => ({t:x.exu, ok:x===w})), L:w.L, wid:w.id, zh:w.ex, uz:w.exu}; },
+    L2: () => { const w = pick(EXW,1)[0], yes = Math.random() < .5, other = pick(EXW.filter(x => x.exu !== w.exu),1)[0]; return {audio:w.ex, show:yes ? w.exu : other.exu, opts:[{t:"✓ Mos", ok:yes}, {t:"✗ Mos emas", ok:!yes}], L:w.L, wid:w.id, zh:w.ex, uz:w.exu}; },
+    L3: () => { const p = pick(pairs,1)[0], o = mkOpts(p.b, pairs.map(x => x.b), x => x[2]); return {audio:`${p.a[1]}　${p.b[1]}`, opts:o.map(x => ({t:x[2], ok:x===p.b})), L:p.t.L, zh:`${p.a[0]}：${p.a[1]}\n${p.b[0]}：${p.b[1]}`, uz:`${p.a[2]}\n${p.b[2]}`}; },
+    L4: () => { const t = pick(TX,1)[0], s = Math.floor(Math.random() * Math.max(1, t.lines.length - 3)), ls = t.lines.slice(s, s + 4), o = mkOpts(t, TX, x => x.sceneuz); return {audio:ls.map(l => l[1]).join("　"), opts:o.map(x => ({t:x.sceneuz, ok:x===t})), L:t.L, zh:ls.map(l => (l[0] ? l[0] + "：" : "") + l[1]).join("\n"), uz:t.sceneuz}; },
+    R1: () => { const p = pick(pairs,1)[0], o = mkOpts(p.b, pairs.map(x => x.b), x => x[1]); return {text:p.a[1], opts:o.map(x => ({t:x[1], zh:1, ok:x===p.b})), L:p.t.L, zh:`${p.a[1]}\n${p.b[1]}`, uz:`${p.a[2]}\n${p.b[2]}`}; },
+    R2: () => { const w = pick(EXW,1)[0], same = W.filter(x => x.pos === w.pos && x.hz !== w.hz && !w.ex.includes(x.hz)), o = mkOpts(w, same.length >= 3 ? same : W, x => x.hz); return {text:w.ex.replace(w.hz, "（　　）"), opts:o.map(x => ({t:x.hz, zh:1, ok:x===w})), L:w.L, wid:w.id, zh:w.ex, uz:`${w.hz} ${w.py} — ${w.uz}. ${w.exu}`}; },
+    R3: () => { const t = pick(TX,1)[0], s = Math.floor(Math.random() * Math.max(1, t.lines.length - 2)), ls = t.lines.slice(s, s + 3), right = pick(ls,1)[0], o = mkOpts(right, lines.filter(l => l.t !== t).map(l => [l.spk, l.zh, l.uz]), x => x[2]); return {text:ls.map(l => l[1]).join(""), opts:o.map(x => ({t:x[2], ok:x===right})), L:t.L, zh:ls.map(l => l[1]).join(""), uz:ls.map(l => l[2]).join(" ")}; },
+    W1: () => { const s = pick(ORD,1)[0], ch = chunksOf(s.tag).map(c => c.t); let sh = shuffle(ch.slice()); for (let k = 0; k < 5 && sh.join("") === ch.join(""); k++) sh = shuffle(ch.slice()); return {order:sh, ans:ch.join(""), L:s.L, gk:s.gk, zh:s.zh, uz:s.uz}; },
+    W2: () => { const w = pick(ONE,1)[0], same = ONE.filter(x => x.hz !== w.hz), o = mkOpts(w, same, x => x.hz); return {text:w.ex.replace(w.hz, `（${w.py}）`), opts:o.map(x => ({t:x.hz, zh:1, ok:x===w})), L:w.L, wid:w.id, zh:w.ex, uz:`${w.hz} ${w.py} — ${w.uz}. ${w.exu}`}; },
+  };
+  for (const part in M.n) for (let i = 0; i < M.n[part]; i++) { try { q.push({part, sec:part[0], ...G[part]()}); } catch (_) {} }
+  return {mode, q, a:q.map(() => null), plays:q.map(() => 0), i:0, start:Date.now(), end:Date.now() + M.min * 60e3, qt:q.map(() => 0), qs:Date.now(), done:false};
+}
+function mkAnsOk(x, a){ return a == null ? false : x.order ? a.join("") === x.ans : !!x.opts[a].ok; }
+function mkStart(mode){ MK = mkBuild(mode); hap("tap"); mkTick(); renderMock(); mkAuto(); window.scrollTo({top:0}); }
+function mkTick(){ clearInterval(mkTimer); mkTimer = setInterval(() => { if (!MK || MK.done) return clearInterval(mkTimer); const el = $("#mkClock"); const left = MK.end - Date.now(); if (left <= 0) { toast("Vaqt tugadi!"); mkFinish(); return; } if (el) { el.textContent = mkT(left); el.classList.toggle("low", left < 5 * 60e3); } }, 1000); }
+function mkAuto(){ const x = MK && !MK.done && MK.q[MK.i]; if (x && x.audio && !MK.plays[MK.i]) setTimeout(() => mkPlay(), 350); }
+function mkPlay(){ const x = MK.q[MK.i]; if (MK.plays[MK.i] >= 2) { toast("Imtihonda har bir audio 2 marta eshitiladi."); return; } MK.plays[MK.i]++; say(x.audio); renderMock(); }
+function mkGo(d){ const now = Date.now(); MK.qt[MK.i] += now - MK.qs; MK.qs = now; speechSynthesis && speechSynthesis.cancel && speechSynthesis.cancel(); MK.i = Math.max(0, Math.min(MK.q.length - 1, MK.i + d)); renderMock(); mkAuto(); }
+function mkFinish(){
+  if (!MK || MK.done) return; clearInterval(mkTimer);
+  const now = Date.now(); MK.qt[MK.i] += now - MK.qs; MK.done = true; MK.fin = now;
+  const R = mkScore(MK); MK.res = R;
+  const xp = {}; MK.q.forEach((x, i) => { if (mkAnsOk(x, MK.a[i])) { const s = xbOf(x.L); xp[s] = (xp[s]||0) + 8; } });
+  if (R.total >= 180) xp.n = (xp.n||0) + 50;
+  for (const s in xp) xpAdd(xp[s], s);
+  S.mock = (S.mock || []).concat([{t:now, m:MK.mode, L:R.sec.L, R:R.sec.R, W:R.sec.W, tot:R.total, ok:R.ok, n:MK.q.length, dur:Math.round((now - MK.start) / 1000)}]).slice(-30);
+  if (!S.first) S.first = now; touchDay(); save(); hap(R.total >= 180 ? "ok" : "bad"); renderMock(); window.scrollTo({top:0});
+}
+function mkScore(K){
+  const sec = {}, part = {}, les = {}, wrongW = [];
+  let ok = 0;
+  K.q.forEach((x, i) => {
+    const g = mkAnsOk(x, K.a[i]); if (g) ok++;
+    const s = sec[x.sec] = sec[x.sec] || [0, 0]; s[0]++; if (g) s[1]++;
+    const p = part[x.part] = part[x.part] || [0, 0, 0]; p[0]++; if (g) p[1]++; p[2] += K.qt[i];
+    const l = les[x.L] = les[x.L] || [0, 0]; l[0]++; if (g) l[1]++;
+    if (!g && x.wid && !wrongW.includes(x.wid)) wrongW.push(x.wid);
+  });
+  const sc = {}; ["L","R","W"].forEach(k => { if (sec[k]) sc[k] = Math.round(sec[k][1] / sec[k][0] * 100); });
+  const ks = Object.keys(sc), total = MK_MODES[K.mode].n.L1 && MK_MODES[K.mode].n.R1 ? ks.reduce((a, k) => a + sc[k], 0) : Math.round(ks.reduce((a, k) => a + sc[k], 0) / ks.length * 3);
+  return {sec:sc, raw:sec, part, les, wrongW, ok, total, skipped:K.a.filter(a => a == null).length};
+}
+function mkRing(v, max, col){ const r = 42, c = 2 * Math.PI * r, f = Math.max(0, Math.min(1, v / max)); return `<svg viewBox="0 0 100 100" class="mk-ring"><circle cx="50" cy="50" r="${r}" class="rg-bg"/><circle cx="50" cy="50" r="${r}" fill="none" stroke="${col}" stroke-width="9" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c * (1 - f)}" transform="rotate(-90 50 50)"/></svg>`; }
+function mkAdvice(R, K){
+  const out = [], s = R.sec, p = R.part, pc = k => p[k] ? Math.round(p[k][1] / p[k][0] * 100) : null;
+  if (s.L != null && s.L < 60) out.push(["🎧", "Tinglash zaif", `Tinglash ${s.L}/100. Har kuni 10 daqiqa “Tinglab top” mashqi va 课文 dialoglarini ovoz bilan tingla.`, "listen"]);
+  if (pc("L3") != null && pc("L3") < 60 || pc("L4") != null && pc("L4") < 60) out.push(["💬", "Suhbatni tushunish", "Uzun suhbatlarda adashyapsan. Matnlar boʻlimida dialoglarni avval tinglab, keyin oʻqi.", "texts"]);
+  if (pc("R2") != null && pc("R2") < 70) out.push(["🧩", "Soʻz tanlash (boʻsh joy)", "Soʻzni gapda ishlatish qiyin. “Boʻsh joy” mashqi va kartalardagi misol gaplarni takrorla.", "fill"]);
+  if (s.R != null && s.R < 60) out.push(["📖", "Oʻqish zaif", `Oʻqish ${s.R}/100. Ierogif tanish tezligini oshir: “Ierogifini top” va kartalar.`, "hanzi"]);
+  if (pc("W1") != null && pc("W1") < 70) out.push(["🧱", "Gap tuzish", "Soʻz tartibi (ega–hol–kesim–toʻldiruvchi) chalkash. Grammatika va “Gap tuzish” mashqi.", "order"]);
+  if (pc("W2") != null && pc("W2") < 70) out.push(["✍️", "Ierogif yozish", "Pinyindan ierogifni tanish qiyin. Yodlash → Xotiradan yozish.", "write"]);
+  const used = (K.fin - K.start) / 1000, lim = MK_MODES[K.mode].min * 60;
+  if (R.skipped > 0) out.push(["⏱", "Javobsiz savollar", `${R.skipped} ta savolga javob berilmadi. Imtihonda hamma savolga javob ber — taxmin ham ball keltirishi mumkin.`]);
+  else if (used > lim * .95) out.push(["⏱", "Vaqt yetmadi", "Vaqtni taqsimla: qiyin savolda toʻxtama, oxirida qaytib kel."]);
+  if (!out.length) out.push(["🏆", "Zoʻr natija!", R.total >= 270 ? "Imtihonga tayyorsan. Haftada 1–2 ta toʻliq mock bilan formani saqla." : "Yaxshi! Toʻliq mockni muntazam ishla va xatolarni takrorla."]);
+  return out;
+}
+function renderMock(){
+  const v = $("#v-mock"), K = MK, fmtT = s => { s = Math.round(s); return s >= 60 ? Math.floor(s / 60) + " daq " + (s % 60) + " s" : s + " s"; };
+  if (K && !K.done) {
+    const x = K.q[K.i], [pn, pi] = MK_PARTS[x.part], a = K.a[K.i], answered = K.a.filter(y => y != null).length;
+    const opts = x.order ? `<div class="mk-ord">${(a || []).map((t, j) => `<button class="mk-chip on" data-mkun="${j}" lang="zh">${esc(t)}</button>`).join("") || `<span class="sub">Boʻlaklarni tartib bilan bos</span>`}</div>
+        <div class="mk-ord pool">${x.order.map((t, j) => (a || []).length > 0 && mkUsed(a, x.order, j) ? `<span class="mk-chip ghost" lang="zh">${esc(t)}</span>` : `<button class="mk-chip" data-mkch="${j}" lang="zh">${esc(t)}</button>`).join("")}</div>`
+      : `<div class="mk-opts">${x.opts.map((o, j) => `<button class="mk-opt${a === j ? " sel" : ""}" data-mkopt="${j}"><span class="mk-l">${"ABCD"[j]}</span><span${o.zh ? ' lang="zh"' : ""}>${esc(o.t)}</span></button>`).join("")}</div>`;
+    v.innerHTML = `
+      <div class="mk-top"><span class="mk-sec">${MK_SEC[x.sec]}</span><span class="mk-clock" id="mkClock">${mkT(K.end - Date.now())}</span></div>
+      <div class="mk-prog"><i style="width:${(K.i + 1) / K.q.length * 100}%"></i></div>
+      <div class="mk-meta"><span>${K.i + 1} / ${K.q.length}</span><span>Javob berildi: ${answered}</span></div>
+      <section class="mk-q">
+        <p class="mk-part">${pn}</p><h3 class="mk-ins">${pi}</h3>
+        ${x.audio ? `<button class="mk-play" data-mkplay="1" ${K.plays[K.i] >= 2 ? "disabled" : ""}><span>${ICON}</span><b>${K.plays[K.i] ? "Yana tinglash" : "Tinglash"}</b><small>${2 - K.plays[K.i]} marta qoldi</small></button>` : ""}
+        ${x.show ? `<p class="mk-show">“${esc(x.show)}”</p>` : ""}
+        ${x.text ? `<p class="mk-text" lang="zh">${esc(x.text)}</p>` : ""}
+        ${opts}
+      </section>
+      <div class="mk-nav"><button class="btn" data-mkgo="-1" ${K.i ? "" : "disabled"}>‹ Oldingi</button>${K.i < K.q.length - 1 ? `<button class="btn primary" data-mkgo="1">Keyingi ›</button>` : `<button class="btn primary" data-mkfin="1">Yakunlash</button>`}</div>
+      <details class="mk-map"><summary>Savollar xaritasi · ${answered}/${K.q.length}</summary><div class="mk-grid">${K.q.map((y, j) => `<button data-mkj="${j}" class="${K.a[j] != null ? "done" : ""}${j === K.i ? " cur" : ""}">${j + 1}</button>`).join("")}</div></details>
+      <button class="mk-quit" data-mkfin="1">Imtihonni yakunlash</button>`;
+    return;
+  }
+  if (K && K.done) {
+    const R = K.res, pass = R.total >= 180, mx = 300, col = pass ? "#2E9E6B" : "#E5484D";
+    const used = (K.fin - K.start) / 1000, wrong = K.q.map((x, i) => ({x, i})).filter(o => !mkAnsOk(o.x, K.a[o.i]));
+    const lesW = Object.entries(R.les).map(([L, v]) => ({L:+L, n:v[0], ok:v[1], p:v[1] / v[0]})).filter(o => o.n >= 2 && o.p < .75).sort((a, b) => a.p - b.p).slice(0, 4);
+    const prev = (S.mock || []).slice(0, -1).filter(m => m.m === K.mode), best = prev.length ? Math.max(...prev.map(m => m.tot)) : null;
+    v.innerHTML = `
+      <section class="mk-res ${pass ? "pass" : "fail"}">
+        <div class="mk-rbox">${mkRing(R.total, mx, col)}<div class="mk-rv"><b>${R.total}</b><small>/ ${mx}</small></div></div>
+        <div><p class="mk-verdict">${pass ? "✅ Oʻtdingiz" : "❌ Hali oʻtmadingiz"}</p><p class="sub">Oʻtish bali — 180. ${pass ? `Zaxira: +${R.total - 180}` : `Yetmadi: ${180 - R.total} ball`}</p>
+        <p class="sub">${R.ok}/${K.q.length} toʻgʻri · ${fmtT(used)}${best != null ? ` · avvalgi eng yaxshi: ${best}` : ""}</p></div>
+      </section>
+      <div class="mk-secs">${["L","R","W"].filter(k => R.sec[k] != null).map(k => `<div><div class="mk-sbox">${mkRing(R.sec[k], 100, R.sec[k] >= 60 ? "#2E9E6B" : "#E5484D")}<b>${R.sec[k]}</b></div><span>${MK_SEC[k]}</span><small>${R.raw[k][1]}/${R.raw[k][0]}</small></div>`).join("")}</div>
+      <h3 class="sect">Qismlar boʻyicha tahlil</h3>
+      <div class="mk-parts">${Object.entries(R.part).map(([k, p]) => { const pc = Math.round(p[1] / p[0] * 100); return `<div class="mk-pr"><span><b>${MK_PARTS[k][0]}</b><small>${MK_PARTS[k][1]}</small></span><span class="mk-pb"><i style="width:${pc}%;background:${pc >= 75 ? "#2E9E6B" : pc >= 50 ? "#E5A23B" : "#E5484D"}"></i></span><b class="mk-pc">${pc}%</b><small class="mk-pt">${p[1]}/${p[0]} · ${Math.round(p[2] / p[0] / 1000)} s/savol</small></div>`; }).join("")}</div>
+      <h3 class="sect">Tavsiyalar</h3>
+      <div class="mk-adv">${mkAdvice(R, K).map(([i, b, t, go]) => `<div class="mk-a"><span class="mk-ai">${i}</span><div><b>${b}</b><p>${t}</p>${go ? `<button class="btn sm" data-mkdo="${go}">Mashq qilish ›</button>` : ""}</div></div>`).join("")}</div>
+      ${lesW.length ? `<h3 class="sect">Zaif darslar</h3><div class="mk-les">${lesW.map(o => `<button data-mkles="${o.L}" style="--lc:${lc(o.L)}"><b>${esc(lname(o.L))}</b><span>${Math.round(o.p * 100)}% · ${o.ok}/${o.n}</span><small>Shu darsni mashq qilish ›</small></button>`).join("")}</div>` : ""}
+      ${R.wrongW.length ? `<h3 class="sect">Takrorlash kerak boʻlgan soʻzlar (${R.wrongW.length})</h3><div class="mk-ww">${R.wrongW.map(id => WMAP[id]).filter(Boolean).map(w => `<div><span lang="zh">${esc(w.hz)}</span><span><b>${esc(w.py)}</b> ${esc(w.uz)}</span>${sayBtn(w.tts)}</div>`).join("")}</div>` : ""}
+      <h3 class="sect">Xatolar tahlili (${wrong.length})</h3>
+      <div class="mk-wrong">${wrong.length ? wrong.map(({x, i}) => `<details><summary><span class="mk-wn">${i + 1}</span><span>${MK_PARTS[x.part][0]}</span><span class="sub">${K.a[i] == null ? "javob yoʻq" : "notoʻgʻri"}</span></summary>
+        ${x.audio ? `<p>${sayBtn(x.audio)} <span class="sub">Audioni qayta tinglash</span></p>` : ""}
+        ${x.order ? `<p>Sening javobing: <span lang="zh">${esc((K.a[i] || []).join(" ") || "—")}</span></p><p>Toʻgʻri: <b lang="zh">${esc(x.ans)}</b></p>` : `<p>Sening javobing: <span${x.opts[0].zh ? ' lang="zh"' : ""}>${K.a[i] == null ? "—" : esc(x.opts[K.a[i]].t)}</span></p><p>Toʻgʻri: <b${x.opts[0].zh ? ' lang="zh"' : ""}>${esc(x.opts.find(o => o.ok).t)}</b></p>`}
+        <p class="mk-ex" lang="zh">${esc(x.zh).replace(/\n/g, "<br>")}</p><p class="sub">${esc(x.uz).replace(/\n/g, "<br>")}</p></details>`).join("") : `<p class="sub">Xato yoʻq — ajoyib! 🎉</p>`}</div>
+      <div class="mk-nav"><button class="btn" data-mkhome="1">Mock bosh sahifasi</button><button class="btn primary" data-mkstart="${K.mode}">Yana ishlash</button></div>`;
+    return;
+  }
+  const H = S.mock || [], last = H.slice(-10), best = H.length ? Math.max(...H.map(m => m.tot)) : 0, avg = H.length ? Math.round(H.reduce((a, m) => a + m.tot, 0) / H.length) : 0;
+  const tg = !!(TG && TG.openTelegramLink);
+  v.innerHTML = `
+    <section class="mk-hero"><span class="mk-badge">HSK 3 · 模拟考试</span><h2>Mock imtihon</h2><p>Haqiqiy HSK 3 formatida: tinglash, oʻqish va yozish. Har safar yangi savollar, vaqt, 300 ballik baho va chuqur tahlil.</p>
+      <div class="mk-hs"><div><b>${H.length}</b><span>ishlangan</span></div><div><b>${best || "—"}</b><span>eng yaxshi</span></div><div><b>${avg || "—"}</b><span>oʻrtacha</span></div></div></section>
+    ${MOCK_CHANNEL ? `<button class="mk-tg" data-mktg="1"><span class="mk-tgi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 4.5 2.8 11.7c-1 .4-1 1.8.1 2.1l4.6 1.4 1.8 5.5c.3.8 1.3 1 1.9.4l2.6-2.5 4.8 3.5c.7.5 1.7.1 1.9-.7L23 5.8c.2-1-.6-1.7-1.5-1.3zM9.3 14.8l8.6-7.6-6.6 8.9-.3 3z" fill="currentColor"/></svg></span><span><b>Telegram kanaldagi mocklar</b><small>Rasmiy eski HSK 3 testlari, audio va javoblar</small></span><span class="chev">›</span></button>` : ""}
+    <h3 class="sect">Imtihon turini tanlang</h3>
+    <div class="mk-modes">${Object.entries(MK_MODES).map(([k, m]) => `<button data-mkstart="${k}" class="${k === "full" ? "main" : ""}"><b>${m.name}</b><span>${m.sub}</span></button>`).join("")}</div>
+    <details class="mk-how"><summary>Imtihon qanday tuzilgan?</summary>
+      <div class="mk-rules">${Object.entries(MK_PARTS).map(([k, p]) => `<div><b>${p[0]}</b><span>${p[1]}</span><small>${MK_MODES.full.n[k]} ta</small></div>`).join("")}</div>
+      <p class="sub">Har bir boʻlim 100 ball, jami 300. Oʻtish — 180. Audio 2 marta eshitiladi. Har toʻgʻri javob +8 XP, oʻtsangiz +50 XP bonus.</p></details>
+    ${last.length ? `<h3 class="sect">Natijalar tarixi</h3><div class="mk-hist"><div class="mk-chart">${last.map(m => `<i title="${m.tot}" style="height:${m.tot / 3}%;background:${m.tot >= 180 ? "#2E9E6B" : "#E5484D"}"><em>${m.tot}</em></i>`).join("")}<span class="mk-line" style="bottom:60%"></span></div>
+      ${H.slice(-6).reverse().map(m => `<div class="mk-hr"><span>${dmy(m.t)} · ${hhmm(m.t)}</span><span>${(MK_MODES[m.m] || {}).name || m.m}</span><b style="color:${m.tot >= 180 ? "#2E9E6B" : "#E5484D"}">${m.tot}</b><small>${["L","R","W"].filter(k => m[k] != null).map(k => k + " " + m[k]).join(" · ")}</small></div>`).join("")}</div>` : ""}
+    <h3 class="sect">Boshqa bepul mocklar</h3>
+    <div class="mgroup">${MOCK_LINKS.map(([b, s, u], j) => `<button class="mrow" data-mklink="${j}"><span class="mi2" style="--qc:#56605A">${SVG.ex}</span><span><b>${b}</b><span class="s">${s}</span></span><span class="chev">↗</span></button>`).join("")}</div>
+    <p class="sub" style="margin-top:10px">Rasmiy HSK testlari mualliflik huquqi bilan himoyalangan, shuning uchun ular ilova ichiga koʻchirilmagan — havolalar orqali oching.</p>`;
+}
+// Telegram ichida o'zining tasdiq oynasi, brauzerda oddiy confirm
+function mkAsk(msg, yes){ try { if (TG && TG.showConfirm && (!TG.isVersionAtLeast || TG.isVersionAtLeast("6.2"))) return TG.showConfirm(msg, ok => ok && yes()); } catch (_) {} if (confirm(msg)) yes(); }
+function mkUsed(a, order, j){ const cnt = order.slice(0, j + 1).filter(t => t === order[j]).length; return a.filter(t => t === order[j]).length >= cnt; }
+function mkOpen(u){ try { if (/^https:\/\/t\.me\//.test(u) && TG && TG.openTelegramLink) return TG.openTelegramLink(u); if (TG && TG.openLink) return TG.openLink(u); } catch (_) {} window.open(u, "_blank", "noopener"); }
+$("#v-mock").addEventListener("click", e => {
+  const g = s => e.target.closest(s); let b;
+  if ((b = g("[data-mkstart]"))) { const m = b.dataset.mkstart; if (MK && !MK.done) mkAsk("Boshlangan imtihon bekor qilinadi. Davom etamizmi?", () => mkStart(m)); else mkStart(m); return; }
+  if (!MK || MK.done) {
+    if (g("[data-mkhome]")) { MK = null; renderMock(); window.scrollTo({top:0}); return; }
+    if (g("[data-mktg]")) { mkOpen(MOCK_CHANNEL); return; }
+    if ((b = g("[data-mklink]"))) { mkOpen(MOCK_LINKS[+b.dataset.mklink][2]); return; }
+    if ((b = g("[data-mkles]"))) { P.book = bookOf(+b.dataset.mkles); P.lessons = [+b.dataset.mkles]; save(); renderChips(); goTab("ex"); return; }
+    if ((b = g("[data-mkdo]"))) { const d = b.dataset.mkdo; if (d === "texts") goTab("texts"); else if (d === "write") { P.wmode = "memory"; P.wtop = "w"; goTab("write"); } else { goTab("ex"); try { startEx(d); } catch (_) {} } return; }
+    return;
+  }
+  const K = MK, x = K.q[K.i];
+  if (g("[data-mkplay]")) { mkPlay(); return; }
+  if ((b = g("[data-mkopt]"))) { hap("tap"); K.a[K.i] = +b.dataset.mkopt; renderMock(); return; }
+  if ((b = g("[data-mkch]"))) { hap("tap"); K.a[K.i] = (K.a[K.i] || []).concat(x.order[+b.dataset.mkch]); renderMock(); return; }
+  if ((b = g("[data-mkun]"))) { const a = K.a[K.i].slice(); a.splice(+b.dataset.mkun, 1); K.a[K.i] = a.length ? a : null; renderMock(); return; }
+  if ((b = g("[data-mkgo]"))) { hap("tap"); mkGo(+b.dataset.mkgo); return; }
+  if ((b = g("[data-mkj]"))) { mkGo(+b.dataset.mkj - K.i); return; }
+  if (g("[data-mkfin]")) { const left = K.a.filter(a => a == null).length; mkAsk(left ? `${left} ta savolga javob berilmagan. Yakunlaymizmi?` : "Imtihonni yakunlaymizmi?", mkFinish); return; }
+});
+
 /* ================= KO'PROQ ================= */
 function renderMore(){
   const canHome = !!(TG && TG.addToHomeScreen && (!TG.isVersionAtLeast || TG.isVersionAtLeast("8.0")));
@@ -3077,6 +3334,7 @@ function renderMore(){
     <p class="mhead">Oʻrganish</p>
     <div class="mgroup">
       ${P.book==="new" ? row("texts","texts","#C2477F","Matnlar va tahlil","Kitobdagi 课文: dialoglar, yangi soʻzlar, grammatika") : ""}
+      ${P.book==="hsk5" ? "" : row("mock","ex","#E5484D","Mock imtihon","HSK 3 formatida: tinglash, oʻqish, yozish · ball va tahlil")}
       ${row("grammar","grammar","#A93F55","Grammatika","Qolip, nazariya, rangli tahlil, xatolar")}
       ${row("words","words","#3B5BA9","Lugʻat","Barcha soʻzlar, ilmoqlar va misollar")}
       ${row("spell","spell","#8C5A3C","Yozilishi","Chiziqlar, tuzilish va yozish tartibi")}
