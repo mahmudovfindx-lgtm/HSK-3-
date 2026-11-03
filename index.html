@@ -1097,7 +1097,9 @@ main{padding-top:6px;}
 .rmodes button[aria-pressed="true"]{background:var(--surface);color:var(--ink);border-color:var(--ink);}
 .rs-py{color:var(--acc);}
 .h2 .zh{color:var(--acc);}
-.en{display:block;font-size:13.5px;line-height:1.35;color:var(--ink-3);margin-top:2px;font-weight:400;}
+.en{display:block;font-size:14px;line-height:1.35;color:var(--ink-2);margin-top:3px;font-weight:500;}
+.en i{font-style:normal;font-size:10px;font-weight:800;letter-spacing:.04em;color:var(--ink-3);border:1px solid var(--line);border-radius:5px;padding:1px 4px;margin-right:6px;vertical-align:2px}
+.en-f{font-size:17px;margin:8px 0 0;text-align:center}
 .hb-head .en,.fback .en{font-size:15px;text-align:center;}
 
 /* ---------- XP va reyting ---------- */
@@ -1969,7 +1971,10 @@ function startSession(free){
   session = {q, i:0, total:q.length, done:0, res:{again:0,hard:0,good:0}, missed:new Map(), first:new Set(), revealed:false, dir:P.dir, deck:P.deck, free};
   save(); renderPractice(); window.scrollTo({top:0});
 }
-function enL(w){ return w && w.en ? `<span class="en" lang="en">${esc(w.en)}</span>` : ""; }
+const enOk = w => w && w.en && w.en.trim().toLowerCase() !== String(w.uz || "").trim().toLowerCase();  // o'zbekchasi bilan bir xil bo'lsa takrorlamaymiz
+function enL(w){ return enOk(w) ? `<span class="en" lang="en"><i>EN</i>${esc(w.en)}</span>` : ""; }
+// Karta old tomoni (ma'no ko'rsatilganda): o'zbekcha ostida inglizchasi kattaroq — ma'no aniqroq bo'lsin
+function enF(w){ return enOk(w) ? `<p class="en en-f" lang="en"><i>EN</i>${esc(w.en)}</p>` : ""; }
 function band(n, label){ return `<div class="fc-band"><span>${lname(n)}${label?`, ${esc(label)}`:""}</span><span lang="zh">${esc(lessonTitle(n))}</span></div>`; }
 function cardCtl(){
   const s = session, c = s.q[s.i], pv = preview(c.id, s.dir);
@@ -1989,7 +1994,7 @@ function renderCard(){
   const s = session, c = s.q[s.i], isW = s.deck==="w", zh2uz = s.dir==="zh2uz";
   let front = "", head = "", extra = "";
   if (isW) {
-    front = zh2uz ? tzg(c.hz,"xl") : `<p class="ptr">${esc(c.uz)}</p><p class="sub">${POS[c.pos]||""}</p><div style="margin-top:16px">${tzg(c.hz,"lg",true)}</div>`;
+    front = zh2uz ? tzg(c.hz,"xl") : `<p class="ptr">${esc(c.uz)}</p>${enF(c)}<p class="sub">${POS[c.pos]||""}</p><div style="margin-top:16px">${tzg(c.hz,"lg",true)}</div>`;
     head = `${tzg(c.hz,"md")}<div class="fc-py">${esc(c.py)}</div><div class="fc-uz">${esc(c.uz)} <span class="sub" style="display:inline">${POS[c.pos]||""}</span></div>${enL(c)}${twinHtml(c)}`;
     extra = `${c.hook?`<div class="fc-sec"><span class="fc-lbl">Ilmoq</span><p>${esc(c.hook)}</p></div>`:""}${c.ex?`<div class="fc-sec"><span class="fc-lbl">Misol</span><p class="ex" lang="zh">${hl(c.ex,c.hz)}</p><p>${esc(c.exu)}</p></div>`:""}`;
   } else {
@@ -2578,7 +2583,7 @@ function rFc(v){
   <div class="fcopts"><div class="seg" data-dfront><button data-v="hz" aria-pressed="${fr==="hz"}">Old: 汉字</button><button data-v="uz" aria-pressed="${fr==="uz"}">Old: maʼno</button></div><button class="btn sm" data-d="fcShuf">Aralashtirish</button></div>
   <div class="fstage">
     <div class="fcard enter ${DS.fl?"flipped":""}" id="fcard" style="--lc:${lc(w.L)}"><div class="inner">
-      <div class="face ffront">${fr==="hz" ? `<div class="fhz" lang="zh">${esc(w.hz)}</div>` : `<div class="fuz big">${esc(w.uz)}</div>`}<span class="fhint">Bosib aylantir</span></div>
+      <div class="face ffront">${fr==="hz" ? `<div class="fhz" lang="zh">${esc(w.hz)}</div>` : `<div class="fuz big">${esc(w.uz)}</div>${enF(w)}`}<span class="fhint">Bosib aylantir</span></div>
       <div class="face fback"><div class="fhz sm" lang="zh">${esc(w.hz)}</div><div class="fpy">${esc(w.py)}</div><div class="fuz">${esc(w.uz)}</div>${enL(w)}</div>
     </div></div>
     <div class="ftools">${sayBtn(w.tts)}<button class="star" data-star="${w.id}" aria-pressed="${isStar(w.id)}" aria-label="Yulduzcha">★</button></div>
