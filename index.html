@@ -1255,6 +1255,41 @@ main{padding-bottom:110px;}
 .pd-base span{font-size:22px;font-weight:800;color:var(--mc);}
 .pd.p1 .pd-base{height:96px;} .pd.p2 .pd-base{height:70px;} .pd.p3 .pd-base{height:54px;}
 .pd.me .pd-nm{color:var(--acc);}
+/* XP bo'limlar bo'yicha */
+.xbc{display:flex;flex-wrap:wrap;gap:3px;margin-top:4px;justify-content:inherit}
+.xbc i{font-style:normal;font-size:10.5px;font-weight:700;line-height:1;padding:3px 6px;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 13%,transparent);white-space:nowrap}
+.rk-nm .xbc{justify-content:flex-start}
+.pd-base{flex-direction:column;align-items:center;gap:4px;padding:10px 4px 10px}
+.podium{margin-top:70px}
+.pd.p1 .pd-base{min-height:118px;height:auto} .pd.p2 .pd-base{min-height:84px;height:auto} .pd.p3 .pd-base{min-height:66px;height:auto}
+.pd-base .xbc{justify-content:center;margin-top:0}
+.xbb{background:var(--surface);border-radius:var(--r,20px);box-shadow:var(--sh);padding:12px 14px;margin:12px 0}
+.xbb-bar{display:flex;gap:3px;height:10px;border-radius:999px;overflow:hidden}
+.xbb-bar i{background:var(--c);min-width:4px}
+.xbb-leg{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:9px;font-size:12px;color:var(--ink-2)}
+.xbb-leg span{display:flex;align-items:center;gap:5px}.xbb-leg span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.xbb-leg b{color:var(--ink)}
+/* 1-o'rin — lotus */
+.pd.p1{--mc:#E36BA0;z-index:1}
+.pd.p1 .rav{box-shadow:0 0 0 3px var(--paper),0 0 0 6px #F29BC1,0 0 26px 8px rgba(242,120,170,.55);animation:lotusGlow 2.6s ease-in-out infinite}
+.pd.p1 .pd-base{background:linear-gradient(180deg,#FCE0EC 0%,#F6B3D0 100%);position:relative;overflow:hidden}
+.pd.p1 .pd-base .xbc i{background:rgba(255,255,255,.75)}
+.pd.p1 .pd-base::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-100%);animation:lotusShine 3.2s ease-in-out infinite}
+.pd.p1 .pd-base span{color:#B0306A}
+.pd.p1 .pd-nm{background:linear-gradient(90deg,#C2477F,#E88AB5,#C2477F);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:lotusText 3s linear infinite;font-weight:800}
+.pd-tag{margin-top:4px;font-size:11px;font-weight:800;color:#B0306A;background:#FDE3EF;border-radius:999px;padding:3px 9px}
+.lotus-fx{position:absolute;left:50%;top:0;width:150px;height:170px;transform:translateX(-50%);pointer-events:none;overflow:visible}
+.lotus-fx i{position:absolute;bottom:40px;left:calc(8% + var(--i)*11%);width:16px;color:#F08DB8;opacity:0;animation:lotusRise 4.8s ease-in infinite;animation-delay:calc(var(--i)*-.6s)}
+.lotus-fx i:nth-child(odd){width:11px;color:#F7B6D2}
+.lotus-fx svg,.lotus-bloom svg{display:block;width:100%}
+.lotus-bloom{position:absolute;top:-56px;left:50%;width:58px;transform:translateX(-50%);color:#EC7FB0;filter:drop-shadow(0 4px 10px rgba(236,127,176,.5));animation:lotusBloom 3s ease-in-out infinite}
+.pd.p1 .crown{top:-30px;z-index:2}
+@keyframes lotusRise{0%{transform:translateY(0) rotate(0) scale(.6);opacity:0}15%{opacity:.95}100%{transform:translateY(-150px) rotate(40deg) scale(1);opacity:0}}
+@keyframes lotusGlow{50%{box-shadow:0 0 0 3px var(--paper),0 0 0 6px #F29BC1,0 0 38px 14px rgba(242,120,170,.75)}}
+@keyframes lotusShine{60%,100%{transform:translateX(100%)}}
+@keyframes lotusText{to{background-position:-200% 0}}
+@keyframes lotusBloom{50%{transform:translateX(-50%) scale(1.08) translateY(-3px)}}
+@media (prefers-reduced-motion:reduce){.lotus-fx i,.lotus-bloom,.pd.p1 .rav,.pd.p1 .pd-base::after,.pd.p1 .pd-nm{animation:none}.lotus-fx i{opacity:.6}}
 .rk-list{padding:6px 14px;border-radius:var(--r);}
 .rk-list li{border-bottom-color:var(--mask);}
 .rk-list li.me{background:color-mix(in srgb,var(--acc) 8%,transparent);border-radius:16px;margin:2px -8px;padding:10px 8px;}
@@ -1406,8 +1441,8 @@ const LONGW = WORDS.filter(w => [...w.hz].length >= 2).sort((a,b)=>b.hz.length-a
 
 /* ---------- storage ---------- */
 const KEY = "hsk3-tg-1-7-v1";
-const S = {srs:{}, prefs:{}, exw:{}, days:[], st:{ty:{},L:{},g:{},d:{},w:{}}, lr:{}, t:0, cur:null, hist:[], xp:{}};
-try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); S.xp = (p.xp && typeof p.xp==="object") ? p.xp : {}; } } } catch(e) {}
+const S = {srs:{}, prefs:{}, exw:{}, days:[], st:{ty:{},L:{},g:{},d:{},w:{}}, lr:{}, t:0, cur:null, hist:[], xp:{}, xb:{}};
+try { const raw = localStorage.getItem(KEY); if (raw) { const p = JSON.parse(raw); if (p && typeof p === "object") { S.srs = p.srs||{}; S.prefs = p.prefs||{}; S.exw = p.exw||{}; S.days = Array.isArray(p.days)?p.days:[]; if (p.st) S.st = Object.assign(S.st, p.st); S.lr = p.lr||{}; S.t = p.t||0; S.seeded = !!p.seeded; S.first = p.first||0; S.cur = p.cur||null; S.hist = Array.isArray(p.hist)?p.hist:[]; S.h5 = Object.assign(H5DEF(), p.h5||{}); S.xp = (p.xp && typeof p.xp==="object") ? p.xp : {}; S.xb = (p.xb && typeof p.xb==="object") ? p.xb : {}; } } } catch(e) {}
 if (!S.h5) S.h5 = H5DEF();
 const ALL = LESS.map(L=>L.n);
 const BOOKS = [{k:"new", zh:"新HSK教程3", uz:"Yangi HSK 3", v:"3.0"}, {k:"old", zh:"HSK标准教程3", uz:"Eski HSK 3", v:"2.0"}, {k:"hsk5", zh:"HSK 5", uz:"Dilobar 老师 uchun"}];
@@ -1422,7 +1457,7 @@ if (!Array.isArray(P.lessons) || !P.lessons.length || P.lessons.some(n=>!ALL.inc
   if (P.book!=="old" && P.book!=="hsk5") P.book = "new"; if (P.lessons.some(n=>bookOf(n)!==P.book)) P.lessons = bookLessons(P.book);
 if (P.wmode!=="learn" && P.wmode!=="trace" && P.wmode!=="memory") P.wmode = "learn";
 let dirty = false;
-function body(){ return {v:3, t:S.t, srs:S.srs, exw:S.exw, days:S.days, st:S.st, lr:S.lr, prefs:P, cur:S.cur, hist:S.hist, seeded:!!S.seeded, first:S.first||0, h5:S.h5, xp:S.xp}; }
+function body(){ return {v:3, t:S.t, srs:S.srs, exw:S.exw, days:S.days, st:S.st, lr:S.lr, prefs:P, cur:S.cur, hist:S.hist, seeded:!!S.seeded, first:S.first||0, h5:S.h5, xp:S.xp, xb:S.xb}; }
 function writeLocal(){ try { localStorage.setItem(KEY, JSON.stringify(body())); } catch(e) {} }
 function save(){ S.prefs = P; S.t = Date.now(); S.cur = serCur(); dirty = true; writeLocal(); scheduleCloud(); }
 function dkey(t){ const d = new Date(t); return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`; }
@@ -1438,15 +1473,33 @@ function xpDiff(item){
   return 1;
 }
 function xpGain(kind, ok, item){ return ok ? Math.max(1, Math.round((XPB[kind]||4) * xpDiff(item))) : 1; }
-function xpAdd(n){
+// XP bo'limlar bo'yicha: n — Yangi HSK 3, o — Eski HSK 3, h5 — HSK 5 (Dilobar), r — kalitlar
+const XBK = ["n","o","h5","r"], XBN = {n:"Yangi HSK 3", o:"Eski HSK 3", h5:"HSK 5", r:"Kalitlar"};
+function xbOf(L){ const b = bookOf(L != null ? L : (P.lessons||[])[0]); return b==="old" ? "o" : b==="hsk5" ? "h5" : "n"; }
+// S.xb kelishidan oldingi XP bo'limlarga bo'linmagan — qolganini bajarilgan javoblar soniga qarab taxminan taqsimlaymiz
+function xpParts(){
+  const out = {}, t = xpTotal(); let sum = 0; XBK.forEach(k => { out[k] = +S.xb[k]||0; sum += out[k]; });
+  const rest = t - sum;
+  if (rest > 0) {
+    const w = {n:0, o:0, h5:0, r: Object.keys(P.rk||{}).length * XPB.rad};
+    for (const L in S.st.L) w[xbOf(+L)] += (S.st.L[L][0]||0) * 5.5;
+    for (const m in (S.h5.ans||{})) w.h5 += (S.h5.ans[m][0]||0) * 9.6;
+    const W = w.n + w.o + w.h5 + w.r;
+    XBK.forEach(k => out[k] += W ? rest * w[k] / W : (k==="n" ? rest : 0));
+  }
+  XBK.forEach(k => out[k] = Math.round(out[k])); return out;
+}
+function xpAdd(n, src){
   if (!(n > 0)) return; const k = isoDay(Date.now()); S.xp[k] = (S.xp[k]||0) + n;
+  const b = XBK.includes(src) ? src : xbOf(); S.xb[b] = (S.xb[b]||0) + n;
   xpFloat(n);
 }
-function xpPayload(){ const d = {}; for (let i=0;i<8;i++) { const k = isoDay(Date.now()-i*DAY); if (S.xp[k]) d[k] = S.xp[k]; } return {t: xpTotal(), d}; }
+function xpPayload(){ const d = {}; for (let i=0;i<8;i++) { const k = isoDay(Date.now()-i*DAY); if (S.xp[k]) d[k] = S.xp[k]; } return {t: xpTotal(), d, b: xpParts()}; }
 function xpTotal(){ let t = 0; for (const k in S.xp) t += +S.xp[k]||0; return t; }
 function xpToday(){ return S.xp[isoDay(Date.now())]||0; }
 function xpWeek(){ let t = 0; for (let i=0;i<7;i++) t += S.xp[isoDay(Date.now()-i*DAY)]||0; return t; }
-function xpLevel(x){ const l = Math.floor(Math.sqrt(x/60)) + 1, a = 60*(l-1)*(l-1), b = 60*l*l; return {l, cur:x-a, need:b-a}; }
+// Daraja: 1 — 0…1 000, 2 — 1 000…10 000, keyin har 5 000 XP da bitta (3 — 10k…15k, 4 — 15k…20k …)
+function xpLevel(x){ x = +x||0; if (x < 1000) return {l:1, cur:x, need:1000}; if (x < 10000) return {l:2, cur:x-1000, need:9000}; const l = 3 + Math.floor((x-10000)/5000); return {l, cur:x-10000-(l-3)*5000, need:5000}; }
 let xpFT, xpFN = 0;
 function xpFloat(n){
   let el = document.getElementById("xpFloat"); if (!el) { el = document.createElement("div"); el.id = "xpFloat"; document.body.appendChild(el); }
@@ -1454,7 +1507,7 @@ function xpFloat(n){
   clearTimeout(xpFT); xpFT = setTimeout(() => { el.classList.remove("on"); xpFN = 0; }, 1400);
 }
 function logAns(kind, ok, item){
-  xpAdd(xpGain(kind, ok, item));
+  xpAdd(xpGain(kind, ok, item), xbOf(item && item.L));
   if (!S.first) S.first = Date.now();
   const st = S.st; const inc = (o,k) => { const v = (o[k]||[0,0]).slice(); v[0]++; if (ok) v[1]++; o[k] = v; };
   inc(st.ty, kind); if (item) { inc(st.L, String(item.L)); if (item.gk) inc(st.g, item.gk); if (item.hz) inc(st.w, item.id); }
@@ -1488,6 +1541,7 @@ function mergeIn(r){
   if (r.first && (!S.first || r.first < S.first)) S.first = r.first;
   mergeH5(r.h5);
   const rx = r.xp || {}; for (const k in rx) if (/^\d{4}-\d{2}-\d{2}$/.test(k)) S.xp[k] = Math.max(S.xp[k]||0, +rx[k]||0);
+  const rb = r.xb || {}; for (const k of XBK) if (rb[k]) S.xb[k] = Math.max(S.xb[k]||0, +rb[k]||0);
   const hs = (S.hist||[]).concat(r.hist||[]), seen = new Set(); S.hist = hs.filter(h => h && !seen.has(h.t) && seen.add(h.t)).sort((a,b)=>b.t-a.t).slice(0,30);
   if ((r.t||0) > (S.t||0)) { if (r.prefs && typeof r.prefs === "object") Object.assign(P, r.prefs); S.cur = r.cur || null; S.t = r.t; }
   if (!Array.isArray(P.lessons) || !P.lessons.length || P.lessons.some(n=>!ALL.includes(n))) P.lessons = ALL.slice();
@@ -2360,7 +2414,7 @@ function h5mark(w, ok, kind, mode){
   const H = S.h5, k = H.k[w.id]||0, prev = {k, wr:H.wr[w.id]||0};
   if (ok) H.k[w.id] = kind==="mc" ? Math.max(k,2) : (k>=2 ? 3 : 2);
   else { H.k[w.id] = 1; H.wr[w.id] = (H.wr[w.id]||0) + 1; }
-  h5log(mode, ok); xpAdd(xpGain("h5", ok, w)); hap(ok ? "ok" : "bad"); return prev;
+  h5log(mode, ok); xpAdd(xpGain("h5", ok, w), "h5"); hap(ok ? "ok" : "bad"); return prev;
 }
 function h5override(w, prev, mode){
   const H = S.h5; H.wr[w.id] = prev.wr; if (!prev.wr) delete H.wr[w.id];
@@ -2877,7 +2931,7 @@ $("#v-texts").addEventListener("click", e => {
 const RADS = D.rads.map(r => ({n:r[0], c:r[1], v:r[2], py:r[3], s:r[4], uz:r[5], ex:r[6], nm:r[7]})), RKEY = new Set(D.radkey);
 const RK = {open:null, i:0, flip:false, t:null};
 function rkKnown(n){ return !!(P.rk && P.rk[n]); }
-function rkSet(n, on){ P.rk = P.rk || {}; if (on && !P.rk[n]) xpAdd(XPB.rad); if (on) P.rk[n] = 1; else delete P.rk[n]; save(); }
+function rkSet(n, on){ P.rk = P.rk || {}; if (on && !P.rk[n]) xpAdd(XPB.rad, "r"); if (on) P.rk[n] = 1; else delete P.rk[n]; save(); }
 function radList(){ const f = P.rf || "key"; return RADS.filter(r => f==="key" ? RKEY.has(r.n) : f==="all" ? true : r.s===+f); }
 function radWords(ch){ return WORDS.filter(w => bookOf(w.L)==="new" && w.hz.includes(ch)).slice(0,2); }
 function radEx(r){ return [...r.ex].map(ch => { const w = radWords(ch)[0]; return `<span class="rex"><b lang="zh">${esc(ch)}</b>${w?`<small>${esc(w.hz)} · ${esc(w.uz.split(/[;,(]/)[0])}</small>`:""}</span>`; }).join(""); }
@@ -2968,6 +3022,15 @@ function lvlRing(L, size){
   const r = 42, c = 2*Math.PI*r, f = L.cur/L.need;
   return `<svg class="ring" viewBox="0 0 100 100" width="${size}" height="${size}" aria-hidden="true"><circle cx="50" cy="50" r="${r}" class="rg-bg"/><circle cx="50" cy="50" r="${r}" class="rg-fg" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-f)}" transform="rotate(-90 50 50)"/></svg>`;
 }
+const XBC = {n:"#E5484D", o:"#3E7BFA", h5:"#C2477F", r:"#C9A04E"};
+const kfmt = n => n >= 10000 ? Math.round(n/1000) + "k" : n >= 1000 ? (n/1000).toFixed(1).replace(".0","") + "k" : String(n);
+// Kimdir bo'limlar bo'yicha XP: qaysi bo'limdan ko'p yig'gani (kattasidan boshlab)
+function xbChips(b){ if (!b) return ""; const ks = XBK.filter(k => b[k] > 0).sort((x,y) => b[y]-b[x]); return ks.length ? `<span class="xbc">${ks.map(k => `<i style="--c:${XBC[k]}">${XBN[k].replace("HSK 3","").trim() || XBN[k]} ${kfmt(b[k])}</i>`).join("")}</span>` : ""; }
+function xbBar(b){ const t = XBK.reduce((a,k) => a + (b[k]||0), 0); if (!t) return ""; const ks = XBK.filter(k => b[k] > 0).sort((x,y) => b[y]-b[x]);
+  return `<div class="xbb"><div class="xbb-bar">${ks.map(k => `<i style="--c:${XBC[k]};flex:${b[k]}"></i>`).join("")}</div><div class="xbb-leg">${ks.map(k => `<span style="--c:${XBC[k]}"><b>${(b[k]).toLocaleString("ru-RU")}</b> ${XBN[k]} · ${Math.round(b[k]/t*100)}%</span>`).join("")}</div></div>`; }
+// 1-o'rin: lotus gullari va yorug'lik
+const LOTUS = `<svg viewBox="0 0 64 40" aria-hidden="true"><g fill="currentColor"><path d="M32 2c6 8 7 20 0 32-7-12-6-24 0-32z" opacity=".95"/><path d="M14 10c10 2 16 12 17 24C20 32 13 22 14 10z" opacity=".75"/><path d="M50 10c1 12-6 22-17 24 1-12 7-22 17-24z" opacity=".75"/><path d="M2 22c10-2 20 4 28 13C18 37 7 32 2 22z" opacity=".55"/><path d="M62 22c-5 10-16 15-28 13 8-9 18-15 28-13z" opacity=".55"/></g></svg>`;
+function lotusFx(){ return `<span class="lotus-fx" aria-hidden="true">${[0,1,2,3,4,5,6,7].map(i => `<i style="--i:${i}">${LOTUS}</i>`).join("")}</span><span class="lotus-bloom" aria-hidden="true">${LOTUS}</span>`; }
 function renderRank(){
   const v = $("#v-rank"), x = xpTotal(), L = xpLevel(x), per = RKG.per, D = RKG.data[per], er = RKG.err[per];
   const me = TG && TG.initDataUnsafe && TG.initDataUnsafe.user;
@@ -2979,9 +3042,9 @@ function renderRank(){
   else if (!D.list.length) body = `<div class="rk-empty"><span class="rk-ei">${SVG.rank}</span><b>Hali hech kim yoʻq</b><span>Birinchi boʻl — bitta mashq yetarli.</span></div>`;
   else {
     const top = D.list.slice(0,3), rest = D.list.slice(3), isMe = u => me && u.id===me.id;
-    const pod = [top[1], top[0], top[2]].map((u, k) => { if (!u) return `<div class="pd empty"></div>`; const place = [2,1,3][k]; return `<div class="pd p${place}${isMe(u)?" me":""}">${place===1?`<span class="crown" aria-hidden="true">👑</span>`:""}${rankAv(u)}<b class="pd-nm">${esc(rankName(u))}</b><span class="pd-xp">${fmt(u.xp)} XP</span><div class="pd-base"><span>${place}</span></div></div>`; }).join("");
+    const pod = [top[1], top[0], top[2]].map((u, k) => { if (!u) return `<div class="pd empty"></div>`; const place = [2,1,3][k]; return `<div class="pd p${place}${isMe(u)?" me":""}">${place===1?lotusFx()+`<span class="crown" aria-hidden="true">👑</span>`:""}${rankAv(u)}<b class="pd-nm">${esc(rankName(u))}</b><span class="pd-xp">${fmt(u.xp)} XP · ${xpLevel(u.total||u.xp).l}-daraja</span>${place===1?`<span class="pd-tag">🪷 Lider</span>`:""}<div class="pd-base"><span>${place}</span>${xbChips(u.b)}</div></div>`; }).join("");
     body = `<div class="podium">${pod}</div>
-      ${rest.length ? `<ol class="rk-list" start="4">${rest.map((u,i) => `<li class="${isMe(u)?"me":""}"><span class="rk-n">${i+4}</span>${rankAv(u)}<span class="rk-nm">${esc(rankName(u))}<small>${xpLevel(u.total||u.xp).l}-daraja</small></span><b class="rk-xp">${fmt(u.xp)}</b></li>`).join("")}</ol>` : ""}
+      ${rest.length ? `<ol class="rk-list" start="4">${rest.map((u,i) => `<li class="${isMe(u)?"me":""}"><span class="rk-n">${i+4}</span>${rankAv(u)}<span class="rk-nm">${esc(rankName(u))}<small>${xpLevel(u.total||u.xp).l}-daraja</small>${xbChips(u.b)}</span><b class="rk-xp">${fmt(u.xp)}</b></li>`).join("")}</ol>` : ""}
       ${D.me && D.me.rank > 3 && !D.list.slice(3).some(isMe) ? `<div class="rk-mine"><span class="rk-n">${D.me.rank}</span><span class="rk-nm">Sen</span><b class="rk-xp">${fmt(D.me.xp)}</b></div>` : ""}
       <p class="rk-foot">${D.count} ishtirokchi</p>`;
   }
@@ -2990,12 +3053,14 @@ function renderRank(){
       <div class="rk-ringbox">${lvlRing(L, 108)}<div class="rk-lv"><b>${L.l}</b><small>daraja</small></div></div>
       <div class="rk-hx"><span class="rk-cap">Jami</span><b>${fmt(x)} <small>XP</small></b><span class="rk-next">Keyingi darajagacha <b>${fmt(L.need-L.cur)}</b> XP</span></div>
     </section>
+    ${xbBar(xpParts())}
     <div class="rk-stats"><div><b>+${fmt(xpToday())}</b><span>bugun</span></div><div><b>${fmt(xpWeek())}</b><span>7 kun</span></div><div><b>${D && D.me && D.me.rank ? "#"+D.me.rank : "—"}</b><span>oʻrning</span></div></div>
     <div class="rk-seg" role="tablist">${[["day","Bugun"],["week","Hafta"],["all","Umumiy"]].map(([k,l]) => `<button data-rkp="${k}" aria-pressed="${per===k}">${l}</button>`).join("")}</div>
     ${body}
     <details class="rk-how"><summary>XP qanday yigʻiladi?</summary>
       <div class="rk-rules">${[["Kartochka","4"],["Gap kartasi","6"],["Maʼnosini top","5"],["Ierogifini top · Pinyin","6"],["Tinglab top","7"],["Boʻsh joy","8"],["Gap tuzish","10"],["Xotiradan yozish","12"],["Yangi kalit","5"],["Xato javob","1"]].map(([a,b]) => `<div><span>${a}</span><b>${b}</b></div>`).join("")}</div>
-      <p class="sub">Har bir qoʻshimcha ierogif +25%, HSK 5 soʻzlari ×1.6. Reytingda ismingiz va Telegram rasmingiz koʻrinadi.</p>
+      <p class="sub">Har bir qoʻshimcha ierogif +25%, HSK 5 soʻzlari ×1.6. XP Yangi HSK 3, Eski HSK 3, HSK 5 va kalitlardan yigʻiladi va hammasi qoʻshiladi.</p>
+      <p class="sub"><b>Darajalar:</b> 1 — 0–1 000 XP · 2 — 1 000–10 000 · 3 — 10 000–15 000 · keyin har 5 000 XP da yangi daraja. Reytingda ismingiz va Telegram rasmingiz koʻrinadi.</p>
     </details>`;
   if (!D && !er) rankLoad(false);
 }
@@ -3214,16 +3279,20 @@ setTimeout(initCloud, 0);
 (function(){
   if (!STATS_URL || !TG) return;
   const sid = (Math.random().toString(36).slice(2) + Date.now().toString(36)).slice(0, 30);
-  let vis = document.visibilityState === "visible", t0 = Date.now(), acc = 0;
+  // Vaqtni asosan server hisoblaydi (ketma-ket pinglar orasidagi vaqt), d — zaxira. h — eski tarix (kirgan kunlar), bir marta.
+  const shown = () => document.visibilityState !== "hidden";
+  let t0 = Date.now(), acc = 0, hsent = false;
   function send(beacon){
-    const n = Date.now(); if (vis) acc += n - t0; t0 = n;
+    const n = Date.now(); acc += n - t0; t0 = n;
     const d = Math.round(acc / 1000); acc -= d * 1000;
-    const body = JSON.stringify({init: TG.initData, sid, d, p: TG.platform || "", xp: xpPayload()});
+    const o = {init: TG.initData, sid, d, p: TG.platform || "", xp: xpPayload()};
+    if (!hsent) { hsent = true; o.h = {days: (S.days||[]).slice(-120), first: S.first||0, hist: (S.hist||[]).map(h => h.t).filter(Boolean).slice(0,30)}; }
+    const body = JSON.stringify(o);
     try { if (beacon && navigator.sendBeacon) navigator.sendBeacon(STATS_URL + "/ping", body); else fetch(STATS_URL + "/ping", {method:"POST", body, keepalive:true}).catch(()=>{}); } catch(_) {}
   }
   send(false);
-  setInterval(() => { if (vis) send(false); }, 60000);
-  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") { send(true); vis = false; } else { vis = true; t0 = Date.now(); } });
+  setInterval(() => { if (shown()) send(false); else t0 = Date.now(); }, 30000);
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") send(true); else { t0 = Date.now(); send(false); } });
 })();
 </script>
 </body>
