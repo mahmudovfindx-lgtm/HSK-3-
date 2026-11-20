@@ -2162,6 +2162,26 @@ button.bn-t:active{transform:scale(.97);}
 @keyframes xpPop{0%{transform:translateY(-8px) scale(1.15);opacity:.3}100%{transform:none;opacity:1}}
 @keyframes xpRise{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.9}100%{transform:translateY(-105vh) rotate(40deg);opacity:0}}
 @media (prefers-reduced-motion:reduce){.xp-card,.xp-h,.xp-ic,.xp-flap,.xp-fly i,.xp-u b.pop{animation:none}}
+/* Maktub reklama-banneri (pastda, menyu ustida) */
+.xbn{position:fixed;left:10px;right:10px;bottom:calc(74px + env(safe-area-inset-bottom,0px));z-index:8;display:flex;align-items:center;gap:10px;max-width:560px;margin:0 auto;padding:9px 10px 9px 9px;border:0;border-radius:18px;background:linear-gradient(115deg,#D6336C 0%,#E8578A 55%,#F28AAE 100%);color:#fff;text-align:left;cursor:pointer;overflow:hidden;box-shadow:0 12px 26px -10px rgba(176,35,79,.75);animation:xbnIn .55s cubic-bezier(.2,.9,.3,1.2);font:inherit;}
+.xbn[hidden]{display:none;}
+.xbn-sh{position:absolute;top:0;bottom:0;left:-40%;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.38),transparent);transform:skewX(-18deg);animation:xbnSh 3.2s ease-in-out infinite;pointer-events:none;}
+.xbn-ic{flex:none;width:42px;height:42px;border-radius:12px;background:#fff;display:grid;place-items:center;box-shadow:0 4px 10px rgba(120,0,40,.25);animation:xpFloat 2.4s ease-in-out infinite;}
+.xbn-ic svg{width:32px;height:32px;display:block;}
+.xbn-ic .xseal{transform-origin:20px 24px;animation:xbeat 1.8s ease-in-out infinite;}
+.xbn-tx{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;}
+.xbn-t{font-size:15px;font-weight:800;letter-spacing:-.01em;}
+.xbn-s{font-size:12.5px;opacity:.95;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
+.xbn-s b{font-weight:800;}
+.xbn-go{flex:none;padding:7px 11px;border-radius:999px;background:#fff;color:#B0234F;font-size:13px;font-weight:800;}
+.xbn.open .xbn-go{animation:xbeat 1.6s ease-in-out infinite;}
+.xbn-x{position:absolute;top:3px;right:6px;font-size:11px;line-height:1;opacity:.75;padding:3px;}
+.xbn .xbn-go{margin-right:6px;}
+:root.xbn-on body{padding-bottom:calc(150px + env(safe-area-inset-bottom,0px)) !important;}
+:root.focus .xbn,:root.dict-on .xbn{display:none !important;}
+@keyframes xbnIn{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
+@keyframes xbnSh{0%,55%{left:-40%}100%{left:130%}}
+@media (prefers-reduced-motion:reduce){.xbn,.xbn-sh,.xbn-ic,.xbn-ic .xseal,.xbn.open .xbn-go{animation:none}}
 /* ===== Maxfiy xat (yuqori burchak) ===== */
 .xatbtn{position:relative;flex:none;width:36px;height:36px;margin-left:8px;border:1px solid #F3C1D2;border-radius:50%;background:linear-gradient(160deg,#fff,#FFE8EF);display:grid;place-items:center;line-height:1;cursor:pointer;padding:0;}
 .xatbtn .xi{display:block;width:26px;height:26px;animation:xpFloat 2.6s ease-in-out infinite;}
@@ -2551,6 +2571,7 @@ html.dict-on .nav{display:none !important;}
   <button data-tab="book" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.8C10.3 5.3 7.7 4.6 3.5 4.7v13.6c4.2-.1 6.8.6 8.5 2 1.7-1.4 4.3-2.1 8.5-2V4.7c-4.2-.1-6.8.6-8.5 2.1z"/><path d="M12 6.8v13.5"/></svg></span><span class="nl">Kitob</span></button>
   <button data-tab="more" type="button"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.2c1.2-3.6 4.1-5.4 7.5-5.4s6.3 1.8 7.5 5.4"/></svg></span><span class="nl">Profil</span></button>
 </nav>
+<button class="xbn" id="xatBn" type="button" hidden aria-label="Sizga maktub bor"></button>
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script>
@@ -2906,7 +2927,26 @@ function xatPop(force){
     if (a && a.dataset.xp === "open"){ xatSnd("open"); setTimeout(xatShow, 200); }
   });
 }
+/* Reklama-banner: Dilobar rejimida pastda doim turadi (xat o'qilmaguncha) */
+let xbnHide = false;
+function xatBanner(){
+  const b = $("#xatBn"); if (!b) return;
+  const on = !!XAT && P.book === "hsk5" && !P.xatRead && !xbnHide;
+  b.hidden = !on; document.documentElement.classList.toggle("xbn-on", on);
+  if (!on) return;
+  const o = xatOpen(), L = xatLeft();
+  const cd = o ? "Maktub ochildi — hoziroq oʻqing!" : `Ochilishiga: <b>${L[0]}</b> kun <b>${String(L[1]).padStart(2,"0")}:${String(L[2]).padStart(2,"0")}:${String(L[3]).padStart(2,"0")}</b>`;
+  if (!b.firstChild) b.innerHTML = `<span class="xbn-sh" aria-hidden="true"></span><span class="xbn-ic">${XAT_ICO}</span><span class="xbn-tx"><span class="xbn-t">💌 Sizga maktub bor</span><span class="xbn-s"></span></span><span class="xbn-go">${o ? "Ochish" : "Koʻrish"} ›</span><span class="xbn-x" role="button" aria-label="Yopish">✕</span>`;
+  b.querySelector(".xbn-s").innerHTML = cd;
+  b.querySelector(".xbn-go").textContent = (o ? "Ochish" : "Koʻrish") + " ›";
+  b.classList.toggle("open", o);
+}
+$("#xatBn").addEventListener("click", e => {
+  if (e.target.closest(".xbn-x")){ xbnHide = true; xatBanner(); return; }
+  hap("tap"); xatPop(true);
+});
 xatInit(); setInterval(xatInit, 10000);
+xatBanner(); setInterval(() => { if (!document.hidden) xatBanner(); }, 1000);
 const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts", rank:"#v-rank", mock:"#v-mock", mb:"#v-mb", book:"#v-book"};
 const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashq", write:"Mashq", more:"Profil", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar", rank:"Reyting", mock:"Mock", mb:"Xatolar", book:"Kitob"};
 const SUBTABS = ["grammar","words","spell","stats","tips","texts","mock","mb", "rank"];
@@ -2943,7 +2983,7 @@ function renderChips(){
   $("#chips").classList.toggle("open", CHO);
   $("#books").classList.toggle("dbooks", P.book==="hsk5");
   document.documentElement.classList.toggle("dilobar", P.book==="hsk5");
-  if (P.book==="hsk5") setTimeout(() => xatPop(), 700);
+  if (P.book==="hsk5") setTimeout(() => xatPop(), 700); if (typeof xatBanner === "function") xatBanner();
   ["lv1","lv2","lv3"].forEach(c => document.documentElement.classList.toggle(c, P.book!=="hsk5" && "lv"+bk(P.book).lv===c));
   $("#chips").innerHTML = `<span class="lbl">${P.book==="new"?"Mavzu":P.book==="hsk5"?"Toʻplam":"Dars"}:</span>` + LESS.filter(L=>(L.book||"new")===P.book).map(L => `<button class="chip" style="--lc:${lc(L.n)}" data-l="${L.n}" aria-pressed="${!all && P.lessons.includes(L.n)}" aria-label="${lname(L.n)}">${L.d||L.n}</button>`).join("") + `<button class="chip all" data-l="all" aria-pressed="${all}">Hammasi</button>`;
 }
