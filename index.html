@@ -3306,9 +3306,9 @@ xatBanner(); setInterval(() => { if (!document.hidden) xatBanner(); }, 1000);
    yuguruvchi qator, kirishda tort + shamlar + "Happy Birthday" kuyi.
    Sinash: URL oxiriga ?bday=1 qo'shing.
    =================================================================== */
-function isBday(){   // 22-noyabr 00:00 — 23-noyabr 00:00 (telefon vaqti)
+function isBday(){   // dizayn 21-noyabr 00:00 dan 23-noyabr 00:00 gacha (egasi: "dizayn turaversin"); maktub baribir XAT_KUN = 22-noyabrda ochiladi
   const t = Date.now();
-  return /[?&]bday=1/.test(location.search) || (t >= new Date(2026, 10, 22).getTime() && t < new Date(2026, 10, 23).getTime());
+  return /[?&]bday=1/.test(location.search) || (t >= new Date(2026, 10, 21).getTime() && t < new Date(2026, 10, 23).getTime());
 }
 const BD_TITLES = {home:"Dilobar kuni 🎂", cards:"Kartalar 🎈", ex:"Mashq 🎉", write:"Mashq 🎉", book:"Kitob 🎁", more:"Profil 🎂"};
 const BD_CAKE = `<svg class="bd-cake" viewBox="0 0 200 190" aria-hidden="true">
