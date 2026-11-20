@@ -2182,6 +2182,230 @@ button.bn-t:active{transform:scale(.97);}
 @keyframes xbnIn{from{transform:translateY(30px);opacity:0}to{transform:none;opacity:1}}
 @keyframes xbnSh{0%,55%{left:-40%}100%{left:130%}}
 @media (prefers-reduced-motion:reduce){.xbn,.xbn-sh,.xbn-ic,.xbn-ic .xseal,.xbn.open .xbn-go{animation:none}}
+/* ===================== TUG'ILGAN KUN REJIMI (22-noyabr) ===================== */
+:root.bday:not(.zq):not(.zz){--ac:#D6336C !important;--acc:#D6336C !important;--lv:#D6336C !important;--lv-2:#D6336C !important;--acs:color-mix(in srgb,#D6336C 14%,var(--surface)) !important;}
+.xatbtn .xbd{white-space:nowrap;}
+:root.bday body{background-image:radial-gradient(circle at 12% 18%,rgba(240,101,149,.10) 0 2px,transparent 3px),radial-gradient(circle at 78% 42%,rgba(255,212,59,.12) 0 2px,transparent 3px),radial-gradient(circle at 40% 76%,rgba(116,192,252,.10) 0 2px,transparent 3px),radial-gradient(circle at 90% 88%,rgba(177,151,252,.10) 0 2px,transparent 3px);background-size:120px 120px,150px 150px,130px 130px,170px 170px;}
+:root.bday .top .wrap{position:relative;}
+.bd-flags{display:block;width:100%;height:26px;margin:0 0 -6px;pointer-events:none;transform-origin:50% 0;animation:bdSway 4s ease-in-out infinite;}
+.bd-tick{overflow:hidden;margin:4px -16px 2px;padding:5px 0;background:linear-gradient(90deg,#D6336C,#F06595,#B197FC,#D6336C);color:#fff;font-size:12.5px;font-weight:700;white-space:nowrap;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);}
+.bd-tk-in{display:inline-flex;gap:28px;padding-left:28px;animation:bdTick 38s linear infinite;will-change:transform;}
+.bd-tk-in span{flex:none;}
+.bd-card{position:relative;overflow:hidden;margin:0 0 14px;padding:16px 16px 14px;border-radius:22px;background:linear-gradient(135deg,#D6336C 0%,#F06595 50%,#B197FC 100%);color:#fff;box-shadow:0 16px 34px -14px rgba(176,35,79,.7);animation:xpUp .6s cubic-bezier(.2,.9,.3,1.2);}
+.bd-card::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);animation:xbnSh 4s ease-in-out infinite;pointer-events:none;}
+.bd-c-fx i{position:absolute;font-style:normal;font-size:18px;opacity:.9;animation:xpFloat 3s ease-in-out infinite;pointer-events:none;}
+.bd-c-fx i:nth-child(1){top:8px;right:14px}.bd-c-fx i:nth-child(2){top:46px;right:52px;animation-delay:.6s;font-size:14px}.bd-c-fx i:nth-child(3){bottom:58px;right:12px;animation-delay:1.1s}.bd-c-fx i:nth-child(4){top:10px;right:78px;animation-delay:1.6s;font-size:13px}.bd-c-fx i:nth-child(5){bottom:12px;right:40%;animation-delay:.3s;font-size:12px}
+.bd-c-top{display:flex;align-items:center;gap:12px;position:relative;z-index:1;}
+.bd-c-ic{flex:none;width:76px;height:72px;background:rgba(255,255,255,.95);border-radius:18px;display:grid;place-items:center;}
+.bd-c-ic .bd-cake{width:66px;height:62px;}
+.bd-c-k{margin:0;font-size:11.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.9;}
+.bd-card h2{margin:2px 0 4px;font-size:20px;line-height:1.2;font-weight:800;color:#fff;}
+.bd-card h2 b{display:inline-block;color:#FFF3BF;animation:bdPulse 1.8s ease-in-out infinite;}
+.bd-c-zh{margin:0;font-size:17px;font-weight:700;}
+.bd-c-zh span{font-size:12.5px;font-weight:500;opacity:.85;margin-left:6px;}
+.bd-c-w{position:relative;z-index:1;margin:10px 0 12px;font-size:14px;line-height:1.45;opacity:.96;}
+.bd-c-act,.bd-sp-act{position:relative;z-index:1;display:flex;gap:8px;}
+.bd-b1,.bd-b2{flex:1;padding:11px 10px;border-radius:14px;border:0;font:inherit;font-size:14px;font-weight:800;cursor:pointer;}
+.bd-b1{background:#fff;color:#B0234F;box-shadow:0 6px 14px -6px rgba(0,0,0,.35);}
+.bd-b2{background:rgba(255,255,255,.2);color:#fff;border:1.5px solid rgba(255,255,255,.7);}
+.bd-pf{display:flex;align-items:center;gap:12px;margin:10px 0 4px;padding:12px 14px;border-radius:18px;background:linear-gradient(120deg,#D6336C,#F06595);color:#fff;}
+.bd-pf>span{font-size:28px;animation:xpFloat 2.6s ease-in-out infinite;}
+.bd-pf b{display:block;font-size:15px;}
+.bd-pf small{display:block;font-size:12.5px;opacity:.92;}
+:root.bday .nav button[aria-current="page"]{animation:bdPulse 2.4s ease-in-out infinite;}
+.bd-bal{position:fixed;bottom:-90px;z-index:6;pointer-events:none;opacity:.88;animation:bdRise 13s linear forwards;}
+.bd-bal svg{width:100%;height:auto;display:block;animation:bdWob 2.6s ease-in-out infinite;}
+.bd-cf{position:fixed;z-index:500;width:10px;height:10px;font-style:normal;font-size:18px;line-height:1;pointer-events:none;animation:bdCf 1.8s cubic-bezier(.15,.7,.4,1) forwards;}
+.bd-cf.pc{width:8px;height:12px;border-radius:2px;}
+.bd-tp{position:fixed;z-index:500;font-style:normal;font-size:13px;line-height:1;pointer-events:none;margin:-6px 0 0 -6px;animation:bdTp .7s ease-out forwards;}
+/* kirish sahnasi */
+.bd-sp{position:fixed;inset:0;z-index:450;display:grid;place-items:center;padding:20px;overflow:hidden;background:radial-gradient(circle at 50% 30%,#FF8FB5 0%,#D6336C 45%,#7B1E4A 100%);color:#fff;text-align:center;animation:fadein .4s;}
+.bd-sp.bye{opacity:0;transform:scale(1.04);transition:opacity .38s,transform .38s;}
+.bd-sp-bg{position:absolute;inset:0;pointer-events:none;}
+.bd-sb{position:absolute;bottom:-100px;animation:bdRise 8s linear infinite;}
+.bd-sb svg{width:100%;height:auto;display:block;animation:bdWob 2.4s ease-in-out infinite;}
+.bd-sp-x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 12px);right:12px;z-index:3;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.22);color:#fff;font-size:17px;cursor:pointer;}
+.bd-sp-in{position:relative;z-index:2;width:100%;max-width:380px;}
+.bd-l1,.bd-l2,.bd-l3,.bd-l4,.bd-cakebtn,.bd-hint,.bd-sp .bd-sp-act{opacity:0;animation:bdIn .7s cubic-bezier(.2,.9,.3,1.2) forwards;}
+.bd-l1{margin:0;font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;animation-delay:.2s;}
+.bd-l2{margin:8px 0 0;font-size:30px;line-height:1.1;font-weight:800;animation-delay:.55s;}
+.bd-l3{margin:2px 0 6px;font-size:50px;line-height:1.05;font-weight:900;color:#FFF3BF;text-shadow:0 6px 24px rgba(120,0,40,.45);animation:bdIn .8s .95s cubic-bezier(.2,1.4,.3,1) forwards,bdPulse 2s 2s ease-in-out infinite;}
+.bd-l4{margin:0 0 6px;font-size:24px;font-weight:700;animation-delay:1.3s;}
+.bd-l4 span{display:block;font-size:13px;font-weight:500;opacity:.85;}
+.bd-cakebtn{display:block;width:200px;height:190px;margin:4px auto 0;padding:0;border:0;background:none;cursor:pointer;animation-delay:1.6s;}
+.bd-cakebtn .bd-cake{width:100%;height:100%;}
+.bd-hint{min-height:22px;margin:4px 0 14px;font-size:15px;animation-delay:1.9s;}
+.bd-sp .bd-sp-act{animation-delay:2.1s;}
+.bd-sp .bd-b2{background:rgba(255,255,255,.18);}
+.bd-fl path{fill:#FFA94D;transform-box:fill-box;transform-origin:50% 100%;animation:bdFlame .5s ease-in-out infinite alternate;}
+.bd-fl path:nth-child(2){animation-delay:.15s}.bd-fl path:nth-child(3){animation-delay:.3s}
+.bd-smk circle{fill:rgba(255,255,255,.7);opacity:0;}
+.bd-sp.party .bd-cakebtn{animation:bdIn .7s 1.6s forwards,bdBob 1.2s 2.4s ease-in-out infinite;}
+.bd-sp.blown .bd-fl path{animation:bdOut .35s forwards;}
+.bd-sp.blown .bd-smk circle{animation:bdSmoke 1.4s ease-out forwards;}
+.bd-sp.blown .bd-smk circle:nth-child(2){animation-delay:.1s}.bd-sp.blown .bd-smk circle:nth-child(3){animation-delay:.2s}
+@keyframes bdSway{0%,100%{transform:rotate(-.6deg)}50%{transform:rotate(.6deg)}}
+@keyframes bdTick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes bdPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes bdRise{from{transform:translate(0,0)}to{transform:translate(var(--sw,0),-125vh)}}
+@keyframes bdWob{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes bdCf{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}
+@keyframes bdTp{0%{transform:translate(0,0) scale(.6);opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.1);opacity:0}}
+@keyframes bdIn{from{transform:translateY(22px) scale(.94);opacity:0}to{transform:none;opacity:1}}
+@keyframes bdFlame{from{transform:scale(1,1) rotate(-3deg)}to{transform:scale(.86,1.12) rotate(3deg)}}
+@keyframes bdOut{to{transform:scale(0);opacity:0}}
+@keyframes bdSmoke{0%{opacity:.8;transform:translateY(0) scale(.6)}100%{opacity:0;transform:translateY(-40px) scale(2.2)}}
+@keyframes bdBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){.bd-flags,.bd-tk-in,.bd-card,.bd-card::after,.bd-c-fx i,.bd-card h2 b,.bd-pf>span,.bd-bal,.bd-sb,.bd-sb svg,.bd-bal svg,.bd-l3,.bd-fl path,:root.bday .nav button[aria-current="page"]{animation:none !important}.bd-l1,.bd-l2,.bd-l3,.bd-l4,.bd-cakebtn,.bd-hint,.bd-sp .bd-sp-act{animation:none;opacity:1}}
+/* --- tug'ilgan kun: qo'shimcha effektlar --- */
+.bd-l3 span{display:inline-block;animation:bdLetter .7s cubic-bezier(.2,1.6,.4,1) both;}
+.bd-stars i{position:absolute;font-style:normal;font-size:12px;color:#FFF3BF;opacity:0;animation:bdTw 2.4s ease-in-out infinite;}
+.bd-stage{position:relative;min-height:190px;display:grid;place-items:center;}
+.bd-sp.blown .bd-fl path:nth-child(1){animation-delay:0s}.bd-sp.blown .bd-fl path:nth-child(2){animation-delay:.22s}.bd-sp.blown .bd-fl path:nth-child(3){animation-delay:.44s}
+.bd-sp.blown .bd-cakebtn{animation:bdWiggle .5s .1s 2;}
+.bd-giftbtn{display:block;width:170px;height:170px;margin:0 auto;padding:0;border:0;background:none;cursor:pointer;animation:bdIn .6s cubic-bezier(.2,1.4,.3,1) both,bdBob 1.4s .6s ease-in-out infinite;}
+.bd-gift{width:100%;height:100%;overflow:visible;}
+.bd-giftbtn.shake{animation:bdShake .12s linear infinite;}
+.bd-giftbtn .bd-lid{transform-box:fill-box;transform-origin:50% 100%;transition:transform .7s cubic-bezier(.2,1.3,.4,1),opacity .7s;}
+.bd-giftbtn.open{animation:none;}
+.bd-giftbtn.open .bd-lid{transform:translate(40px,-90px) rotate(35deg);opacity:0;}
+.bd-gw{position:absolute;left:50%;top:44%;width:min(300px,86vw);padding:16px 14px;border-radius:20px;background:#fff;color:#7B1E4A;box-shadow:0 18px 40px -14px rgba(60,0,25,.6);transform:translate(-50%,-50%);animation:bdGw .8s cubic-bezier(.2,1.4,.3,1) both;}
+.bd-gw span{display:block;font-size:36px;line-height:1.1;}
+.bd-gw b{display:block;margin:6px 0 4px;font-size:18px;line-height:1.3;}
+.bd-gw small{display:block;font-size:14px;color:#D6336C;font-weight:700;}
+.bd-c-act .bd-b2{flex:1;}
+.bd-c-hunt{position:relative;z-index:1;margin:10px 0 0;font-size:12.5px;opacity:.95;text-align:center;}
+.bd-c-hunt b{font-weight:900;}
+.bd-fw{position:fixed;z-index:520;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;pointer-events:none;animation:bdFw 1.3s cubic-bezier(.1,.7,.3,1) forwards;}
+.bd-fwf{position:fixed;z-index:519;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;pointer-events:none;opacity:.35;filter:blur(18px);animation:bdFlash .6s ease-out forwards;}
+.bd-wt{position:fixed;left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:470;display:flex;align-items:center;gap:12px;max-width:440px;margin:0 auto;padding:12px 14px;border-radius:18px;background:linear-gradient(120deg,#fff,#FFF0F5);color:#7B1E4A;box-shadow:0 16px 36px -14px rgba(120,0,45,.55),0 0 0 1px #F7C9D6;animation:bdWt .6s cubic-bezier(.2,1.3,.3,1) both;}
+.bd-wt.out{opacity:0;transform:translateY(-20px);transition:opacity .4s,transform .4s;}
+.bd-wt-e{flex:none;font-size:30px;animation:bdPulse 1.2s ease-in-out infinite;}
+.bd-wt-t b{display:block;font-size:14.5px;line-height:1.3;}
+.bd-wt-t small{display:block;font-size:12.5px;color:#D6336C;font-weight:700;margin-top:2px;}
+.bd-wt-t em{display:block;font-style:normal;font-size:12px;font-weight:800;margin-top:3px;color:#B0234F;}
+.bd-wb{position:fixed;inset:0;z-index:460;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 40%,rgba(214,51,108,.55),rgba(40,8,24,.82));animation:fadein .3s;}
+.bd-wb-c{width:100%;max-width:340px;padding:24px 20px 18px;border-radius:26px;background:linear-gradient(180deg,#fff,#FFF2F7);color:#7B1E4A;text-align:center;box-shadow:0 30px 70px -20px rgba(0,0,0,.6);}
+.bd-wb-c.show{animation:bdGw .7s cubic-bezier(.2,1.4,.3,1) both;}
+.bd-wb-drum{font-size:64px;line-height:1;animation:bdShake .1s linear infinite;}
+.bd-wb-e{font-size:58px;line-height:1;animation:bdPulse 1.4s ease-in-out infinite;}
+.bd-wb-k{margin:10px 0 4px;font-size:12.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#D6336C;}
+.bd-wb-c h3{margin:4px 0 8px;font-size:21px;line-height:1.3;font-weight:800;color:#7B1E4A;}
+.bd-wb-zh{margin:0;font-size:26px;font-weight:800;color:#D6336C;}
+.bd-wb-py{margin:2px 0 16px;font-size:13.5px;color:#9a5a72;}
+.bd-wb .bd-b2{background:#FFE3EC;color:#B0234F;border:0;}
+.bd-mc{position:fixed;z-index:30;width:58px;height:56px;padding:4px;border:0;border-radius:18px;background:rgba(255,255,255,.92);box-shadow:0 10px 24px -8px rgba(176,35,79,.65),0 0 0 2px #F7C9D6;cursor:pointer;animation:bdMcIn .6s cubic-bezier(.2,1.5,.3,1) both,bdBob 1.6s .6s ease-in-out infinite;}
+.bd-mc .bd-cake{width:100%;height:100%;}
+.bd-mc-g{position:absolute;inset:-8px;border-radius:24px;border:2px solid rgba(240,101,149,.6);animation:bdRing 1.6s ease-out infinite;pointer-events:none;}
+.bd-mc.got{animation:bdGot .45s ease-in forwards;}
+.bd-mc.bye{opacity:0;transform:scale(.5);transition:opacity .4s,transform .4s;}
+@keyframes bdLetter{0%{transform:translateY(-40px) scale(.4) rotate(-20deg);opacity:0}100%{transform:none;opacity:1}}
+@keyframes bdTw{0%,100%{opacity:0;transform:scale(.5)}50%{opacity:.9;transform:scale(1.2)}}
+@keyframes bdWiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-4deg)}75%{transform:rotate(4deg)}}
+@keyframes bdShake{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-3px,1px) rotate(-4deg)}50%{transform:translate(2px,-1px) rotate(3deg)}75%{transform:translate(-2px,0) rotate(-3deg)}100%{transform:translate(0,0) rotate(0)}}
+@keyframes bdGw{0%{transform:translate(-50%,-30%) scale(.3);opacity:0}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+.bd-wb-c.show{animation-name:bdPop2;}
+@keyframes bdPop2{0%{transform:scale(.4);opacity:0}100%{transform:none;opacity:1}}
+@keyframes bdFw{0%{transform:translate(0,0) scale(1);opacity:1}70%{opacity:1}100%{transform:translate(var(--x),var(--y)) scale(.3);opacity:0}}
+@keyframes bdFlash{0%{transform:scale(.3);opacity:.6}100%{transform:scale(1.6);opacity:0}}
+@keyframes bdWt{0%{transform:translateY(-40px) scale(.9);opacity:0}100%{transform:none;opacity:1}}
+@keyframes bdMcIn{0%{transform:scale(0) rotate(-30deg)}100%{transform:none}}
+@keyframes bdRing{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
+@keyframes bdGot{0%{transform:scale(1)}40%{transform:scale(1.4) rotate(12deg)}100%{transform:scale(0) rotate(40deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.bd-l3 span,.bd-stars i,.bd-giftbtn,.bd-wt,.bd-wt-e,.bd-wb-drum,.bd-wb-e,.bd-mc,.bd-mc-g{animation:none !important}}
+/* --- tug'ilgan kun: 3-bosqich — ko'p rangli, professional ko'rinish --- */
+:root.bday{--bd-rb:linear-gradient(90deg,#FF6B6B,#FF922B,#FFD43B,#69DB7C,#4DABF7,#9775FA,#F06595,#FF6B6B);}
+/* sahna: aurora fon, nur, kamalak yozuv */
+.bd-sp{background:radial-gradient(120% 80% at 50% 0%,#FF6FA3 0%,#C2255C 42%,#5F1A6B 78%,#2B0F45 100%);}
+.bd-sp::before{content:"";position:absolute;left:50%;top:38%;width:170vmax;height:170vmax;margin:-85vmax 0 0 -85vmax;background:conic-gradient(from 0deg,rgba(255,107,107,.0),rgba(255,212,59,.22),rgba(105,219,124,.0),rgba(77,171,247,.22),rgba(151,117,250,.0),rgba(240,101,149,.24),rgba(255,107,107,.0));animation:bdSpin 18s linear infinite;pointer-events:none;}
+.bd-sp::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 62%,rgba(255,236,153,.28),transparent 70%);pointer-events:none;}
+.bd-l1{display:inline-block;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.16);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);}
+.bd-l2{letter-spacing:-.02em;text-shadow:0 4px 18px rgba(60,0,40,.35);}
+.bd-l3{font-size:56px;letter-spacing:-.01em;color:#FFF3BF;text-shadow:0 4px 0 rgba(120,20,70,.35),0 10px 26px rgba(255,160,210,.55);animation:bdIn .8s .95s cubic-bezier(.2,1.4,.3,1) forwards;}
+.bd-l3 span{color:var(--c);animation:bdLetter .7s cubic-bezier(.2,1.6,.4,1) both,bdWave 2.4s ease-in-out infinite;animation-delay:var(--d),calc(var(--d) + 1s);}
+@keyframes bdWave{0%,100%{transform:translateY(0)}20%{transform:translateY(-8px)}40%{transform:translateY(0)}}
+.bd-l5{margin:2px 0 4px;font-size:16px;font-style:italic;font-weight:700;letter-spacing:.02em;color:#FFE3EC;opacity:0;animation:bdIn .7s 1.45s cubic-bezier(.2,.9,.3,1.2) forwards;}
+.bd-glow circle{transform-box:fill-box;transform-origin:50% 50%;animation:bdGlow 1.1s ease-in-out infinite alternate;}
+.bd-sp.blown .bd-glow{opacity:0;transition:opacity .5s .3s;}
+.bd-gw em{display:block;margin-top:8px;font-size:13px;font-style:italic;font-weight:700;color:#9C36B5;}
+.bd-wb-from{margin:-8px 0 14px;font-size:13.5px;font-style:italic;font-weight:700;color:#9C36B5;}
+.bd-sp .bd-b1{background:linear-gradient(135deg,#fff,#FFF0F6);}
+/* bosh sahifa kartasi: aylanuvchi kamalak hoshiya */
+.bd-card{padding:16px 16px 14px;background:#D6336C;isolation:isolate;}
+.bd-card::before{content:"";position:absolute;left:50%;top:50%;width:200%;height:300%;margin:-150% 0 0 -100%;background:conic-gradient(#FF6B6B,#FFD43B,#69DB7C,#4DABF7,#9775FA,#F06595,#FF6B6B);animation:bdSpin 6s linear infinite;z-index:-2;}
+.bd-card>*{position:relative;}
+.bd-card .bd-c-in{display:block;}
+.bd-card{--in:linear-gradient(135deg,#D6336C 0%,#E64980 30%,#AE3EC9 70%,#7048E8 100%);}
+.bd-card>.bd-c-fx,.bd-card>.bd-c-top,.bd-card>.bd-c-w,.bd-card>.bd-from,.bd-card>.bd-c-act,.bd-card>.bd-c-hunt{z-index:1;}
+.bd-card::after{z-index:2;}
+.bd-from{margin:-4px 0 10px;font-size:13.5px;font-style:italic;font-weight:800;color:#FFF3BF;}
+.bd-from span{display:inline-block;animation:bdWob 2s ease-in-out infinite;}
+/* ichki fon (hoshiya ichida) */
+.bd-card{box-shadow:0 18px 40px -16px rgba(150,40,160,.7);}
+.bd-card .bd-c-bg{position:absolute;inset:2px;border-radius:20px;background:var(--in);z-index:0;}
+/* yuguruvchi qator: kamalak */
+.bd-tick{background:linear-gradient(90deg,#FF6B6B,#FF922B,#FCC419,#51CF66,#339AF0,#845EF7,#F06595,#FF6B6B);background-size:200% 100%;animation:bdRbBg 8s linear infinite;text-shadow:0 1px 2px rgba(0,0,0,.25);}
+/* butun ilova: rang-barang tugmalar, chiziqlar, sarlavhalar */
+:root.bday:not(.zq):not(.zz) .btn.primary{background:linear-gradient(120deg,#F06595,#CC5DE8 50%,#5C7CFA) !important;border-color:transparent !important;color:#fff !important;box-shadow:0 8px 18px -8px rgba(160,40,170,.6) !important;}
+:root.bday .top::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;background:var(--bd-rb);background-size:200% 100%;animation:bdRbBg 6s linear infinite;}
+:root.bday .top{position:sticky;}
+:root.bday:not(.zq):not(.zz) .card-top .prog i,:root.bday .pc-bar i{background:var(--bd-rb) !important;background-size:200% 100% !important;animation:bdRbBg 4s linear infinite;}
+:root.bday .mhead,:root.bday h3.sect{background:linear-gradient(90deg,#F06595,#9775FA,#4DABF7);-webkit-background-clip:text;background-clip:text;color:transparent !important;-webkit-text-fill-color:transparent;}
+:root.bday .lgroup{box-shadow:0 0 0 1px color-mix(in srgb,#F06595 22%,transparent),var(--sh,none);}
+:root.bday .lrow .lic,:root.bday .lrow>.ic{filter:saturate(1.3);}
+:root.bday .nav button[aria-current="page"]{background:linear-gradient(135deg,rgba(240,101,149,.22),rgba(151,117,250,.22)) !important;}
+:root.bday #ttl{background:linear-gradient(90deg,#F06595,#CC5DE8,#4DABF7,#F06595);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:bdRbBg 5s linear infinite;}
+:root.bday #logo b{font-style:italic;}
+:root.bday #logo b small{color:#F06595;}
+.xbn{background:linear-gradient(115deg,#F06595 0%,#CC5DE8 45%,#5C7CFA 100%);}
+.bd-pf{background:linear-gradient(120deg,#F06595,#CC5DE8 55%,#5C7CFA);}
+.bd-wt{box-shadow:0 16px 36px -14px rgba(120,0,45,.55),0 0 0 2px transparent;background:linear-gradient(#fff,#fff) padding-box,var(--bd-rb) border-box;border:2px solid transparent;}
+.bd-wb-c{background:linear-gradient(180deg,#fff,#FFF2F7) padding-box,conic-gradient(#FF6B6B,#FFD43B,#69DB7C,#4DABF7,#9775FA,#F06595,#FF6B6B) border-box;border:3px solid transparent;}
+.bd-mc{background:linear-gradient(#fff,#fff) padding-box,conic-gradient(#FF6B6B,#FFD43B,#69DB7C,#4DABF7,#9775FA,#F06595,#FF6B6B) border-box;border:2.5px solid transparent;box-shadow:0 10px 24px -8px rgba(150,40,170,.6);}
+/* konfetti: yangi shakllar */
+.bd-cf.rd{border-radius:50%;width:9px;height:9px;}
+.bd-cf.st{width:4px;height:16px;border-radius:2px;}
+@keyframes bdSpin{to{transform:rotate(360deg)}}
+@keyframes bdRbText{to{background-position:300% 0}}
+@keyframes bdRbBg{to{background-position:200% 0}}
+@keyframes bdGlow{from{transform:scale(.85);opacity:.7}to{transform:scale(1.15);opacity:1}}
+@media (prefers-reduced-motion:reduce){.bd-sp::before,.bd-card::before,.bd-tick,:root.bday .top::after,:root.bday #ttl,.bd-l3,.bd-glow circle,.bd-from span{animation:none !important}}
+/* --- tug'ilgan kun: 4-bosqich — canvas salyut, tungi osmon --- */
+.bd-fx{position:fixed;left:0;top:0;z-index:600;pointer-events:none;}
+.bd-sky{position:fixed;inset:0;z-index:465;overflow:hidden;background:radial-gradient(130% 90% at 50% 100%,#3B1360 0%,#1A0B3A 45%,#07051A 100%);animation:fadein .5s;cursor:pointer;}
+.bd-sky.bye{opacity:0;transition:opacity .5s;}
+.bd-sky-st i{position:absolute;font-style:normal;color:#FFF3BF;opacity:.2;animation:bdTw 3s ease-in-out infinite;}
+.bd-sky-moon{position:absolute;right:9%;top:7%;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFF9DB,#FFE066 60%,#FAB005);box-shadow:0 0 40px 10px rgba(255,224,102,.35);}
+.bd-sky-moon::after{content:"";position:absolute;inset:-4px -14px 4px 14px;border-radius:50%;background:#140A30;opacity:.0;}
+.bd-sky-cap{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);text-align:center;color:#fff;}
+.bd-sky-cap b{display:block;font-size:20px;font-weight:800;font-style:italic;letter-spacing:.01em;text-shadow:0 0 18px rgba(240,101,149,.9);animation:bdPulse 2s ease-in-out infinite;}
+.bd-sky-cap small{display:block;margin-top:6px;font-size:12px;opacity:.6;}
+.bd-lan{position:absolute;bottom:-60px;width:22px;height:30px;border-radius:9px 9px 6px 6px;background:radial-gradient(circle at 50% 70%,#FFF3BF 0%,#FFC078 35%,#FF8787 75%,#E8590C 100%);box-shadow:0 0 18px 6px rgba(255,169,77,.45);opacity:0;transform:scale(var(--sc,1));animation:bdLan 10s linear infinite;will-change:transform,opacity;}
+.bd-lan::after{content:"";position:absolute;left:50%;bottom:3px;width:6px;height:8px;margin-left:-3px;border-radius:50%;background:#FFF9DB;box-shadow:0 0 8px 3px #FFE066;animation:bdFlk .35s ease-in-out infinite alternate;}
+@keyframes bdLan{0%{opacity:0;transform:translate3d(0,0,0) scale(var(--sc,1))}8%{opacity:.95}50%{transform:translate3d(18px,-55vh,0) scale(var(--sc,1)) rotate(4deg)}90%{opacity:.8}100%{opacity:0;transform:translate3d(-10px,-112vh,0) scale(calc(var(--sc,1)*.6)) rotate(-3deg)}}
+@keyframes bdFlk{from{opacity:.7;transform:scale(.85)}to{opacity:1;transform:scale(1.1)}}
+.bd-sky-gnd{position:absolute;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 92px);display:flex;justify-content:center;align-items:flex-end;gap:34px;pointer-events:none;}
+.bd-sky-ck{font-size:64px;line-height:1;filter:drop-shadow(0 0 18px rgba(255,212,59,.75));animation:bdCkB 1.6s ease-in-out infinite;}
+@keyframes bdCkB{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.06)}}
+.bd-sky-sp{position:relative;width:4px;height:46px;border-radius:2px;background:linear-gradient(#FFF3BF,#868E96);}
+.bd-sky-sp::before,.bd-sky-sp::after{content:"✦";position:absolute;left:50%;top:-14px;margin-left:-11px;width:22px;text-align:center;font-size:22px;color:#FFE066;text-shadow:0 0 10px #FFD43B,0 0 22px #FF922B;animation:bdSpk .28s linear infinite;}
+.bd-sky-sp::after{content:"✧";color:#fff;animation-duration:.4s;animation-direction:reverse;}
+@keyframes bdSpk{0%{transform:rotate(0) scale(.8)}50%{transform:rotate(90deg) scale(1.25)}100%{transform:rotate(180deg) scale(.8)}}
+body:has(.bd-sky) .bd-wt,body:has(.bd-sky) .bd-mc{display:none !important;}
+.bd-sky-sub{position:absolute;left:4%;right:4%;transform:translateY(-50%);text-align:center;font-size:clamp(19px,6vw,30px);font-weight:900;color:#fff;letter-spacing:.01em;line-height:1.25;pointer-events:none;text-shadow:0 0 10px var(--g,#FFD43B),0 0 26px var(--g,#FFD43B);}
+.bd-sky-sub span{display:inline-block;opacity:0;}
+.bd-sky-sub.on span{animation:bdSub .55s cubic-bezier(.2,1.4,.4,1) forwards;}
+@keyframes bdSub{0%{opacity:0;transform:translateY(16px) scale(.4) rotate(-12deg)}60%{opacity:1;transform:translateY(-4px) scale(1.15)}100%{opacity:1;transform:none}}
+.bd-sky-ln{min-height:26px;font-size:18px !important;font-style:normal !important;opacity:0;}
+.bd-sky-ln.on{animation:bdIn .6s cubic-bezier(.2,.9,.3,1.2) forwards,bdPulse 2s .6s ease-in-out infinite;}
+.bd-sky.fin .bd-sky-ck{animation:bdCkB .6s ease-in-out infinite;}
+@media (max-height:640px){.bd-sky-gnd{bottom:calc(env(safe-area-inset-bottom,0px) + 80px)}.bd-sky-ck{font-size:50px}.bd-sky-sp{height:36px}}
+@media (prefers-reduced-motion:reduce){.bd-lan,.bd-sky-ck,.bd-sky-sp::before,.bd-sky-sp::after{animation:none !important}.bd-lan{display:none}}
+.bd-sky::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(transparent,rgba(240,101,149,.18));pointer-events:none;}
+.bd-sp-act{flex-wrap:wrap;}
+.bd-sp-act .bd-wide{flex:1 1 100%;background:linear-gradient(120deg,#FFD43B,#FF922B,#F06595) !important;color:#fff !important;font-size:16px;padding:14px;box-shadow:0 10px 24px -10px rgba(255,120,60,.8);animation:bdPulse 1.6s ease-in-out infinite;}
+.bd-c-act.bd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.bd-c-act.bd-grid .bd-b1:first-child{background:linear-gradient(120deg,#FFD43B,#FF922B);color:#fff;}
 /* ===== Maxfiy xat (yuqori burchak) ===== */
 .xatbtn{position:relative;flex:none;width:36px;height:36px;margin-left:8px;border:1px solid #F3C1D2;border-radius:50%;background:linear-gradient(160deg,#fff,#FFE8EF);display:grid;place-items:center;line-height:1;cursor:pointer;padding:0;}
 .xatbtn .xi{display:block;width:26px;height:26px;animation:xpFloat 2.6s ease-in-out infinite;}
@@ -2836,16 +3060,145 @@ document.addEventListener("click", e => { const b = e.target.closest("[data-say]
 function applyFont(){ document.documentElement.classList.toggle("hei", P.font==="hei"); $("#fontBtn").innerHTML = `Shrift:<span class="hzi">${P.font==="hei"?"黑体":"楷体"}</span>`; }
 $("#fontBtn").addEventListener("click", () => { P.font = P.font==="hei" ? "kai" : "hei"; save(); applyFont(); if (P.tab==="write") renderWrite(); toast(P.font==="hei" ? "Oddiy shrift (黑体) yoqildi." : "Kitobdagidek shrift (楷体) yoqildi."); });
 /* ===== Maxfiy xat: 22-noyabrgacha teskari sanoq, keyin ochiladi (parol bilan) ===== */
-const XAT = "<!DOCTYPE html>\n<html lang=\"uz\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n<meta name=\"robots\" content=\"noindex\">\n<title>💌 Maxfiy xat<\/title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@600;700&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap\" rel=\"stylesheet\">\n<style>\n:root{\n  --ink:#2c2654;          /* siyoh rangi */\n  --wine:#8e1538;\n  --rose:#d6406b;\n  --blush:#f7c9d6;\n  --paper:#fffcf6;\n}\n*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}\nhtml,body{min-height:100%}\nbody{\n  font-family:\"Cormorant Garamond\",Georgia,serif;color:var(--ink);overflow-x:hidden;min-height:100vh;\n  background:\n    radial-gradient(1200px 700px at 15% -10%,#ffe4ec 0,transparent 60%),\n    radial-gradient(900px 600px at 110% 110%,#7a1035 0,transparent 60%),\n    linear-gradient(160deg,#f6b8c9 0%,#d9668b 45%,#9c1f4a 100%) fixed;\n}\n#sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}\n.ht{position:absolute;bottom:-40px;color:#fff;opacity:.5;animation:up linear forwards;filter:drop-shadow(0 2px 4px rgba(150,30,70,.3))}\n@keyframes up{to{transform:translateY(-115vh) translateX(var(--dx)) rotate(30deg);opacity:0}}\n.bokeh{position:fixed;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 70%);pointer-events:none;z-index:0;animation:glow 6s ease-in-out infinite}\n@keyframes glow{50%{opacity:.35;transform:scale(1.15)}}\n\n/* ================= QULF EKRANI ================= */\n#lock{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;transition:opacity .7s,transform .7s}\n#lock.go{opacity:0;transform:translateY(-30px) scale(.94);pointer-events:none}\n.card{width:100%;max-width:380px;text-align:center;padding:34px 24px 26px;border-radius:28px;\n  background:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.16));\n  border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);\n  box-shadow:0 30px 70px rgba(90,10,40,.35),inset 0 1px 0 rgba(255,255,255,.6)}\n.env{position:relative;width:250px;height:162px;margin:6px auto 30px;perspective:800px;animation:float 4s ease-in-out infinite}\n@keyframes float{50%{transform:translateY(-9px) rotate(-1deg)}}\n.env .b{position:absolute;inset:0;border-radius:10px;background:linear-gradient(160deg,#fffaf3,#f8e6da);box-shadow:0 22px 36px rgba(110,15,50,.35)}\n.env .card2{position:absolute;left:14px;right:14px;top:14px;height:120px;border-radius:6px;background:var(--paper);transition:transform .9s .35s cubic-bezier(.2,.8,.2,1)}\n.env .l{position:absolute;inset:0;border-radius:10px;background:linear-gradient(15deg,#fbeee5,#f3d9cb);clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%)}\n.env .f{position:absolute;left:0;right:0;top:0;height:100px;background:linear-gradient(180deg,#f6dccd,#efc8b6);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:10px 10px 0 0;transform-origin:top;transition:transform .8s;z-index:2}\n.env .to{position:absolute;left:20px;bottom:12px;z-index:4;font-family:\"Dancing Script\",cursive;font-size:22px;color:var(--wine)}\n.stamp{position:absolute;right:12px;top:10px;width:38px;height:46px;background:#fff;border:2px dashed #e7a7b9;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:20px;transform:rotate(6deg);z-index:4;box-shadow:0 2px 4px rgba(0,0,0,.12)}\n.pm{position:absolute;right:42px;top:20px;width:48px;height:48px;border:2px solid rgba(142,21,56,.35);border-radius:50%;font:700 10px/1 sans-serif;color:rgba(142,21,56,.55);display:flex;align-items:center;justify-content:center;transform:rotate(-14deg);z-index:4}\n.seal{position:absolute;left:50%;top:76px;width:56px;height:56px;margin-left:-28px;border-radius:50%;z-index:3;\n  background:radial-gradient(circle at 35% 30%,#ec5a7a,#9e0f36 70%,#7c0a29);display:flex;align-items:center;justify-content:center;color:#ffd6df;font-size:24px;\n  box-shadow:0 4px 10px rgba(100,0,30,.45),inset 0 -4px 8px rgba(0,0,0,.3),inset 0 3px 6px rgba(255,255,255,.25);transition:transform .5s,opacity .5s}\n.seal:after{content:\"\";position:absolute;inset:5px;border-radius:50%;border:1.5px dashed rgba(255,214,223,.45)}\n#lock.open .env{animation:none}\n#lock.open .env .f{transform:rotateX(180deg);z-index:0}\n#lock.open .env .card2{transform:translateY(-70px)}\n#lock.open .stamp,#lock.open .pm,#lock.open .to{opacity:0;transition:opacity .3s}\n#lock.open .seal{transform:scale(0) rotate(120deg);opacity:0}\n.lt{font-family:\"Dancing Script\",cursive;font-size:36px;color:#fff;text-shadow:0 2px 12px rgba(120,20,60,.45);line-height:1.1}\n.ls{color:#fff;opacity:.95;font-size:18px;margin:8px 0 22px;font-style:italic}\n.box{display:flex;gap:8px}\n.inp{position:relative;flex:1;min-width:0}\n.inp input{width:100%;padding:15px 46px 15px 18px;border-radius:16px;border:1.5px solid rgba(255,255,255,.8);background:rgba(255,255,255,.95);font:500 17px \"Cormorant Garamond\",serif;color:var(--ink);outline:none;transition:box-shadow .2s}\n.inp input:focus{box-shadow:0 0 0 4px rgba(255,255,255,.4)}\n.eye{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:none;font-size:18px;cursor:pointer;opacity:.6}\n.go-btn{padding:0 20px;border:0;border-radius:16px;background:linear-gradient(160deg,#c3224f,#8e1538);color:#fff;font:600 17px \"Cormorant Garamond\",serif;cursor:pointer;box-shadow:0 8px 20px rgba(100,0,30,.4)}\n.go-btn:disabled{opacity:.6}\n.err{min-height:22px;margin-top:14px;color:#fff;font-size:16px;font-weight:600}\n.shake{animation:sh .45s}\n.qz-go{margin-top:4px;padding:13px 22px;border:1.5px solid rgba(255,255,255,.85);border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font:600 18px \"Cormorant Garamond\",serif;cursor:pointer;backdrop-filter:blur(4px)}\n.qz{margin-top:14px;padding:18px 16px 16px;border-radius:20px;background:rgba(255,255,255,.96);color:var(--ink);text-align:left;box-shadow:0 14px 34px rgba(100,0,30,.3);animation:qzIn .4s cubic-bezier(.2,.9,.3,1.2)}\n.qz .qn{font:600 14px \"Cormorant Garamond\",serif;letter-spacing:.08em;text-transform:uppercase;color:var(--rose)}\n.qz .dots{float:right;letter-spacing:4px;color:#e9b5c5}\n.qz .dots b{color:var(--rose)}\n.qz .qq{font:600 21px/1.3 \"Cormorant Garamond\",serif;margin:6px 0 12px;color:var(--wine)}\n.qz .op{display:flex;align-items:center;gap:10px;width:100%;margin:0 0 8px;padding:12px 14px;border:1.5px solid #f2c3d1;border-radius:14px;background:#fff;color:var(--ink);font:500 18px \"Cormorant Garamond\",serif;text-align:left;cursor:pointer;transition:transform .15s}\n.qz .op i{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#fde3eb;color:var(--wine);font:700 14px sans-serif;font-style:normal}\n.qz .op:active{transform:scale(.98)}\n.qz .op.ok{border-color:#3aa76d;background:#eafaf1}\n.qz .op.ok i{background:#3aa76d;color:#fff}\n.qz .op.bad{border-color:#d6406b;background:#fff0f4;animation:sh .45s}\n.qz .msg{min-height:20px;font:600 16px \"Cormorant Garamond\",serif;color:var(--rose);text-align:center}\n.qz .win{text-align:center}\n.qz .win .big{font-size:40px;line-height:1}\n.qz .win .pwv{display:inline-block;margin:10px 0 12px;padding:10px 18px;border-radius:14px;background:#fde3eb;color:var(--wine);font:700 24px \"Cormorant Garamond\",serif;letter-spacing:.04em;user-select:all}\n.qz .win button{width:100%}\n@keyframes qzIn{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}\n\n@keyframes sh{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}\n\n/* ================= XAT ================= */\n#letter{position:relative;z-index:2;display:none;padding:34px 14px 120px}\n#letter.on{display:block}\n.paper{\n  max-width:580px;margin:0 auto;position:relative;border-radius:6px;padding:58px 30px 44px 34px;\n  background-color:var(--paper);\n  background-image:\n    url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .4 0 0 0 0 .3 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\"),\n    radial-gradient(ellipse at 50% 0,rgba(255,255,255,.9),transparent 70%),\n    radial-gradient(ellipse at 50% 120%,rgba(230,190,160,.25),transparent 60%);\n  box-shadow:0 2px 0 #f1e6d8,0 4px 0 #ece0d0,0 30px 70px rgba(90,10,40,.4);\n  animation:rise 1.1s cubic-bezier(.2,.8,.2,1)}\n@keyframes rise{from{transform:translateY(90px) rotate(-2deg) scale(.95);opacity:0}}\n.tape{position:absolute;top:-14px;left:50%;width:120px;height:32px;margin-left:-60px;transform:rotate(-3deg);\n  background:repeating-linear-gradient(45deg,rgba(240,150,180,.75) 0 8px,rgba(250,190,210,.75) 8px 16px);\n  box-shadow:0 2px 4px rgba(0,0,0,.08);clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 50%)}\n.flower{position:absolute;width:92px;height:92px;pointer-events:none;opacity:.9}\n.flower.tl{left:-16px;top:-18px;transform:rotate(-20deg)}\n.flower.br{right:-14px;bottom:-16px;transform:rotate(160deg)}\n\n/* matn — qo'lyozma */\n.paper .blk{opacity:0;transition:opacity .5s}\n.paper .blk.in{opacity:1}\n.paper p{font-family:Caveat,cursive;font-size:25px;line-height:1.45;margin:0 0 18px;color:var(--ink)}\n.paper .hi{font-family:\"Dancing Script\",cursive;font-size:30px;color:var(--wine);margin-bottom:10px}\n.paper h1{font-family:\"Dancing Script\",cursive;font-weight:700;font-size:44px;line-height:1.12;color:var(--rose);margin:4px 0 2px;text-align:center}\n.paper .date{text-align:center;font-family:\"Cormorant Garamond\",serif;font-style:italic;font-size:18px;color:#b06a7e;margin-bottom:26px}\n.paper .date:before,.paper .date:after{content:\"\";display:inline-block;width:40px;height:1px;background:#e3a9ba;vertical-align:middle;margin:0 10px}\n.zh{margin:24px 0;padding:20px 16px;border-radius:16px;text-align:center;position:relative;\n  background:linear-gradient(135deg,rgba(255,236,242,.9),rgba(255,224,234,.9));border:1px solid #f6c6d4}\n.zh:before,.zh:after{content:\"❝\";position:absolute;font-size:34px;color:#f0a3ba;top:2px;left:10px}\n.zh:after{content:\"❞\";top:auto;left:auto;bottom:-6px;right:12px}\n.zh-c{font-family:\"Ma Shan Zheng\",cursive;font-size:30px;color:var(--wine);line-height:1.35}\n.zh-p{font-family:Caveat,cursive;font-size:20px;color:#c0577a;margin:6px 0 6px}\n.zh-t{font-family:Caveat,cursive;font-size:21px;color:#5b3b52;line-height:1.35}\n.wish{display:flex;gap:10px;margin:6px 0 24px}\n.wish>div{flex:1;text-align:center;padding:14px 4px 12px;border-radius:14px;background:#fff;border:1px solid #f6d3dd;\n  box-shadow:0 6px 16px rgba(201,86,122,.15);opacity:0;transform:translateY(10px) scale(.9);transition:all .5s cubic-bezier(.3,1.6,.5,1)}\n.wish>div.in{opacity:1;transform:none}\n.wish b{display:block;font-family:\"Ma Shan Zheng\",cursive;font-weight:400;font-size:30px;color:var(--rose);line-height:1.2}\n.wish span{font-family:Caveat,cursive;font-size:20px;color:#7a5560}\n.paper .end{font-family:\"Dancing Script\",cursive;font-size:26px;color:var(--wine);margin:30px 0 0}\n.paper .ps{font-size:21px;color:#7a5f8a;margin:22px 0 0;padding-top:14px;border-top:1px dashed #e7c6d0}\n\n/* harflar */\n.w{display:inline-block;white-space:nowrap}\n.c{display:inline-block;opacity:0;white-space:pre}\n.c.on{animation:ink .32s ease-out forwards}\n.c.now{opacity:1}\n@keyframes ink{0%{opacity:0;clip-path:inset(-20% 100% -20% 0);filter:blur(1.2px)}60%{opacity:1}100%{opacity:1;clip-path:inset(-20% -20% -20% 0);filter:none}}\n.done .c{opacity:1;animation:none}\n\n/* ruchka */\n.pen{position:absolute;left:0;top:0;width:38px;height:38px;z-index:5;pointer-events:none;opacity:0;transition:opacity .4s,transform .09s linear;filter:drop-shadow(2px 5px 4px rgba(40,20,60,.3))}\n.pen.on{opacity:1}\n\n/* imzo */\n.sigw{display:flex;justify-content:flex-end;align-items:center;gap:6px;margin-top:2px}\n.sig{width:240px;max-width:70%;overflow:visible}\n.sig path{fill:none;stroke:var(--wine);stroke-linecap:round;stroke-linejoin:round}\n.sig .m{stroke-width:5}\n.sig .u{stroke-width:2.6}\n.sig .h{fill:var(--rose);stroke:none;opacity:0;transform-origin:262px 42px;transform:scale(0)}\n.sig.draw .h{animation:pop .7s 3.5s forwards}\n@keyframes pop{60%{opacity:1;transform:scale(1.35)}to{opacity:1;transform:scale(1)}}\n.sig .dot{fill:var(--wine);opacity:0}\n.sig.draw .dot{animation:fade .3s 3.1s forwards}\n@keyframes fade{to{opacity:1}}\n.wax{width:62px;height:62px;flex:none;border-radius:50%;opacity:0;transform:scale(2.4) rotate(-30deg);\n  background:radial-gradient(circle at 35% 30%,#ec5a7a,#9e0f36 70%,#7c0a29);color:#ffd6df;display:flex;align-items:center;justify-content:center;\n  font:700 26px \"Dancing Script\",cursive;box-shadow:0 4px 10px rgba(100,0,30,.4),inset 0 -4px 8px rgba(0,0,0,.3)}\n.wax.on{animation:stamp .5s cubic-bezier(.5,0,.6,1.4) forwards}\n@keyframes stamp{to{opacity:1;transform:scale(1) rotate(-12deg)}}\n\n/* tugmalar */\n.bar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;display:flex;gap:8px;padding:6px;border-radius:999px;\n  background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(90,10,40,.3)}\n.bar button{border:0;border-radius:999px;padding:10px 16px;font:600 16px \"Cormorant Garamond\",serif;color:var(--wine);background:transparent;cursor:pointer;white-space:nowrap}\n.bar button.pri{background:var(--wine);color:#fff}\n.bar[hidden],.bar [hidden]{display:none}\n.cf{position:fixed;z-index:7;pointer-events:none;font-size:22px;animation:burst 1.8s ease-out forwards}\n@keyframes burst{to{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}\n@media (max-width:420px){\n  .paper{padding:54px 20px 40px 22px}\n  .paper p{font-size:23px}\n  .paper h1{font-size:38px}\n}\n<\/style>\n<\/head>\n<body>\n<div id=\"sky\"><\/div>\n\n<section id=\"lock\">\n  <div class=\"card\">\n    <div class=\"env\">\n      <div class=\"b\"><\/div>\n      <div class=\"card2\"><\/div>\n      <div class=\"l\"><\/div>\n      <div class=\"stamp\">🌸<\/div>\n      <div class=\"pm\">23·11<\/div>\n      <div class=\"to\">Sizga ✉<\/div>\n      <div class=\"f\"><\/div>\n      <div class=\"seal\">♥<\/div>\n    <\/div>\n    <div class=\"lt\">Sizga maktub bor<\/div>\n    <div class=\"ls\">Parolni topish uchun 3 ta savolga toʻgʻri javob bering 🗝️<\/div>\n    <form class=\"box\" id=\"frm\" autocomplete=\"off\">\n      <div class=\"inp\">\n        <input id=\"pw\" type=\"password\" placeholder=\"Parolni kiriting\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\">\n        <button type=\"button\" class=\"eye\" id=\"eye\" aria-label=\"Parolni koʻrsatish\">👁<\/button>\n      <\/div>\n      <button id=\"btn\" class=\"go-btn\" type=\"submit\">Ochish<\/button>\n    <\/form>\n    <div class=\"err\" id=\"err\"><\/div>\n    <button type=\"button\" class=\"qz-go\" id=\"qzGo\">🗝️ Savollarga javob berish<\/button>\n    <div class=\"qz\" id=\"qz\" hidden><\/div>\n  <\/div>\n<\/section>\n\n<section id=\"letter\">\n  <article class=\"paper\" id=\"paper\"><\/article>\n<\/section>\n<div class=\"bar\" id=\"bar\" hidden>\n  <button id=\"skip\">⏩ Hammasini koʻrsatish<\/button>\n  <button id=\"replay\" hidden>✍️ Qayta oʻqish<\/button>\n  <button id=\"close\" class=\"pri\" hidden>💌 Yopish<\/button>\n<\/div>\n\n<template id=\"decoT\">\n  <div class=\"tape\"><\/div>\n  <svg class=\"flower tl\" viewBox=\"0 0 100 100\"><g fill=\"#f4a6bd\"><circle cx=\"50\" cy=\"30\" r=\"13\"/><circle cx=\"69\" cy=\"44\" r=\"13\"/><circle cx=\"62\" cy=\"66\" r=\"13\"/><circle cx=\"38\" cy=\"66\" r=\"13\"/><circle cx=\"31\" cy=\"44\" r=\"13\"/><\/g><circle cx=\"50\" cy=\"50\" r=\"9\" fill=\"#f7d67a\"/><path d=\"M60 78 Q72 92 92 96\" stroke=\"#8fb58a\" stroke-width=\"3\" fill=\"none\"/><ellipse cx=\"80\" cy=\"86\" rx=\"9\" ry=\"4\" fill=\"#9cc297\" transform=\"rotate(30 80 86)\"/><\/svg>\n  <svg class=\"flower br\" viewBox=\"0 0 100 100\"><g fill=\"#f9c3d2\"><circle cx=\"50\" cy=\"32\" r=\"12\"/><circle cx=\"67\" cy=\"45\" r=\"12\"/><circle cx=\"60\" cy=\"65\" r=\"12\"/><circle cx=\"40\" cy=\"65\" r=\"12\"/><circle cx=\"33\" cy=\"45\" r=\"12\"/><\/g><circle cx=\"50\" cy=\"50\" r=\"8\" fill=\"#f7d67a\"/><path d=\"M60 76 Q72 90 92 94\" stroke=\"#8fb58a\" stroke-width=\"3\" fill=\"none\"/><\/svg>\n  <svg class=\"pen\" viewBox=\"0 0 40 40\"><path d=\"M9 31 L30 4 Q34 1 37 4 Q39 7 36 10 L13 35 Z\" fill=\"#2c2654\"/><path d=\"M30 4 Q34 1 37 4 Q39 7 36 10 L33 13 L27 7Z\" fill=\"#8e1538\"/><path d=\"M9 31 L13 35 L3 39 Z\" fill=\"#d4a64a\"/><path d=\"M4 38 L8.5 33.5\" stroke=\"#7a5a1a\" stroke-width=\".8\"/><\/svg>\n<\/template>\n\n<template id=\"sigT\">\n  <div class=\"sigw blk\">\n    <svg class=\"sig\" viewBox=\"0 0 300 130\" aria-label=\"M\">\n      <path class=\"m\" d=\"M22 104 C30 86 40 56 52 38 C58 29 66 30 64 46 C62 64 56 88 54 104 C62 80 74 50 88 36 C95 29 102 32 100 48 C98 66 92 88 92 102 C100 78 114 48 130 35 C138 29 145 33 143 50 C141 70 136 92 146 103 C156 112 176 98 192 84\"/>\n      <path class=\"u\" d=\"M30 118 C90 112 160 110 238 104 C252 103 262 100 270 94\"/>\n      <circle class=\"dot\" cx=\"208\" cy=\"80\" r=\"4\"/>\n      <path class=\"h\" d=\"M262 54 C252 46 244 40 244 32 C244 26 249 22 254 22 C258 22 261 25 262 28 C263 25 266 22 270 22 C275 22 280 26 280 32 C280 40 272 46 262 54Z\"/>\n    <\/svg>\n    <div class=\"wax\">M<\/div>\n  <\/div>\n<\/template>\n\n<script>\nconst X = {\"i\": 300000, \"s\": \"vuyaue8DMWP8WW/FHnxUWg==\", \"n\": \"Z71QDRkq5lkfwO7E\", \"c\": \"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\", \"t\": \"dk2z61HaOwfpe0FEe44NPj65+KlPrLZNpIuDjmCeMY0=\"};\nconst $ = id => document.getElementById(id);\nconst b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));\nconst sleep = ms => new Promise(r => setTimeout(r, ms));\n\nasync function decrypt(pw){\n  const te = new TextEncoder(), S = crypto.subtle;\n  const base = await S.importKey(\"raw\", te.encode(pw), \"PBKDF2\", false, [\"deriveBits\"]);\n  const bits = new Uint8Array(await S.deriveBits({name:\"PBKDF2\", salt:b64(X.s), iterations:X.i, hash:\"SHA-256\"}, base, 512));\n  const hm = {name:\"HMAC\", hash:\"SHA-256\"};\n  const ek = await S.importKey(\"raw\", bits.slice(0,32), hm, false, [\"sign\"]);\n  const mk = await S.importKey(\"raw\", bits.slice(32), hm, false, [\"sign\"]);\n  const n = b64(X.n), ct = b64(X.c), tag = b64(X.t);\n  const m = new Uint8Array(n.length + ct.length); m.set(n); m.set(ct, n.length);\n  const t = new Uint8Array(await S.sign(\"HMAC\", mk, m));\n  let diff = t.length ^ tag.length;\n  for (let i = 0; i < t.length; i++) diff |= t[i] ^ tag[i];\n  if (diff) return null;\n  const jobs = [];\n  for (let i = 0; i * 32 < ct.length; i++){\n    const b = new Uint8Array(n.length + 4); b.set(n); new DataView(b.buffer).setUint32(n.length, i);\n    jobs.push(S.sign(\"HMAC\", ek, b));\n  }\n  const ks = await Promise.all(jobs), out = new Uint8Array(ct.length);\n  for (let i = 0; i < ct.length; i++) out[i] = ct[i] ^ new Uint8Array(ks[i >> 5])[i & 31];\n  return new TextDecoder().decode(out);\n}\n\n/* ---------- fon: yuraklar va nur ---------- */\nconst sky = $(\"sky\"), HS = [\"♥\",\"❤\",\"💕\",\"🌸\",\"✿\",\"❀\"];\nfunction heart(){\n  const h = document.createElement(\"div\");\n  h.className = \"ht\";\n  h.textContent = HS[Math.random() * HS.length | 0];\n  h.style.left = Math.random() * 100 + \"vw\";\n  h.style.fontSize = 12 + Math.random() * 20 + \"px\";\n  h.style.setProperty(\"--dx\", (Math.random() * 120 - 60) + \"px\");\n  h.style.animationDuration = 8 + Math.random() * 8 + \"s\";\n  sky.appendChild(h);\n  setTimeout(() => h.remove(), 17000);\n}\nsetInterval(heart, 800); for (let i = 0; i < 6; i++) setTimeout(heart, i * 250);\nfor (let i = 0; i < 7; i++){\n  const b = document.createElement(\"div\"), s = 60 + Math.random() * 160;\n  b.className = \"bokeh\";\n  Object.assign(b.style, {width:s+\"px\", height:s+\"px\", left:Math.random()*100+\"vw\", top:Math.random()*100+\"vh\", animationDelay:-Math.random()*6+\"s\"});\n  sky.appendChild(b);\n}\n\nfunction burst(){\n  const E = [\"💖\",\"🎉\",\"🌸\",\"✨\",\"🎂\",\"💕\",\"🎈\",\"🌷\"];\n  for (let i = 0; i < 50; i++){\n    const c = document.createElement(\"div\");\n    c.className = \"cf\";\n    c.textContent = E[i % E.length];\n    c.style.left = \"50vw\"; c.style.top = \"42vh\";\n    const a = Math.random() * Math.PI * 2, d = 120 + Math.random() * 280;\n    c.style.setProperty(\"--x\", Math.cos(a) * d + \"px\");\n    c.style.setProperty(\"--y\", Math.sin(a) * d - 90 + \"px\");\n    c.style.setProperty(\"--r\", (Math.random() * 720 - 360) + \"deg\");\n    document.body.appendChild(c);\n    setTimeout(() => c.remove(), 1900);\n  }\n}\n\n/* ---------- harflarga ajratish ---------- */\nfunction split(root){\n  const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [];\n  while (tw.nextNode()) nodes.push(tw.currentNode);\n  for (const n of nodes){\n    if (!n.nodeValue.trim()) continue;\n    const f = document.createDocumentFragment();\n    for (const part of n.nodeValue.split(/(\\s+)/)){\n      if (!part) continue;\n      if (/^\\s+$/.test(part)){ f.append(\" \"); continue; }\n      const cjk = /[\\u3000-\\u9fff\\uff00-\\uffef]/.test(part);\n      const w = cjk ? f : document.createElement(\"span\");\n      if (!cjk) w.className = \"w\";\n      for (const ch of part){ const s = document.createElement(\"span\"); s.className = \"c\"; s.textContent = ch; w.append(s); }\n      if (!cjk) f.append(w);\n    }\n    n.replaceWith(f);\n  }\n}\n\n/* ---------- imzo ---------- */\nfunction drawSig(svg){\n  let delay = 0;\n  svg.querySelectorAll(\".m,.u\").forEach((p, k) => {\n    const L = p.getTotalLength(), dur = k ? 1 : 2.5;\n    p.style.transition = \"none\";\n    p.style.strokeDasharray = L; p.style.strokeDashoffset = L;\n    p.getBoundingClientRect();\n    p.style.transition = `stroke-dashoffset ${dur}s ease-in-out ${delay}s`;\n    p.style.strokeDashoffset = 0;\n    delay += dur;\n  });\n  svg.classList.remove(\"draw\"); void svg.offsetWidth; svg.classList.add(\"draw\");\n}\n\n/* ---------- yozish animatsiyasi ---------- */\nlet HTML = \"\", run = 0, skip = false;\n\nfunction follow(el){\n  const r = el.getBoundingClientRect(), vh = innerHeight;\n  if (r.bottom > vh - 150) scrollBy({top: r.bottom - vh + 220, behavior: \"smooth\"});\n}\n\nasync function write(){\n  const me = ++run; skip = false;\n  const paper = $(\"paper\");\n  paper.className = \"paper\"; paper.innerHTML = HTML;\n  const ps = paper.querySelector(\".ps\"); if (ps) ps.remove();\n  paper.prepend($(\"decoT\").content.cloneNode(true));\n  paper.appendChild($(\"sigT\").content.cloneNode(true));\n  if (ps) paper.appendChild(ps);\n  const blocks = [...paper.children].filter(e => !e.matches(\".tape,.flower,.pen\"));\n  blocks.forEach(b => { b.classList.add(\"blk\"); if (!b.matches(\".sigw\")) split(b); });\n  const pen = paper.querySelector(\".pen\");\n  $(\"bar\").hidden = false; $(\"skip\").hidden = false; $(\"replay\").hidden = true; $(\"close\").hidden = true;\n  $(\"letter\").classList.add(\"on\");\n  scrollTo(0, 0);\n  burst();\n  await sleep(1100);\n\n  for (const b of blocks){\n    if (me !== run) return;\n    if (skip) break;\n    b.classList.add(\"in\");\n    if (b.matches(\".sigw\")){\n      pen.classList.remove(\"on\");\n      follow(b);\n      await sleep(300);\n      drawSig(b.querySelector(\".sig\"));\n      await sleep(3700);\n      b.querySelector(\".wax\").classList.add(\"on\");\n      await sleep(700);\n      continue;\n    }\n    const big = b.matches(\"h1,.hi\"), zh = b.matches(\".zh\");\n    for (const c of b.querySelectorAll(\".c\")){\n      if (me !== run) return;\n      if (skip) break;\n      const card = c.closest(\".wish>div\");\n      if (card && !card.classList.contains(\"in\")){ card.classList.add(\"in\"); await sleep(250); }\n      c.classList.add(\"on\");\n      const r = c.getBoundingClientRect(), pr = paper.getBoundingClientRect();\n      pen.style.transform = `translate(${r.right - pr.left - 4}px,${r.bottom - pr.top - 36}px)`;\n      pen.classList.add(\"on\");\n      if (c.parentElement.firstChild === c) follow(c);\n      const ch = c.textContent;\n      let d = big ? 70 : 34;\n      if (/[一-鿿]/.test(ch)) d = 140;\n      if (/[.!?。！？]/.test(ch)) d += 380;\n      else if (/[,，;:]/.test(ch)) d += 180;\n      await sleep(d + Math.random() * 18);\n    }\n    if (skip) break;\n    pen.classList.remove(\"on\");\n    await sleep(zh ? 500 : 420);\n  }\n  if (me !== run) return;\n  pen.classList.remove(\"on\");\n  if (skip) finish(paper);\n  $(\"skip\").hidden = true; $(\"replay\").hidden = false; $(\"close\").hidden = false;\n}\n\nfunction finish(paper){\n  paper.classList.add(\"done\");\n  paper.querySelectorAll(\".blk,.wish>div\").forEach(e => e.classList.add(\"in\"));\n  const svg = paper.querySelector(\".sig\");\n  svg.querySelectorAll(\"path\").forEach(p => { p.style.transition = \"none\"; p.style.strokeDasharray = \"none\"; p.style.strokeDashoffset = 0; });\n  svg.classList.add(\"draw\");\n  svg.querySelectorAll(\".h,.dot\").forEach(e => { e.style.animationDelay = \"0s\"; });\n  paper.querySelector(\".wax\").classList.add(\"on\");\n}\n\n/* ---------- parolni topish: 3 ta savol ---------- */\nconst QZ = \"AwwCB1ULGgIZAg==\";\nconst QS = [\n  {q:\"Oʻquvchingiz Azizbek savolingizga toʻgʻri javob bersa nima deysiz?\", o:[\"feichang hao\",\"sehn gut\",\"sehr gut\"], a:1},\n  {q:\"Eng yoqtirgan ichimligingiz?\", o:[\"mineral suv\",\"pijiu\",\"cola\"], a:1},\n  {q:\"365 × 2 = ?\", o:[\"730\",\"740\",\"800\"], a:0}\n];\nlet qi = 0, picks = [];\nfunction qzKey(){ return picks.join(\"|\"); }\nfunction qzPw(){\n  const k = new TextEncoder().encode(qzKey()), c = b64(QZ), out = new Uint8Array(c.length);\n  for (let i = 0; i < c.length; i++) out[i] = c[i] ^ k[i % k.length];\n  return new TextDecoder().decode(out);\n}\nfunction qzDraw(){\n  const box = $(\"qz\");\n  if (qi >= QS.length){\n    const pw = qzPw();\n    box.innerHTML = `<div class=\"win\"><div class=\"big\">🎉<\/div><div class=\"qq\">Barakalla! Hammasi toʻgʻri.<\/div><div>Mana parol:<\/div><div class=\"pwv\">${pw.replace(/[<&]/g, \"\")}<\/div><button type=\"button\" class=\"go-btn\" id=\"qzUse\" style=\"padding:13px 0\">Parolni qoʻyish va ochish<\/button><\/div>`;\n    $(\"qzUse\").onclick = () => { $(\"pw\").value = pw; box.hidden = true; $(\"frm\").requestSubmit ? $(\"frm\").requestSubmit() : $(\"btn\").click(); };\n    burst();\n    return;\n  }\n  const Q = QS[qi];\n  box.innerHTML = `<div class=\"qn\">${qi + 1}-savol <span class=\"dots\">${QS.map((_, i) => i < qi ? \"<b>●<\/b>\" : i === qi ? \"<b>○<\/b>\" : \"○\").join(\"\")}<\/span><\/div>\n    <div class=\"qq\">${Q.q}<\/div>\n    ${Q.o.map((t, i) => `<button type=\"button\" class=\"op\" data-i=\"${i}\"><i>${\"abc\"[i]}<\/i>${t}<\/button>`).join(\"\")}\n    <div class=\"msg\" id=\"qzMsg\"><\/div>`;\n}\n$(\"qzGo\").onclick = () => { qi = 0; picks = []; $(\"qzGo\").hidden = true; $(\"qz\").hidden = false; qzDraw(); };\n$(\"qz\").addEventListener(\"click\", e => {\n  const b = e.target.closest(\".op\"); if (!b) return;\n  const Q = QS[qi], i = +b.dataset.i;\n  if (i === Q.a){\n    b.classList.add(\"ok\"); picks.push(Q.o[i]); qi++;\n    setTimeout(qzDraw, 450);\n  } else {\n    b.classList.remove(\"bad\"); void b.offsetWidth; b.classList.add(\"bad\");\n    $(\"qzMsg\").textContent = \"Notoʻgʻri 🙈 Yana bir oʻylab koʻring!\";\n  }\n});\n\n$(\"skip\").onclick = () => { skip = true; };\n$(\"replay\").onclick = () => write();\n$(\"close\").onclick = () => {\n  run++;\n  $(\"paper\").innerHTML = \"\"; $(\"letter\").classList.remove(\"on\"); $(\"bar\").hidden = true;\n  const l = $(\"lock\"); l.style.display = \"\"; l.classList.remove(\"open\", \"go\");\n  scrollTo(0, 0);\n};\n$(\"eye\").onclick = () => { const p = $(\"pw\"); p.type = p.type === \"password\" ? \"text\" : \"password\"; };\n\n$(\"frm\").onsubmit = async e => {\n  e.preventDefault();\n  const pw = $(\"pw\").value.trim();\n  if (!pw) return;\n  $(\"btn\").disabled = true; $(\"err\").textContent = \"Tekshirilmoqda…\";\n  let html = null;\n  try { html = await decrypt(pw); } catch (_) {}\n  $(\"btn\").disabled = false;\n  if (html === null){\n    $(\"err\").textContent = \"Parol notoʻgʻri. Bu xat faqat egasi uchun 🔒\";\n    const b = document.querySelector(\".box\");\n    b.classList.remove(\"shake\"); void b.offsetWidth; b.classList.add(\"shake\");\n    return;\n  }\n  HTML = html.replace(/ʻ/g, \"‘\").replace(/ʼ/g, \"’\");\n  $(\"err\").textContent = \"\"; $(\"pw\").value = \"\"; $(\"pw\").type = \"password\"; $(\"pw\").blur();\n  $(\"lock\").classList.add(\"open\");\n  setTimeout(() => $(\"lock\").classList.add(\"go\"), 1300);\n  setTimeout(() => { $(\"lock\").style.display = \"none\"; write(); }, 1950);\n};\n\ntry { const tg = window.Telegram && Telegram.WebApp; if (tg) { tg.ready(); tg.expand(); } } catch (_) {}\n<\/script>\n<\/body>\n<\/html>\n";
+const XAT = "<!DOCTYPE html>\n<html lang=\"uz\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1,viewport-fit=cover\">\n<meta name=\"robots\" content=\"noindex\">\n<title>💌 Maxfiy xat<\/title>\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@600;700&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap\" rel=\"stylesheet\">\n<style>\n:root{\n  --ink:#2c2654;          /* siyoh rangi */\n  --wine:#8e1538;\n  --rose:#d6406b;\n  --blush:#f7c9d6;\n  --paper:#fffcf6;\n}\n*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}\nhtml,body{min-height:100%}\nbody{\n  font-family:\"Cormorant Garamond\",Georgia,serif;color:var(--ink);overflow-x:hidden;min-height:100vh;\n  background:\n    radial-gradient(1200px 700px at 15% -10%,#ffe4ec 0,transparent 60%),\n    radial-gradient(900px 600px at 110% 110%,#7a1035 0,transparent 60%),\n    linear-gradient(160deg,#f6b8c9 0%,#d9668b 45%,#9c1f4a 100%) fixed;\n}\n#sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}\n.ht{position:absolute;bottom:-40px;color:#fff;opacity:.5;animation:up linear forwards;filter:drop-shadow(0 2px 4px rgba(150,30,70,.3))}\n@keyframes up{to{transform:translateY(-115vh) translateX(var(--dx)) rotate(30deg);opacity:0}}\n.bokeh{position:fixed;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.55),rgba(255,255,255,0) 70%);pointer-events:none;z-index:0;animation:glow 6s ease-in-out infinite}\n@keyframes glow{50%{opacity:.35;transform:scale(1.15)}}\n\n/* ================= QULF EKRANI ================= */\n#lock{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;transition:opacity .7s,transform .7s}\n#lock.go{opacity:0;transform:translateY(-30px) scale(.94);pointer-events:none}\n.card{width:100%;max-width:380px;text-align:center;padding:34px 24px 26px;border-radius:28px;\n  background:linear-gradient(160deg,rgba(255,255,255,.42),rgba(255,255,255,.16));\n  border:1px solid rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);\n  box-shadow:0 30px 70px rgba(90,10,40,.35),inset 0 1px 0 rgba(255,255,255,.6)}\n.env{position:relative;width:250px;height:162px;margin:6px auto 30px;perspective:800px;animation:float 4s ease-in-out infinite}\n@keyframes float{50%{transform:translateY(-9px) rotate(-1deg)}}\n.env .b{position:absolute;inset:0;border-radius:10px;background:linear-gradient(160deg,#fffaf3,#f8e6da);box-shadow:0 22px 36px rgba(110,15,50,.35)}\n.env .card2{position:absolute;left:14px;right:14px;top:14px;height:120px;border-radius:6px;background:var(--paper);transition:transform .9s .35s cubic-bezier(.2,.8,.2,1)}\n.env .l{position:absolute;inset:0;border-radius:10px;background:linear-gradient(15deg,#fbeee5,#f3d9cb);clip-path:polygon(0 100%,0 0,50% 58%,100% 0,100% 100%)}\n.env .f{position:absolute;left:0;right:0;top:0;height:100px;background:linear-gradient(180deg,#f6dccd,#efc8b6);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:10px 10px 0 0;transform-origin:top;transition:transform .8s;z-index:2}\n.env .to{position:absolute;left:20px;bottom:12px;z-index:4;font-family:\"Dancing Script\",cursive;font-size:22px;color:var(--wine)}\n.stamp{position:absolute;right:12px;top:10px;width:38px;height:46px;background:#fff;border:2px dashed #e7a7b9;border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:20px;transform:rotate(6deg);z-index:4;box-shadow:0 2px 4px rgba(0,0,0,.12)}\n.pm{position:absolute;right:42px;top:20px;width:48px;height:48px;border:2px solid rgba(142,21,56,.35);border-radius:50%;font:700 10px/1 sans-serif;color:rgba(142,21,56,.55);display:flex;align-items:center;justify-content:center;transform:rotate(-14deg);z-index:4}\n.seal{position:absolute;left:50%;top:76px;width:56px;height:56px;margin-left:-28px;border-radius:50%;z-index:3;\n  background:radial-gradient(circle at 35% 30%,#ec5a7a,#9e0f36 70%,#7c0a29);display:flex;align-items:center;justify-content:center;color:#ffd6df;font-size:24px;\n  box-shadow:0 4px 10px rgba(100,0,30,.45),inset 0 -4px 8px rgba(0,0,0,.3),inset 0 3px 6px rgba(255,255,255,.25);transition:transform .5s,opacity .5s}\n.seal:after{content:\"\";position:absolute;inset:5px;border-radius:50%;border:1.5px dashed rgba(255,214,223,.45)}\n#lock.open .env{animation:none}\n#lock.open .env .f{transform:rotateX(180deg);z-index:0}\n#lock.open .env .card2{transform:translateY(-70px)}\n#lock.open .stamp,#lock.open .pm,#lock.open .to{opacity:0;transition:opacity .3s}\n#lock.open .seal{transform:scale(0) rotate(120deg);opacity:0}\n.lt{font-family:\"Dancing Script\",cursive;font-size:36px;color:#fff;text-shadow:0 2px 12px rgba(120,20,60,.45);line-height:1.1}\n.ls{color:#fff;opacity:.95;font-size:18px;margin:8px 0 22px;font-style:italic}\n.box{display:flex;gap:8px}\n.inp{position:relative;flex:1;min-width:0}\n.inp input{width:100%;padding:15px 46px 15px 18px;border-radius:16px;border:1.5px solid rgba(255,255,255,.8);background:rgba(255,255,255,.95);font:500 17px \"Cormorant Garamond\",serif;color:var(--ink);outline:none;transition:box-shadow .2s}\n.inp input:focus{box-shadow:0 0 0 4px rgba(255,255,255,.4)}\n.eye{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:none;font-size:18px;cursor:pointer;opacity:.6}\n.go-btn{padding:0 20px;border:0;border-radius:16px;background:linear-gradient(160deg,#c3224f,#8e1538);color:#fff;font:600 17px \"Cormorant Garamond\",serif;cursor:pointer;box-shadow:0 8px 20px rgba(100,0,30,.4)}\n.go-btn:disabled{opacity:.6}\n.err{min-height:22px;margin-top:14px;color:#fff;font-size:16px;font-weight:600}\n.shake{animation:sh .45s}\n.qz-go{margin-top:4px;padding:13px 22px;border:1.5px solid rgba(255,255,255,.85);border-radius:999px;background:rgba(255,255,255,.18);color:#fff;font:600 18px \"Cormorant Garamond\",serif;cursor:pointer;backdrop-filter:blur(4px)}\n.qz{margin-top:14px;padding:18px 16px 16px;border-radius:20px;background:rgba(255,255,255,.96);color:var(--ink);text-align:left;box-shadow:0 14px 34px rgba(100,0,30,.3);animation:qzIn .4s cubic-bezier(.2,.9,.3,1.2)}\n.qz .qn{font:600 14px \"Cormorant Garamond\",serif;letter-spacing:.08em;text-transform:uppercase;color:var(--rose)}\n.qz .dots{float:right;letter-spacing:4px;color:#e9b5c5}\n.qz .dots b{color:var(--rose)}\n.qz .qq{font:600 21px/1.3 \"Cormorant Garamond\",serif;margin:6px 0 12px;color:var(--wine)}\n.qz .op{display:flex;align-items:center;gap:10px;width:100%;margin:0 0 8px;padding:12px 14px;border:1.5px solid #f2c3d1;border-radius:14px;background:#fff;color:var(--ink);font:500 18px \"Cormorant Garamond\",serif;text-align:left;cursor:pointer;transition:transform .15s}\n.qz .op i{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#fde3eb;color:var(--wine);font:700 14px sans-serif;font-style:normal}\n.qz .op:active{transform:scale(.98)}\n.qz .op.ok{border-color:#3aa76d;background:#eafaf1}\n.qz .op.ok i{background:#3aa76d;color:#fff}\n.qz .op.bad{border-color:#d6406b;background:#fff0f4;animation:sh .45s}\n.qz .msg{min-height:20px;font:600 16px \"Cormorant Garamond\",serif;color:var(--rose);text-align:center}\n.qz .win{text-align:center}\n.qz .win .big{font-size:40px;line-height:1}\n.qz .win .pwv{display:inline-block;margin:10px 0 12px;padding:10px 18px;border-radius:14px;background:#fde3eb;color:var(--wine);font:700 24px \"Cormorant Garamond\",serif;letter-spacing:.04em;user-select:all}\n.qz .win button{width:100%}\n@keyframes qzIn{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}\n\n@keyframes sh{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}\n\n/* ================= XAT ================= */\n#letter{position:relative;z-index:2;display:none;padding:34px 14px 120px}\n#letter.on{display:block}\n.paper{\n  max-width:580px;margin:0 auto;position:relative;border-radius:6px;padding:58px 30px 44px 34px;\n  background-color:var(--paper);\n  background-image:\n    url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .4 0 0 0 0 .3 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\"),\n    radial-gradient(ellipse at 50% 0,rgba(255,255,255,.9),transparent 70%),\n    radial-gradient(ellipse at 50% 120%,rgba(230,190,160,.25),transparent 60%);\n  box-shadow:0 2px 0 #f1e6d8,0 4px 0 #ece0d0,0 30px 70px rgba(90,10,40,.4);\n  animation:rise 1.1s cubic-bezier(.2,.8,.2,1)}\n@keyframes rise{from{transform:translateY(90px) rotate(-2deg) scale(.95);opacity:0}}\n.tape{position:absolute;top:-14px;left:50%;width:120px;height:32px;margin-left:-60px;transform:rotate(-3deg);\n  background:repeating-linear-gradient(45deg,rgba(240,150,180,.75) 0 8px,rgba(250,190,210,.75) 8px 16px);\n  box-shadow:0 2px 4px rgba(0,0,0,.08);clip-path:polygon(3% 0,97% 4%,100% 50%,96% 100%,2% 96%,0 50%)}\n.flower{position:absolute;width:92px;height:92px;pointer-events:none;opacity:.9}\n.flower.tl{left:-16px;top:-18px;transform:rotate(-20deg)}\n.flower.br{right:-14px;bottom:-16px;transform:rotate(160deg)}\n\n/* matn — qo'lyozma */\n.paper .blk{opacity:0;transition:opacity .5s}\n.paper .blk.in{opacity:1}\n.paper p{font-family:Caveat,cursive;font-size:25px;line-height:1.45;margin:0 0 18px;color:var(--ink)}\n.paper .hi{font-family:\"Dancing Script\",cursive;font-size:30px;color:var(--wine);margin-bottom:10px}\n.paper h1{font-family:\"Dancing Script\",cursive;font-weight:700;font-size:44px;line-height:1.12;color:var(--rose);margin:4px 0 2px;text-align:center}\n.paper .date{text-align:center;font-family:\"Cormorant Garamond\",serif;font-style:italic;font-size:18px;color:#b06a7e;margin-bottom:26px}\n.paper .date:before,.paper .date:after{content:\"\";display:inline-block;width:40px;height:1px;background:#e3a9ba;vertical-align:middle;margin:0 10px}\n.zh{margin:24px 0;padding:20px 16px;border-radius:16px;text-align:center;position:relative;\n  background:linear-gradient(135deg,rgba(255,236,242,.9),rgba(255,224,234,.9));border:1px solid #f6c6d4}\n.zh:before,.zh:after{content:\"❝\";position:absolute;font-size:34px;color:#f0a3ba;top:2px;left:10px}\n.zh:after{content:\"❞\";top:auto;left:auto;bottom:-6px;right:12px}\n.zh-c{font-family:\"Ma Shan Zheng\",cursive;font-size:30px;color:var(--wine);line-height:1.35}\n.zh-p{font-family:Caveat,cursive;font-size:20px;color:#c0577a;margin:6px 0 6px}\n.zh-t{font-family:Caveat,cursive;font-size:21px;color:#5b3b52;line-height:1.35}\n.wish{display:flex;gap:10px;margin:6px 0 24px}\n.wish>div{flex:1;text-align:center;padding:14px 4px 12px;border-radius:14px;background:#fff;border:1px solid #f6d3dd;\n  box-shadow:0 6px 16px rgba(201,86,122,.15);opacity:0;transform:translateY(10px) scale(.9);transition:all .5s cubic-bezier(.3,1.6,.5,1)}\n.wish>div.in{opacity:1;transform:none}\n.wish b{display:block;font-family:\"Ma Shan Zheng\",cursive;font-weight:400;font-size:30px;color:var(--rose);line-height:1.2}\n.wish span{font-family:Caveat,cursive;font-size:20px;color:#7a5560}\n.paper .end{font-family:\"Dancing Script\",cursive;font-size:26px;color:var(--wine);margin:30px 0 0}\n.paper .ps{font-size:21px;color:#7a5f8a;margin:22px 0 0;padding-top:14px;border-top:1px dashed #e7c6d0}\n\n/* harflar */\n.w{display:inline-block;white-space:nowrap}\n.c{display:inline-block;opacity:0;white-space:pre}\n.c.on{animation:ink .32s ease-out forwards}\n.c.now{opacity:1}\n@keyframes ink{0%{opacity:0;clip-path:inset(-20% 100% -20% 0);filter:blur(1.2px)}60%{opacity:1}100%{opacity:1;clip-path:inset(-20% -20% -20% 0);filter:none}}\n.done .c{opacity:1;animation:none}\n\n/* ruchka */\n.pen{position:absolute;left:0;top:0;width:38px;height:38px;z-index:5;pointer-events:none;opacity:0;transition:opacity .4s,transform .09s linear;filter:drop-shadow(2px 5px 4px rgba(40,20,60,.3))}\n.pen.on{opacity:1}\n\n/* imzo */\n.sigw{display:flex;justify-content:flex-end;align-items:center;gap:6px;margin-top:2px}\n.sig{width:240px;max-width:70%;overflow:visible}\n.sig path{fill:none;stroke:var(--wine);stroke-linecap:round;stroke-linejoin:round}\n.sig .m{stroke-width:5}\n.sig .u{stroke-width:2.6}\n.sig .h{fill:var(--rose);stroke:none;opacity:0;transform-origin:262px 42px;transform:scale(0)}\n.sig.draw .h{animation:pop .7s 3.5s forwards}\n@keyframes pop{60%{opacity:1;transform:scale(1.35)}to{opacity:1;transform:scale(1)}}\n.sig .dot{fill:var(--wine);opacity:0}\n.sig.draw .dot{animation:fade .3s 3.1s forwards}\n@keyframes fade{to{opacity:1}}\n.wax{width:62px;height:62px;flex:none;border-radius:50%;opacity:0;transform:scale(2.4) rotate(-30deg);\n  background:radial-gradient(circle at 35% 30%,#ec5a7a,#9e0f36 70%,#7c0a29);color:#ffd6df;display:flex;align-items:center;justify-content:center;\n  font:700 26px \"Dancing Script\",cursive;box-shadow:0 4px 10px rgba(100,0,30,.4),inset 0 -4px 8px rgba(0,0,0,.3)}\n.wax.on{animation:stamp .5s cubic-bezier(.5,0,.6,1.4) forwards}\n@keyframes stamp{to{opacity:1;transform:scale(1) rotate(-12deg)}}\n\n/* tugmalar */\n.bar{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;display:flex;gap:8px;padding:6px;border-radius:999px;\n  background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 30px rgba(90,10,40,.3)}\n.bar button{border:0;border-radius:999px;padding:10px 16px;font:600 16px \"Cormorant Garamond\",serif;color:var(--wine);background:transparent;cursor:pointer;white-space:nowrap}\n.bar button.pri{background:var(--wine);color:#fff}\n.bar[hidden],.bar [hidden]{display:none}\n.cf{position:fixed;z-index:7;pointer-events:none;font-size:22px;animation:burst 1.8s ease-out forwards}\n@keyframes burst{to{transform:translate(var(--x),var(--y)) rotate(var(--r));opacity:0}}\n@media (max-width:420px){\n  .paper{padding:54px 20px 40px 22px}\n  .paper p{font-size:23px}\n  .paper h1{font-size:38px}\n}\n<\/style>\n<\/head>\n<body>\n<div id=\"sky\"><\/div>\n\n<section id=\"lock\">\n  <div class=\"card\">\n    <div class=\"env\">\n      <div class=\"b\"><\/div>\n      <div class=\"card2\"><\/div>\n      <div class=\"l\"><\/div>\n      <div class=\"stamp\">🌸<\/div>\n      <div class=\"pm\">22·11<\/div>\n      <div class=\"to\">Sizga ✉<\/div>\n      <div class=\"f\"><\/div>\n      <div class=\"seal\">♥<\/div>\n    <\/div>\n    <div class=\"lt\">Sizga maktub bor<\/div>\n    <div class=\"ls\">Parolni topish uchun 3 ta savolga toʻgʻri javob bering 🗝️<\/div>\n    <form class=\"box\" id=\"frm\" autocomplete=\"off\">\n      <div class=\"inp\">\n        <input id=\"pw\" type=\"password\" placeholder=\"Parolni kiriting\" autocapitalize=\"off\" autocorrect=\"off\" spellcheck=\"false\">\n        <button type=\"button\" class=\"eye\" id=\"eye\" aria-label=\"Parolni koʻrsatish\">👁<\/button>\n      <\/div>\n      <button id=\"btn\" class=\"go-btn\" type=\"submit\">Ochish<\/button>\n    <\/form>\n    <div class=\"err\" id=\"err\"><\/div>\n    <button type=\"button\" class=\"qz-go\" id=\"qzGo\">🗝️ Savollarga javob berish<\/button>\n    <div class=\"qz\" id=\"qz\" hidden><\/div>\n  <\/div>\n<\/section>\n\n<section id=\"letter\">\n  <article class=\"paper\" id=\"paper\"><\/article>\n<\/section>\n<div class=\"bar\" id=\"bar\" hidden>\n  <button id=\"skip\">⏩ Hammasini koʻrsatish<\/button>\n  <button id=\"replay\" hidden>✍️ Qayta oʻqish<\/button>\n  <button id=\"close\" class=\"pri\" hidden>💌 Yopish<\/button>\n<\/div>\n\n<template id=\"decoT\">\n  <div class=\"tape\"><\/div>\n  <svg class=\"flower tl\" viewBox=\"0 0 100 100\"><g fill=\"#f4a6bd\"><circle cx=\"50\" cy=\"30\" r=\"13\"/><circle cx=\"69\" cy=\"44\" r=\"13\"/><circle cx=\"62\" cy=\"66\" r=\"13\"/><circle cx=\"38\" cy=\"66\" r=\"13\"/><circle cx=\"31\" cy=\"44\" r=\"13\"/><\/g><circle cx=\"50\" cy=\"50\" r=\"9\" fill=\"#f7d67a\"/><path d=\"M60 78 Q72 92 92 96\" stroke=\"#8fb58a\" stroke-width=\"3\" fill=\"none\"/><ellipse cx=\"80\" cy=\"86\" rx=\"9\" ry=\"4\" fill=\"#9cc297\" transform=\"rotate(30 80 86)\"/><\/svg>\n  <svg class=\"flower br\" viewBox=\"0 0 100 100\"><g fill=\"#f9c3d2\"><circle cx=\"50\" cy=\"32\" r=\"12\"/><circle cx=\"67\" cy=\"45\" r=\"12\"/><circle cx=\"60\" cy=\"65\" r=\"12\"/><circle cx=\"40\" cy=\"65\" r=\"12\"/><circle cx=\"33\" cy=\"45\" r=\"12\"/><\/g><circle cx=\"50\" cy=\"50\" r=\"8\" fill=\"#f7d67a\"/><path d=\"M60 76 Q72 90 92 94\" stroke=\"#8fb58a\" stroke-width=\"3\" fill=\"none\"/><\/svg>\n  <svg class=\"pen\" viewBox=\"0 0 40 40\"><path d=\"M9 31 L30 4 Q34 1 37 4 Q39 7 36 10 L13 35 Z\" fill=\"#2c2654\"/><path d=\"M30 4 Q34 1 37 4 Q39 7 36 10 L33 13 L27 7Z\" fill=\"#8e1538\"/><path d=\"M9 31 L13 35 L3 39 Z\" fill=\"#d4a64a\"/><path d=\"M4 38 L8.5 33.5\" stroke=\"#7a5a1a\" stroke-width=\".8\"/><\/svg>\n<\/template>\n\n<template id=\"sigT\">\n  <div class=\"sigw blk\">\n    <svg class=\"sig\" viewBox=\"0 0 300 130\" aria-label=\"M\">\n      <path class=\"m\" d=\"M22 104 C30 86 40 56 52 38 C58 29 66 30 64 46 C62 64 56 88 54 104 C62 80 74 50 88 36 C95 29 102 32 100 48 C98 66 92 88 92 102 C100 78 114 48 130 35 C138 29 145 33 143 50 C141 70 136 92 146 103 C156 112 176 98 192 84\"/>\n      <path class=\"u\" d=\"M30 118 C90 112 160 110 238 104 C252 103 262 100 270 94\"/>\n      <circle class=\"dot\" cx=\"208\" cy=\"80\" r=\"4\"/>\n      <path class=\"h\" d=\"M262 54 C252 46 244 40 244 32 C244 26 249 22 254 22 C258 22 261 25 262 28 C263 25 266 22 270 22 C275 22 280 26 280 32 C280 40 272 46 262 54Z\"/>\n    <\/svg>\n    <div class=\"wax\">M<\/div>\n  <\/div>\n<\/template>\n\n<script>\nconst X = {\"i\": 300000, \"s\": \"VnIeaJryO9oZ1yy1TeN4OA==\", \"n\": \"XFGEeFJz9kntNkY/\", \"c\": \"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\", \"t\": \"h7BjdacMZrUN8yfOlESNKpo0/bmhFz5rXjQgoAMa5jo=\"};\nconst $ = id => document.getElementById(id);\nconst b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));\nconst sleep = ms => new Promise(r => setTimeout(r, ms));\n\nasync function decrypt(pw){\n  const te = new TextEncoder(), S = crypto.subtle;\n  const base = await S.importKey(\"raw\", te.encode(pw), \"PBKDF2\", false, [\"deriveBits\"]);\n  const bits = new Uint8Array(await S.deriveBits({name:\"PBKDF2\", salt:b64(X.s), iterations:X.i, hash:\"SHA-256\"}, base, 512));\n  const hm = {name:\"HMAC\", hash:\"SHA-256\"};\n  const ek = await S.importKey(\"raw\", bits.slice(0,32), hm, false, [\"sign\"]);\n  const mk = await S.importKey(\"raw\", bits.slice(32), hm, false, [\"sign\"]);\n  const n = b64(X.n), ct = b64(X.c), tag = b64(X.t);\n  const m = new Uint8Array(n.length + ct.length); m.set(n); m.set(ct, n.length);\n  const t = new Uint8Array(await S.sign(\"HMAC\", mk, m));\n  let diff = t.length ^ tag.length;\n  for (let i = 0; i < t.length; i++) diff |= t[i] ^ tag[i];\n  if (diff) return null;\n  const jobs = [];\n  for (let i = 0; i * 32 < ct.length; i++){\n    const b = new Uint8Array(n.length + 4); b.set(n); new DataView(b.buffer).setUint32(n.length, i);\n    jobs.push(S.sign(\"HMAC\", ek, b));\n  }\n  const ks = await Promise.all(jobs), out = new Uint8Array(ct.length);\n  for (let i = 0; i < ct.length; i++) out[i] = ct[i] ^ new Uint8Array(ks[i >> 5])[i & 31];\n  return new TextDecoder().decode(out);\n}\n\n/* ---------- fon: yuraklar va nur ---------- */\nconst sky = $(\"sky\"), HS = [\"♥\",\"❤\",\"💕\",\"🌸\",\"✿\",\"❀\"];\nfunction heart(){\n  const h = document.createElement(\"div\");\n  h.className = \"ht\";\n  h.textContent = HS[Math.random() * HS.length | 0];\n  h.style.left = Math.random() * 100 + \"vw\";\n  h.style.fontSize = 12 + Math.random() * 20 + \"px\";\n  h.style.setProperty(\"--dx\", (Math.random() * 120 - 60) + \"px\");\n  h.style.animationDuration = 8 + Math.random() * 8 + \"s\";\n  sky.appendChild(h);\n  setTimeout(() => h.remove(), 17000);\n}\nsetInterval(heart, 800); for (let i = 0; i < 6; i++) setTimeout(heart, i * 250);\nfor (let i = 0; i < 7; i++){\n  const b = document.createElement(\"div\"), s = 60 + Math.random() * 160;\n  b.className = \"bokeh\";\n  Object.assign(b.style, {width:s+\"px\", height:s+\"px\", left:Math.random()*100+\"vw\", top:Math.random()*100+\"vh\", animationDelay:-Math.random()*6+\"s\"});\n  sky.appendChild(b);\n}\n\nfunction burst(){\n  const E = [\"💖\",\"🎉\",\"🌸\",\"✨\",\"🎂\",\"💕\",\"🎈\",\"🌷\"];\n  for (let i = 0; i < 50; i++){\n    const c = document.createElement(\"div\");\n    c.className = \"cf\";\n    c.textContent = E[i % E.length];\n    c.style.left = \"50vw\"; c.style.top = \"42vh\";\n    const a = Math.random() * Math.PI * 2, d = 120 + Math.random() * 280;\n    c.style.setProperty(\"--x\", Math.cos(a) * d + \"px\");\n    c.style.setProperty(\"--y\", Math.sin(a) * d - 90 + \"px\");\n    c.style.setProperty(\"--r\", (Math.random() * 720 - 360) + \"deg\");\n    document.body.appendChild(c);\n    setTimeout(() => c.remove(), 1900);\n  }\n}\n\n/* ---------- harflarga ajratish ---------- */\nfunction split(root){\n  const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), nodes = [];\n  while (tw.nextNode()) nodes.push(tw.currentNode);\n  for (const n of nodes){\n    if (!n.nodeValue.trim()) continue;\n    const f = document.createDocumentFragment();\n    for (const part of n.nodeValue.split(/(\\s+)/)){\n      if (!part) continue;\n      if (/^\\s+$/.test(part)){ f.append(\" \"); continue; }\n      const cjk = /[\\u3000-\\u9fff\\uff00-\\uffef]/.test(part);\n      const w = cjk ? f : document.createElement(\"span\");\n      if (!cjk) w.className = \"w\";\n      for (const ch of part){ const s = document.createElement(\"span\"); s.className = \"c\"; s.textContent = ch; w.append(s); }\n      if (!cjk) f.append(w);\n    }\n    n.replaceWith(f);\n  }\n}\n\n/* ---------- imzo ---------- */\nfunction drawSig(svg){\n  let delay = 0;\n  svg.querySelectorAll(\".m,.u\").forEach((p, k) => {\n    const L = p.getTotalLength(), dur = k ? 1 : 2.5;\n    p.style.transition = \"none\";\n    p.style.strokeDasharray = L; p.style.strokeDashoffset = L;\n    p.getBoundingClientRect();\n    p.style.transition = `stroke-dashoffset ${dur}s ease-in-out ${delay}s`;\n    p.style.strokeDashoffset = 0;\n    delay += dur;\n  });\n  svg.classList.remove(\"draw\"); void svg.offsetWidth; svg.classList.add(\"draw\");\n}\n\n/* ---------- yozish animatsiyasi ---------- */\nlet HTML = \"\", run = 0, skip = false;\n\nfunction follow(el){\n  const r = el.getBoundingClientRect(), vh = innerHeight;\n  if (r.bottom > vh - 150) scrollBy({top: r.bottom - vh + 220, behavior: \"smooth\"});\n}\n\nasync function write(){\n  const me = ++run; skip = false;\n  const paper = $(\"paper\");\n  paper.className = \"paper\"; paper.innerHTML = HTML;\n  const ps = paper.querySelector(\".ps\"); if (ps) ps.remove();\n  paper.prepend($(\"decoT\").content.cloneNode(true));\n  paper.appendChild($(\"sigT\").content.cloneNode(true));\n  if (ps) paper.appendChild(ps);\n  const blocks = [...paper.children].filter(e => !e.matches(\".tape,.flower,.pen\"));\n  blocks.forEach(b => { b.classList.add(\"blk\"); if (!b.matches(\".sigw\")) split(b); });\n  const pen = paper.querySelector(\".pen\");\n  $(\"bar\").hidden = false; $(\"skip\").hidden = false; $(\"replay\").hidden = true; $(\"close\").hidden = true;\n  $(\"letter\").classList.add(\"on\");\n  scrollTo(0, 0);\n  burst();\n  await sleep(1100);\n\n  for (const b of blocks){\n    if (me !== run) return;\n    if (skip) break;\n    b.classList.add(\"in\");\n    if (b.matches(\".sigw\")){\n      pen.classList.remove(\"on\");\n      follow(b);\n      await sleep(300);\n      drawSig(b.querySelector(\".sig\"));\n      await sleep(3700);\n      b.querySelector(\".wax\").classList.add(\"on\");\n      await sleep(700);\n      continue;\n    }\n    const big = b.matches(\"h1,.hi\"), zh = b.matches(\".zh\");\n    for (const c of b.querySelectorAll(\".c\")){\n      if (me !== run) return;\n      if (skip) break;\n      const card = c.closest(\".wish>div\");\n      if (card && !card.classList.contains(\"in\")){ card.classList.add(\"in\"); await sleep(250); }\n      c.classList.add(\"on\");\n      const r = c.getBoundingClientRect(), pr = paper.getBoundingClientRect();\n      pen.style.transform = `translate(${r.right - pr.left - 4}px,${r.bottom - pr.top - 36}px)`;\n      pen.classList.add(\"on\");\n      if (c.parentElement.firstChild === c) follow(c);\n      const ch = c.textContent;\n      let d = big ? 70 : 34;\n      if (/[一-鿿]/.test(ch)) d = 140;\n      if (/[.!?。！？]/.test(ch)) d += 380;\n      else if (/[,，;:]/.test(ch)) d += 180;\n      await sleep(d + Math.random() * 18);\n    }\n    if (skip) break;\n    pen.classList.remove(\"on\");\n    await sleep(zh ? 500 : 420);\n  }\n  if (me !== run) return;\n  pen.classList.remove(\"on\");\n  if (skip) finish(paper);\n  $(\"skip\").hidden = true; $(\"replay\").hidden = false; $(\"close\").hidden = false;\n}\n\nfunction finish(paper){\n  paper.classList.add(\"done\");\n  paper.querySelectorAll(\".blk,.wish>div\").forEach(e => e.classList.add(\"in\"));\n  const svg = paper.querySelector(\".sig\");\n  svg.querySelectorAll(\"path\").forEach(p => { p.style.transition = \"none\"; p.style.strokeDasharray = \"none\"; p.style.strokeDashoffset = 0; });\n  svg.classList.add(\"draw\");\n  svg.querySelectorAll(\".h,.dot\").forEach(e => { e.style.animationDelay = \"0s\"; });\n  paper.querySelector(\".wax\").classList.add(\"on\");\n}\n\n/* ---------- parolni topish: 3 ta savol ---------- */\nconst QZ = \"AwwCB1ULGgIZAg==\";\nconst QS = [\n  {q:\"Oʻquvchingiz Azizbek savolingizga toʻgʻri javob bersa nima deysiz?\", o:[\"feichang hao\",\"sehn gut\",\"sehr gut\"], a:1},\n  {q:\"Eng yoqtirgan ichimligingiz?\", o:[\"mineral suv\",\"pijiu\",\"cola\"], a:1},\n  {q:\"365 × 2 = ?\", o:[\"730\",\"740\",\"800\"], a:0}\n];\nlet qi = 0, picks = [];\nfunction qzKey(){ return picks.join(\"|\"); }\nfunction qzPw(){\n  const k = new TextEncoder().encode(qzKey()), c = b64(QZ), out = new Uint8Array(c.length);\n  for (let i = 0; i < c.length; i++) out[i] = c[i] ^ k[i % k.length];\n  return new TextDecoder().decode(out);\n}\nfunction qzDraw(){\n  const box = $(\"qz\");\n  if (qi >= QS.length){\n    const pw = qzPw();\n    box.innerHTML = `<div class=\"win\"><div class=\"big\">🎉<\/div><div class=\"qq\">Barakalla! Hammasi toʻgʻri.<\/div><div>Mana parol:<\/div><div class=\"pwv\">${pw.replace(/[<&]/g, \"\")}<\/div><button type=\"button\" class=\"go-btn\" id=\"qzUse\" style=\"padding:13px 0\">Parolni qoʻyish va ochish<\/button><\/div>`;\n    $(\"qzUse\").onclick = () => { $(\"pw\").value = pw; box.hidden = true; $(\"frm\").requestSubmit ? $(\"frm\").requestSubmit() : $(\"btn\").click(); };\n    burst();\n    return;\n  }\n  const Q = QS[qi];\n  box.innerHTML = `<div class=\"qn\">${qi + 1}-savol <span class=\"dots\">${QS.map((_, i) => i < qi ? \"<b>●<\/b>\" : i === qi ? \"<b>○<\/b>\" : \"○\").join(\"\")}<\/span><\/div>\n    <div class=\"qq\">${Q.q}<\/div>\n    ${Q.o.map((t, i) => `<button type=\"button\" class=\"op\" data-i=\"${i}\"><i>${\"abc\"[i]}<\/i>${t}<\/button>`).join(\"\")}\n    <div class=\"msg\" id=\"qzMsg\"><\/div>`;\n}\n$(\"qzGo\").onclick = () => { qi = 0; picks = []; $(\"qzGo\").hidden = true; $(\"qz\").hidden = false; qzDraw(); };\n$(\"qz\").addEventListener(\"click\", e => {\n  const b = e.target.closest(\".op\"); if (!b) return;\n  const Q = QS[qi], i = +b.dataset.i;\n  if (i === Q.a){\n    b.classList.add(\"ok\"); picks.push(Q.o[i]); qi++;\n    setTimeout(qzDraw, 450);\n  } else {\n    b.classList.remove(\"bad\"); void b.offsetWidth; b.classList.add(\"bad\");\n    $(\"qzMsg\").textContent = \"Notoʻgʻri 🙈 Yana bir oʻylab koʻring!\";\n  }\n});\n\n$(\"skip\").onclick = () => { skip = true; };\n$(\"replay\").onclick = () => write();\n$(\"close\").onclick = () => {\n  run++;\n  $(\"paper\").innerHTML = \"\"; $(\"letter\").classList.remove(\"on\"); $(\"bar\").hidden = true;\n  const l = $(\"lock\"); l.style.display = \"\"; l.classList.remove(\"open\", \"go\");\n  scrollTo(0, 0);\n};\n$(\"eye\").onclick = () => { const p = $(\"pw\"); p.type = p.type === \"password\" ? \"text\" : \"password\"; };\n\n$(\"frm\").onsubmit = async e => {\n  e.preventDefault();\n  const pw = $(\"pw\").value.trim();\n  if (!pw) return;\n  $(\"btn\").disabled = true; $(\"err\").textContent = \"Tekshirilmoqda…\";\n  let html = null;\n  try { html = await decrypt(pw); } catch (_) {}\n  $(\"btn\").disabled = false;\n  if (html === null){\n    $(\"err\").textContent = \"Parol notoʻgʻri. Bu xat faqat egasi uchun 🔒\";\n    const b = document.querySelector(\".box\");\n    b.classList.remove(\"shake\"); void b.offsetWidth; b.classList.add(\"shake\");\n    return;\n  }\n  HTML = html.replace(/ʻ/g, \"‘\").replace(/ʼ/g, \"’\");\n  $(\"err\").textContent = \"\"; $(\"pw\").value = \"\"; $(\"pw\").type = \"password\"; $(\"pw\").blur();\n  $(\"lock\").classList.add(\"open\");\n  setTimeout(() => $(\"lock\").classList.add(\"go\"), 1300);\n  setTimeout(() => { $(\"lock\").style.display = \"none\"; write(); }, 1950);\n};\n\ntry { const tg = window.Telegram && Telegram.WebApp; if (tg) { tg.ready(); tg.expand(); } } catch (_) {}\n<\/script>\n<\/body>\n<\/html>\n";
 const XAT_KUN = new Date(2026, 10, 22);   // 22-noyabr 2026, 00:00 (telefon vaqti). Oy 0 dan: 10 = noyabr
 const xatOpen = () => Date.now() >= XAT_KUN.getTime();
 const XAT_ICO = '<svg class="xenv" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="xg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE3EC"/></linearGradient></defs><rect x="5" y="11" width="30" height="21" rx="4" fill="url(#xg1)" stroke="#E07A9B" stroke-width="1.6"/><path d="M6 13 L20 23.5 L34 13" fill="none" stroke="#E07A9B" stroke-width="1.6" stroke-linejoin="round"/><path class="xseal" d="M20 27.5c-2.6-2.1-4.6-3.6-4.6-5.6 0-1.4 1.1-2.4 2.3-2.4.9 0 1.7.5 2.3 1.3.6-.8 1.4-1.3 2.3-1.3 1.2 0 2.3 1 2.3 2.4 0 2-2 3.5-4.6 5.6z" fill="#D6336C"/></svg>';
 const XAT_SVG = '<svg viewBox="0 0 120 100" aria-hidden="true"><defs><linearGradient id="xg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#FFE0EA"/></linearGradient></defs><rect x="10" y="30" width="100" height="64" rx="12" fill="url(#xg2)" stroke="#E07A9B" stroke-width="2.5"/><path d="M12 92 L48 60 M108 92 L72 60" stroke="#F3C1D2" stroke-width="2"/><g class="xp-flap"><path d="M12 36 L60 70 L108 36" fill="#FFF4F8" stroke="#E07A9B" stroke-width="2.5" stroke-linejoin="round"/></g><g class="xp-h"><path d="M60 78 C50 70 42 64 42 56 C42 50 47 46 52 46 C55.5 46 58.5 48 60 51 C61.5 48 64.5 46 68 46 C73 46 78 50 78 56 C78 64 70 70 60 78Z" fill="#D6336C"/><path d="M50 53 C51 50 53.5 49 55.5 49.5" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none" opacity=".7"/></g></svg>';
+/* ===== Ovoz: bitta umumiy AudioContext + telefonda ochish (iOS jim rejimi uchun ham) ===== */
+let AUDX = null, audEl = null;
+function audCtx(){
+  try { if (!AUDX) AUDX = new (window.AudioContext || window.webkitAudioContext)(); } catch (_) { return null; }
+  if (AUDX.state !== "running"){ try { AUDX.resume(); } catch (_) {} }
+  return AUDX;
+}
+function audSilentURL(){
+  const n = 4000, b = new ArrayBuffer(44 + n), v = new DataView(b), w = (o, s) => { for (let i = 0; i < s.length; i++) v.setUint8(o + i, s.charCodeAt(i)); };
+  w(0, "RIFF"); v.setUint32(4, 36 + n, true); w(8, "WAVE"); w(12, "fmt "); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+  v.setUint32(24, 8000, true); v.setUint32(28, 8000, true); v.setUint16(32, 1, true); v.setUint16(34, 8, true); w(36, "data"); v.setUint32(40, n, true);
+  for (let i = 0; i < n; i++) v.setUint8(44 + i, 128);
+  return URL.createObjectURL(new Blob([b], {type: "audio/wav"}));
+}
+function audWant(){ return (typeof isBday === "function" && isBday()) || !!document.querySelector(".xpop,.bd-sp,.bd-sky,.bd-wb"); }
+function audUnlock(){
+  const ac = audCtx();
+  if (ac) try { const s = ac.createBufferSource(); s.buffer = ac.createBuffer(1, 1, 22050); s.connect(ac.destination); s.start(0); } catch (_) {}
+  if (!audWant()) return;                 // boshqa paytda telefondagi musiqani to'xtatmaymiz
+  try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (_) {}
+  try {                                    // iOS: jim tugmasi yoqiq bo'lsa ham ovoz chiqishi uchun
+    if (!audEl){ audEl = new Audio(audSilentURL()); audEl.loop = true; audEl.setAttribute("playsinline", ""); audEl.setAttribute("webkit-playsinline", ""); }
+    if (audEl.paused) audEl.play().catch(() => {});
+  } catch (_) {}
+}
+["touchend", "pointerup", "click", "keydown"].forEach(ev => document.addEventListener(ev, () => {
+  if (!AUDX || AUDX.state !== "running" || (audWant() && (!audEl || audEl.paused))) audUnlock();
+}, {capture: true, passive: true}));
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden){ try { audEl && audEl.pause(); } catch (_) {} }
+  else if (AUDX && AUDX.state !== "running"){ try { AUDX.resume(); } catch (_) {} }
+});
+/* ===== FX: canvas effektlar — haqiqiy konfetti, raketa-salyut, yurak salyut, zarrachali yozuv ===== */
+const FX = (() => {
+  let cv = null, cx = null, W = 0, H = 0, run = false, last = 0;
+  const P = [], R = (a, b) => a + Math.random() * (b - a);
+  const COLS = ["#FF6B6B","#FF922B","#FFD43B","#69DB7C","#38D9A9","#4DABF7","#748FFC","#9775FA","#DA77F2","#F06595","#FFA8C5","#FFF3BF"];
+  const pick = () => COLS[Math.random() * COLS.length | 0];
+  function size(){ if (!cv) return; const d = Math.min(2, devicePixelRatio || 1); W = innerWidth; H = innerHeight; cv.width = W * d; cv.height = H * d; cv.style.width = W + "px"; cv.style.height = H + "px"; cx.setTransform(d, 0, 0, d, 0, 0); }
+  function start(){
+    if (!cv){ cv = document.createElement("canvas"); cv.className = "bd-fx"; cx = cv.getContext("2d"); addEventListener("resize", size); }
+    if (!cv.isConnected){ document.body.appendChild(cv); size(); }
+    if (!run){ run = true; last = 0; requestAnimationFrame(loop); }
+  }
+  function loop(t){
+    const dt = last ? Math.min(2.5, (t - last) / 16.67) : 1; last = t;
+    cx.clearRect(0, 0, W, H);
+    for (let i = P.length - 1; i >= 0; i--) if (!step(P[i], dt)) P.splice(i, 1);
+    if (P.length && !document.hidden) requestAnimationFrame(loop);
+    else { run = false; P.length = 0; cx.clearRect(0, 0, W, H); }
+  }
+  function step(p, dt){
+    if (p.k === "c"){                      // konfetti: aylanib, qanot qoqib tushadi
+      p.vy += .14 * dt; p.vx *= Math.pow(.985, dt); p.vy *= Math.pow(.988, dt);
+      p.x += (p.vx + Math.sin(p.ph) * .8) * dt; p.y += p.vy * dt; p.ph += p.vph * dt; p.r += p.vr * dt; p.life -= dt;
+      if (p.y > H + 30 || p.life < 0) return false;
+      cx.save(); cx.translate(p.x, p.y); cx.rotate(p.r); cx.scale(1, Math.cos(p.ph));
+      cx.globalAlpha = Math.min(1, p.life / 30); cx.fillStyle = p.c;
+      if (p.sh) { cx.beginPath(); cx.arc(0, 0, p.w * .5, 0, 6.283); cx.fill(); } else cx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      cx.restore(); return true;
+    }
+    if (p.k === "s"){                      // uchqun (salyut zarrachasi)
+      const px = p.x, py = p.y;
+      p.vx *= Math.pow(p.dr, dt); p.vy = p.vy * Math.pow(p.dr, dt) + p.g * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.a -= p.dec * dt;
+      if (p.a <= 0) return false;
+      cx.globalCompositeOperation = "lighter"; cx.globalAlpha = p.a; cx.strokeStyle = p.c; cx.lineWidth = p.w;
+      cx.beginPath(); cx.moveTo(px - p.vx * 1.6, py - p.vy * 1.6); cx.lineTo(p.x, p.y); cx.stroke();
+      if (p.tw && Math.random() < .25){ cx.fillStyle = "#fff"; cx.fillRect(p.x - 1, p.y - 1, 2, 2); }
+      cx.globalCompositeOperation = "source-over"; cx.globalAlpha = 1; return true;
+    }
+    if (p.k === "r"){                      // raketa
+      const px = p.x, py = p.y;
+      p.vy += .07 * dt; p.x += p.vx * dt; p.y += p.vy * dt;
+      if (Math.random() < .8) P.push({k:"s", x:p.x, y:p.y, vx:R(-.4,.4), vy:R(.4,1.4), dr:.94, g:.02, a:.7, dec:.035, c:"#FFE8A3", w:1.4});
+      cx.globalCompositeOperation = "lighter"; cx.strokeStyle = "#FFF3BF"; cx.lineWidth = 2.6;
+      cx.beginPath(); cx.moveTo(px, py + 8); cx.lineTo(p.x, p.y); cx.stroke(); cx.globalCompositeOperation = "source-over";
+      if (p.vy >= -1.5 || p.y <= p.ty){ burst(p.x, p.y, p.o); return false; }
+      return true;
+    }
+    if (p.k === "t"){                      // yozuvni tashkil qiluvchi zarracha
+      p.f += dt;
+      if (p.f < p.hold){ const e = Math.min(1, .07 * dt); p.x += (p.tx - p.x) * e; p.y += (p.ty - p.y) * e; }
+      else { if (!p.rel){ p.rel = 1; p.vx = R(-2.2, 2.2); p.vy = R(-3, .5); } p.vy += .07 * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.a -= .014 * dt; if (p.a <= 0) return false; }
+      const tw = p.f > 0 && p.f < p.hold && Math.random() < .05;
+      cx.globalCompositeOperation = "lighter"; cx.globalAlpha = Math.max(0, Math.min(1, p.a)); cx.fillStyle = tw ? "#fff" : p.c;
+      const s = tw ? p.s * 1.9 : p.s; cx.fillRect(p.x - s / 2, p.y - s / 2, s, s);
+      cx.globalCompositeOperation = "source-over"; cx.globalAlpha = 1; return true;
+    }
+    return false;
+  }
+  function burst(x, y, o){
+    o = o || {}; const c1 = o.col || pick(), c2 = pick(), heart = !!o.heart, n = heart ? 76 : 96, k = heart ? .34 : 1;
+    for (let i = 0; i < n; i++){
+      let vx, vy;
+      if (heart){ const t = i / n * 6.283; vx = 16 * Math.pow(Math.sin(t), 3) * k; vy = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t)) * k; }
+      else { const a = R(0, 6.283), sp = R(1.2, 5.6); vx = Math.cos(a) * sp; vy = Math.sin(a) * sp; }
+      P.push({k:"s", x, y, vx, vy, dr: heart ? .962 : .955, g: heart ? .022 : .05, a:1, dec:R(.011, .019), c: i % 3 ? c1 : c2, w:R(1.6, 2.8), tw:1});
+    }
+    for (let i = 0; i < 14; i++){ const a = R(0, 6.283); P.push({k:"s", x, y, vx:Math.cos(a) * 1.2, vy:Math.sin(a) * 1.2, dr:.9, g:0, a:1, dec:.06, c:"#FFFFFF", w:3}); }
+    if (o.onBurst) o.onBurst();
+    start();
+  }
+  function rocket(x, ty, o){ start(); P.push({k:"r", x, y:H + 10, vx:R(-.5, .5), vy:-R(10, 13) * Math.sqrt(H / 800), ty, o}); }
+  function confetti(n, x, y, spread){
+    start(); spread = spread || 1;
+    for (let i = 0; i < n; i++){
+      const a = R(-Math.PI * .95, -Math.PI * .05), sp = R(5, 13) * spread;
+      P.push({k:"c", x, y, vx:Math.cos(a) * sp, vy:Math.sin(a) * sp, ph:R(0, 6.28), vph:R(.08, .22), r:R(0, 6.28), vr:R(-.15, .15), w:R(6, 10), h:R(10, 16), sh: Math.random() < .25 ? 1 : 0, c:pick(), life:R(160, 240)});
+    }
+  }
+  function rain(n){
+    start();
+    for (let i = 0; i < n; i++) P.push({k:"c", x:R(0, W), y:R(-H * .6, -10), vx:R(-1, 1), vy:R(1, 3), ph:R(0, 6.28), vph:R(.08, .2), r:R(0, 6.28), vr:R(-.12, .12), w:R(6, 10), h:R(10, 16), sh: Math.random() < .25 ? 1 : 0, c:pick(), life:R(260, 380)});
+  }
+  function text(str, o){
+    start(); o = o || {};
+    let size = o.size || Math.min(W * .22, 96);
+    const off = document.createElement("canvas"), oc = off.getContext("2d"), font = s => `900 ${s}px system-ui,-apple-system,"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif`;
+    oc.font = font(size); const mw = oc.measureText(str).width; if (mw > W * .9) size = size * W * .9 / mw;
+    const ow = Math.ceil(W), oh = Math.ceil(size * 1.4); off.width = ow; off.height = oh;
+    oc.font = font(size); oc.fillStyle = "#fff"; oc.textAlign = "center"; oc.textBaseline = "middle"; oc.fillText(str, ow / 2, oh / 2);
+    const d = oc.getImageData(0, 0, ow, oh).data;
+    let stp = Math.max(3, Math.round(size / 17)), pts;
+    do { pts = []; for (let yy = 0; yy < oh; yy += stp) for (let xx = 0; xx < ow; xx += stp) if (d[(yy * ow + xx) * 4 + 3] > 140) pts.push([xx, yy]); stp++; } while (pts.length > 850);
+    const cy0 = o.y != null ? o.y : H * .3, cols = o.cols || COLS;
+    pts.forEach(p => P.push({k:"t", x:R(0, W), y:H + R(10, 220), tx:p[0], ty:p[1] - oh / 2 + cy0, f:-R(0, 25), hold:o.hold || 150, a:1, s:Math.max(2.2, stp * .7), c:cols[Math.min(cols.length - 1, p[0] / ow * cols.length | 0)]}));
+  }
+  return {burst, rocket, confetti, rain, text, get busy(){ return P.length; }, clear(){ P.length = 0; }};
+})();
 /* ovoz: fayl kerak emas, WebAudio bilan nozik qo'ng'iroqcha */
 let XAC = null, xatTk = false;
 function xatSnd(kind){
   try {
-    XAC = XAC || new (window.AudioContext || window.webkitAudioContext)();
+    XAC = audCtx(); if (!XAC) return;
     const go = () => {
       const t0 = XAC.currentTime + .02;
       const notes = kind === "open" ? [523.25, 659.25, 783.99, 1046.5, 1318.5] : kind === "tick" ? [(xatTk = !xatTk) ? 1760 : 1320] : [783.99, 987.77, 1174.66, 1567.98];
@@ -2892,8 +3245,8 @@ function xatShow(){
 /* Dilobar ilovaga kirganda: "Sizga maktub bor" oynasi — teskari sanoq, animatsiya, ovoz */
 let xatSeen = false, xatT = null;
 function xatPop(force){
-  if (!XAT || document.querySelector(".xpop,.xatov")) return;
-  if (!force && (P.book !== "hsk5" || xatSeen || P.xatRead)) return;
+  if (!XAT || document.querySelector(".xpop,.xatov,.bd-sp")) return;
+  if (!force && ((P.book !== "hsk5" && !isBday()) || xatSeen || P.xatRead)) return;
   xatSeen = true;
   const m = document.createElement("div"); m.className = "xpop"; m.setAttribute("role", "dialog"); m.setAttribute("aria-label", "Sizga maktub bor");
   const hearts = Array.from({length: 9}, (_, i) => `<i style="left:${8 + i * 10.5}%;animation-delay:${(i * .37) % 2.4}s;font-size:${12 + (i * 7) % 12}px">${["♥","❀","♥","✿"][i % 4]}</i>`).join("");
@@ -2935,7 +3288,7 @@ function xatBanner(){
   b.hidden = !on; document.documentElement.classList.toggle("xbn-on", on);
   if (!on) return;
   const o = xatOpen(), L = xatLeft();
-  const cd = o ? "Maktub ochildi — hoziroq oʻqing!" : `Ochilishiga: <b>${L[0]}</b> kun <b>${String(L[1]).padStart(2,"0")}:${String(L[2]).padStart(2,"0")}:${String(L[3]).padStart(2,"0")}</b>`;
+  const cd = isBday() ? "🎂 Tugʻilgan kuningiz muborak! Maktubni oching" : o ? "Maktub ochildi — hoziroq oʻqing!" : `Ochilishiga: <b>${L[0]}</b> kun <b>${String(L[1]).padStart(2,"0")}:${String(L[2]).padStart(2,"0")}:${String(L[3]).padStart(2,"0")}</b>`;
   if (!b.firstChild) b.innerHTML = `<span class="xbn-sh" aria-hidden="true"></span><span class="xbn-ic">${XAT_ICO}</span><span class="xbn-tx"><span class="xbn-t">💌 Sizga maktub bor</span><span class="xbn-s"></span></span><span class="xbn-go">${o ? "Ochish" : "Koʻrish"} ›</span><span class="xbn-x" role="button" aria-label="Yopish">✕</span>`;
   b.querySelector(".xbn-s").innerHTML = cd;
   b.querySelector(".xbn-go").textContent = (o ? "Ochish" : "Koʻrish") + " ›";
@@ -2947,10 +3300,446 @@ $("#xatBn").addEventListener("click", e => {
 });
 xatInit(); setInterval(xatInit, 10000);
 xatBanner(); setInterval(() => { if (!document.hidden) xatBanner(); }, 1000);
+/* ===================================================================
+   TUG'ILGAN KUN REJIMI — 22-noyabr (Dilobarning tug'ilgan kuni)
+   Butun ilova: pushti bayram mavzusi, yozuvlar, bayroqchalar, sharlar,
+   yuguruvchi qator, kirishda tort + shamlar + "Happy Birthday" kuyi.
+   Sinash: URL oxiriga ?bday=1 qo'shing.
+   =================================================================== */
+function isBday(){   // 22-noyabr 00:00 — 23-noyabr 00:00 (telefon vaqti)
+  const t = Date.now();
+  return /[?&]bday=1/.test(location.search) || (t >= new Date(2026, 10, 22).getTime() && t < new Date(2026, 10, 23).getTime());
+}
+const BD_TITLES = {home:"Dilobar kuni 🎂", cards:"Kartalar 🎈", ex:"Mashq 🎉", write:"Mashq 🎉", book:"Kitob 🎁", more:"Profil 🎂"};
+const BD_CAKE = `<svg class="bd-cake" viewBox="0 0 200 190" aria-hidden="true">
+  <defs>
+    <linearGradient id="bdk1" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF8FB5"/><stop offset=".5" stop-color="#FFB3C8"/><stop offset="1" stop-color="#F783AC"/></linearGradient>
+    <linearGradient id="bdk2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9775FA"/><stop offset=".5" stop-color="#B197FC"/><stop offset="1" stop-color="#845EF7"/></linearGradient>
+    <linearGradient id="bdk3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4DABF7"/><stop offset=".5" stop-color="#74C0FC"/><stop offset="1" stop-color="#339AF0"/></linearGradient>
+    <radialGradient id="bdkg" cx=".5" cy=".6" r=".5"><stop offset="0" stop-color="#FFE066"/><stop offset=".55" stop-color="#FF922B"/><stop offset="1" stop-color="#FF6B6B" stop-opacity="0"/></radialGradient>
+    <pattern id="bdks" width="6" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="6" height="8" fill="#fff"/><rect width="3" height="8" fill="#FF6B9A"/></pattern>
+  </defs>
+  <ellipse cx="100" cy="178" rx="88" ry="8" fill="rgba(0,0,0,.14)"/>
+  <rect x="14" y="168" width="172" height="8" rx="4" fill="#F1F3F5"/>
+  <rect x="22" y="126" width="156" height="44" rx="12" fill="url(#bdk1)"/>
+  <path d="M22 136 q13 13 26 0 q13 13 26 0 q13 13 26 0 q13 13 26 0 q13 13 26 0 q13 13 26 0 V126 H22Z" fill="#fff"/>
+  <rect x="40" y="90" width="120" height="40" rx="11" fill="url(#bdk2)"/>
+  <path d="M40 100 q10 11 20 0 q10 11 20 0 q10 11 20 0 q10 11 20 0 q10 11 20 0 q10 11 20 0 V90 H40Z" fill="#F3F0FF"/>
+  <rect x="58" y="62" width="84" height="32" rx="10" fill="url(#bdk3)"/>
+  <path d="M58 71 q10.5 10 21 0 q10.5 10 21 0 q10.5 10 21 0 q10.5 10 21 0 V62 H58Z" fill="#E7F5FF"/>
+  <g><circle cx="40" cy="154" r="3.2" fill="#FFD43B"/><circle cx="64" cy="160" r="3" fill="#69DB7C"/><circle cx="88" cy="152" r="3.2" fill="#4DABF7"/><circle cx="112" cy="160" r="3" fill="#FFD43B"/><circle cx="136" cy="152" r="3.2" fill="#9775FA"/><circle cx="160" cy="160" r="3" fill="#69DB7C"/>
+     <circle cx="58" cy="116" r="2.6" fill="#FFD43B"/><circle cx="82" cy="120" r="2.6" fill="#FF8FB5"/><circle cx="106" cy="114" r="2.6" fill="#69DB7C"/><circle cx="130" cy="120" r="2.6" fill="#FFD43B"/><circle cx="146" cy="112" r="2.4" fill="#fff"/>
+     <circle cx="74" cy="84" r="2.3" fill="#FF8FB5"/><circle cx="100" cy="86" r="2.3" fill="#FFD43B"/><circle cx="126" cy="84" r="2.3" fill="#fff"/></g>
+  <text x="100" y="155" text-anchor="middle" font-size="15" font-weight="800" fill="#C2255C" font-family="system-ui,sans-serif">Dilobar</text>
+  <g class="bd-cdl">
+    <rect x="73" y="30" width="9" height="34" rx="3" fill="url(#bdks)"/><rect x="95.5" y="24" width="9" height="40" rx="3" fill="url(#bdks)"/><rect x="118" y="30" width="9" height="34" rx="3" fill="url(#bdks)"/>
+    <g class="bd-glow"><circle cx="77.5" cy="20" r="12" fill="url(#bdkg)"/><circle cx="100" cy="14" r="12" fill="url(#bdkg)"/><circle cx="122.5" cy="20" r="12" fill="url(#bdkg)"/></g>
+    <g class="bd-fl"><path d="M77.5 12 c6 8 6 14 0 16 c-6 -2 -6 -8 0 -16Z"/><path d="M100 6 c6 8 6 14 0 16 c-6 -2 -6 -8 0 -16Z"/><path d="M122.5 12 c6 8 6 14 0 16 c-6 -2 -6 -8 0 -16Z"/></g>
+    <g class="bd-smk"><circle cx="77.5" cy="22" r="4"/><circle cx="100" cy="16" r="4"/><circle cx="122.5" cy="22" r="4"/></g>
+  </g>
+</svg>`;
+const BD_BALLOON = c => `<svg viewBox="0 0 40 72" aria-hidden="true"><path d="M20 2C9 2 3 11 3 21c0 12 9 21 17 24 8-3 17-12 17-24C37 11 31 2 20 2Z" fill="${c}"/><path d="M12 12c2-4 6-6 9-6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".6"/><path d="M17 45h6l-3 4z" fill="${c}"/><path d="M20 49c-3 6 3 10 0 16s3 6 0 7" stroke="rgba(120,80,100,.55)" stroke-width="1.2" fill="none"/></svg>`;
+const BD_COLS = ["#F06595","#FF6B6B","#FF922B","#FFD43B","#69DB7C","#38D9A9","#4DABF7","#748FFC","#9775FA","#DA77F2","#FFA8C5"];
+let BD_AC = null, bdMusicOn = false;
+
+/* --- ovoz: "Happy Birthday" kuyi (xalq kuyi), musiqa qutichasi tembri --- */
+function bdMusic(){
+  try {
+    BD_AC = audCtx(); if (!BD_AC) return;
+    const N = {G4:392,A4:440,B4:493.88,C5:523.25,D5:587.33,E5:659.25,F5:698.46,G5:783.99};
+    const tune = [["G4",.75],["G4",.25],["A4",1],["G4",1],["C5",1],["B4",2],
+                  ["G4",.75],["G4",.25],["A4",1],["G4",1],["D5",1],["C5",2],
+                  ["G4",.75],["G4",.25],["G5",1],["E5",1],["C5",1],["B4",1],["A4",2],
+                  ["F5",.75],["F5",.25],["E5",1],["C5",1],["D5",1],["C5",2.5]];
+    const beat = .4; let t = BD_AC.currentTime + .08;
+    bdMusicOn = true;
+    for (const [n, d] of tune){
+      [[1, "sine", .16], [2, "triangle", .035]].forEach(([mul, type, vol]) => {
+        const o = BD_AC.createOscillator(), g = BD_AC.createGain();
+        o.type = type; o.frequency.value = N[n] * mul;
+        g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol, t + .012); g.gain.exponentialRampToValueAtTime(.0001, t + d * beat + .5);
+        o.connect(g); g.connect(BD_AC.destination); o.start(t); o.stop(t + d * beat + .6);
+      });
+      t += d * beat;
+    }
+    setTimeout(() => { bdMusicOn = false; }, (t - BD_AC.currentTime) * 1000);
+  } catch (_) {}
+}
+function bdPuff(){ try { if (typeof xatSnd === "function") xatSnd("open"); } catch (_) {} }
+
+/* --- konfetti (faqat transform/opacity, keyin o'chiriladi) --- */
+function bdConfetti(n, x, y, spread){
+  n = n || 60; x = x == null ? innerWidth / 2 : x; y = y == null ? innerHeight * .4 : y; spread = spread || 1;
+  FX.confetti(Math.round(n * 1.6), x, y, spread);
+  bdEmoji(Math.max(3, Math.round(n / 9)), x, y, spread);
+}
+function bdEmoji(n, x, y, spread){
+  n = n || 60; x = x == null ? innerWidth / 2 : x; y = y == null ? innerHeight * .4 : y; spread = spread || 1;
+  const E = ["🎉","🎈","🎂","💖","✨","🌸","🎁","⭐"];
+  const frag = document.createDocumentFragment(), made = [];
+  for (let i = 0; i < n; i++){
+    const c = document.createElement("i"); c.className = "bd-cf";
+    c.textContent = E[(i + (Math.random() * 8 | 0)) % E.length];
+    const a = Math.random() * Math.PI * 2, d = (90 + Math.random() * 260) * spread;
+    c.style.left = x + "px"; c.style.top = y + "px";
+    c.style.setProperty("--x", Math.cos(a) * d + "px");
+    c.style.setProperty("--y", Math.sin(a) * d * .8 + 160 + "px");
+    c.style.setProperty("--r", (Math.random() * 900 - 450) + "deg");
+    c.style.animationDuration = 1.3 + Math.random() * .9 + "s";
+    frag.appendChild(c); made.push(c);
+  }
+  document.body.appendChild(frag);
+  setTimeout(() => made.forEach(c => c.remove()), 2400);
+}
+function bdMini(){ bdConfetti(16, innerWidth / 2, innerHeight * .35, .55); }
+
+/* --- sharlar: sekin ko'tariladi (bir vaqtda ko'pi bilan 5 ta) --- */
+let bdBalT = null;
+function bdBalloon(){
+  if (document.hidden || document.querySelectorAll(".bd-bal").length >= 5) return;
+  const b = document.createElement("div"); b.className = "bd-bal";
+  b.innerHTML = BD_BALLOON(BD_COLS[Math.random() * BD_COLS.length | 0]);
+  const side = Math.random() < .5 ? Math.random() * 14 : 86 + Math.random() * 10;
+  b.style.left = side + "vw"; b.style.animationDuration = 11 + Math.random() * 6 + "s";
+  b.style.setProperty("--sw", (Math.random() * 30 - 15) + "px");
+  b.style.width = 30 + Math.random() * 16 + "px";
+  document.body.appendChild(b);
+  setTimeout(() => b.remove(), 18000);
+}
+
+/* --- bosilgan joyda yurakchalar --- */
+let bdTapT = 0;
+function bdTap(e){
+  const now = Date.now(); if (now - bdTapT < 140 || !isBday()) return; bdTapT = now;
+  const x = e.clientX, y = e.clientY; if (x == null) return;
+  for (let i = 0; i < 6; i++){
+    const s = document.createElement("i"); s.className = "bd-tp"; s.textContent = ["♥","✦","♥","✿","♥","✦"][i];
+    const a = i / 6 * Math.PI * 2 + Math.random() * .5;
+    s.style.left = x + "px"; s.style.top = y + "px"; s.style.color = BD_COLS[(i + (now & 7)) % BD_COLS.length];
+    s.style.setProperty("--x", Math.cos(a) * 34 + "px"); s.style.setProperty("--y", Math.sin(a) * 34 + "px");
+    document.body.appendChild(s); setTimeout(() => s.remove(), 750);
+  }
+}
+
+/* --- bezaklar: bayroqchalar, yuguruvchi qator, bosh sahifa kartasi --- */
+function bdFlags(){
+  const cols = BD_COLS, n = 13;
+  let flags = ""; for (let i = 0; i < n; i++){ const x = 8 + i * (384 / n); flags += `<path d="M${x} ${6 + Math.sin(i / (n - 1) * Math.PI) * 10} l${384 / n * .82} 0 l${-384 / n * .41} 22 z" fill="${cols[i % cols.length]}"/>`; }
+  return `<svg class="bd-flags" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 4 Q200 30 400 4" stroke="rgba(150,90,110,.5)" stroke-width="1.4" fill="none"/>${flags}</svg>`;
+}
+const BD_TICK = ["🎂 Dilobar, tugʻilgan kuningiz muborak!", "生日快乐 · shēngrì kuàilè", "🎉 Happy Birthday, Dilobar!", "💖 Bugun — sizning kuningiz", "🌸 Barcha orzularingiz ushalsin", "祝您心想事成", "🎁 Sogʻlik, baxt, omad tilaymiz", "✨ Dilobar 老师 — eng zoʻr ustoz", "💐 Azizbek qutlaydi"];
+function bdHomeCard(){
+  return `<section class="bd-card" aria-label="Tugʻilgan kun tabrigi"><span class="bd-c-bg" aria-hidden="true"></span>
+    <div class="bd-c-fx" aria-hidden="true"><i>🎈</i><i>✨</i><i>🎉</i><i>💖</i><i>⭐</i></div>
+    <div class="bd-c-top"><span class="bd-c-ic">${BD_CAKE}</span>
+      <div><p class="bd-c-k">22-noyabr · bayram!</p><h2>Tugʻilgan kuningiz muborak, <b>Dilobar!</b></h2><p class="bd-c-zh" lang="zh">生日快乐！<span>shēngrì kuàilè</span></p></div></div>
+    <p class="bd-c-w">Nimaiki niyat qilgan boʻlsangiz, hammasiga erishing. Bugun soʻz yodlamasangiz ham boʻladi — bugun sizning kuningiz 🙂</p>
+    <div class="bd-c-act bd-grid"><button class="bd-b1" type="button" data-bd="sky">🎆 Salyut</button><button class="bd-b1" type="button" data-bd="letter">💌 Maktub</button><button class="bd-b2" type="button" data-bd="wish">🎁 Tilak</button><button class="bd-b2" type="button" data-bd="party">🎂 Shamlar</button></div>
+    <p class="bd-c-hunt">${(typeof bdCakesN === "function" && bdCakesN() >= 10) ? "👑 Hamma 10 tortcha topildi — siz bayram malikasisiz!" : `🔍 Ilovada yashiringan tortchalarni toping: <b>${typeof bdCakesN === "function" ? bdCakesN() : 0} / 10</b>`}</p>
+  </section>`;
+}
+function bdProfCard(){
+  return `<div class="bd-pf"><span>🎂</span><div><b>Bugun — Dilobarning tugʻilgan kuni!</b><small>🌸 Bugun hammasi siz uchun</small></div></div>`;
+}
+function bdDecorate(){
+  const on = isBday();
+  document.documentElement.classList.toggle("bday", on);
+  if (!on) return;
+  const top = document.querySelector("header.top .wrap");
+  if (top && !top.querySelector(".bd-flags")) top.insertAdjacentHTML("afterbegin", bdFlags());
+  if (top && !top.querySelector(".bd-tick")){
+    const t = BD_TICK.map(s => `<span>${s}</span>`).join("");
+    top.insertAdjacentHTML("beforeend", `<div class="bd-tick" aria-hidden="true"><div class="bd-tk-in">${t}${t}</div></div>`);
+  }
+  const h = $("#v-home"); if (arguments[0]){ const oc = h && h.querySelector(".bd-card"); if (oc) oc.remove(); }
+  if (h && !h.hidden && !h.querySelector(".bd-card")) h.insertAdjacentHTML("afterbegin", bdHomeCard());
+  const m = $("#v-more"); if (m && !m.hidden && !m.querySelector(".bd-pf")){ const pc = m.querySelector(".pcard"); if (pc) pc.insertAdjacentHTML("afterend", bdProfCard()); }
+  const lg = document.querySelector("#logo b"); if (lg && !lg.dataset.bd){ lg.dataset.bd = "1"; lg.innerHTML = "Azizbek<small>qutlaydi 💐</small>"; }
+  const lo = $("#logo"); if (lo) lo.setAttribute("aria-label", "Azizbek qutlaydi");
+  if (!/Dilobar/.test(document.title)) document.title = "🎂 Dilobar, tugʻilgan kuningiz muborak!";
+  const T = BD_TITLES[P.tab]; if (T) $("#ttl").textContent = P.tab === "home" && P.book === "hsk5" ? "Dilobar 老师 🎂" : T;
+  if (!bdBalT){ bdBalT = setInterval(bdBalloon, 3200); setTimeout(bdBalloon, 600); }
+}
+
+/* --- tovush effektlari: barabancha, likopcha, "pop", mushak (faylsiz, WebAudio) --- */
+function bdCtx(){ BD_AC = audCtx(); return BD_AC; }
+let BD_NOISE = null;
+function bdNoise(ac){
+  if (BD_NOISE) return BD_NOISE;
+  const b = ac.createBuffer(1, ac.sampleRate * 1.5, ac.sampleRate), d = b.getChannelData(0);
+  for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+  return BD_NOISE = b;
+}
+function bdHit(ac, t, vol, freq, q, dur, type){
+  const s = ac.createBufferSource(); s.buffer = bdNoise(ac);
+  const f = ac.createBiquadFilter(); f.type = type || "bandpass"; f.frequency.value = freq; f.Q.value = q;
+  const g = ac.createGain(); g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+  s.connect(f); f.connect(g); g.connect(ac.destination); s.start(t, Math.random()); s.stop(t + dur + .05);
+}
+function bdTone(ac, t, f1, f2, vol, dur, type){
+  const o = ac.createOscillator(), g = ac.createGain(); o.type = type || "sine";
+  o.frequency.setValueAtTime(f1, t); o.frequency.exponentialRampToValueAtTime(f2, t + dur);
+  g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(.0001, t + dur);
+  o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t + dur + .05);
+}
+function bdSfx(kind){
+  const ac = bdCtx(); if (!ac) return 0;
+  const t0 = ac.currentTime + .03;
+  if (kind === "drum"){          // barabancha: tezlashib boruvchi zarblar, 1.8 s
+    let t = t0, gap = .11;
+    while (t < t0 + 1.8){ bdHit(ac, t, .32, 1800, .9, .09); bdTone(ac, t, 190, 120, .12, .08, "triangle"); t += gap; gap = Math.max(.035, gap * .93); }
+    return 1.8;
+  }
+  if (kind === "crash"){ bdHit(ac, t0, .5, 6000, .3, 1.6, "highpass"); bdTone(ac, t0, 110, 50, .5, .35); bdHit(ac, t0, .4, 400, .8, .3); return 1.6; }
+  if (kind === "pop"){ bdTone(ac, t0, 420, 1400, .22, .12); bdTone(ac, t0 + .05, 900, 2200, .08, .1, "triangle"); return .2; }
+  if (kind === "boom"){ bdTone(ac, t0, 140, 40, .4, .5); for (let i = 0; i < 9; i++) bdHit(ac, t0 + .18 + Math.random() * .5, .09, 3000 + Math.random() * 3000, 2, .06); return .8; }
+  if (kind === "blow"){ bdHit(ac, t0, .35, 900, .4, .7, "lowpass"); return .7; }
+  if (kind === "ding"){ [1318.5, 1760, 2093].forEach((f, i) => bdTone(ac, t0 + i * .08, f, f, .1, .8)); return 1; }
+  return 0;
+}
+
+/* --- mushaklar (salyut): rang-barang nuqtalar, faqat transform/opacity --- */
+function bdFirework(x, y, col){ FX.burst(x, y, {col, heart: Math.random() < .3}); }
+function bdShow(n, sound){
+  for (let i = 0; i < n; i++) setTimeout(() => {
+    FX.rocket(innerWidth * (.12 + Math.random() * .76), innerHeight * (.12 + Math.random() * .3), {heart: Math.random() < .33, onBurst: sound !== false ? () => bdSfx("boom") : null});
+  }, i * 380 + Math.random() * 150);
+}
+/* --- tungi osmonda katta salyut: zarrachalardan "生日快乐" va "Dilobar" yoziladi --- */
+function bdSky(){
+  if (document.querySelector(".bd-sky")) return;
+  const m = document.createElement("div"); m.className = "bd-sky"; m.setAttribute("role", "dialog"); m.setAttribute("aria-label", "Salyut");
+  const stars = Array.from({length: 40}, (_, i) => `<i style="left:${(i * 37 + 11) % 100}%;top:${(i * 23 + 7) % 78}%;animation-delay:${(i * .27) % 3}s;font-size:${6 + (i * 5) % 7}px">✦</i>`).join("");
+  /* osmonga ko'tariluvchi fonarlar */
+  const lans = Array.from({length: 12}, (_, i) => `<i class="bd-lan" aria-hidden="true" style="left:${(i * 29 + 6) % 92}%;animation-delay:${(.4 + i * .85).toFixed(2)}s;animation-duration:${9 + (i * 7) % 5}s;--sc:${(.65 + ((i * 13) % 6) / 10).toFixed(2)}"></i>`).join("");
+  m.innerHTML = `<div class="bd-sky-st" aria-hidden="true">${stars}</div><div class="bd-sky-moon" aria-hidden="true"></div>${lans}<div class="bd-sky-sub" aria-hidden="true"></div><div class="bd-sky-gnd" aria-hidden="true"><span class="bd-sky-sp l"></span><span class="bd-sky-ck">🎂</span><span class="bd-sky-sp r"></span></div><div class="bd-sky-cap"><b class="bd-sky-ln" id="bdSkyLn"></b><small>Yopish uchun ekranni bosing</small></div>`;
+  document.body.appendChild(m);
+  const T = [], at = (ms, f) => T.push(setTimeout(f, ms));
+  if (!bdMusicOn) bdMusic();
+  for (let i = 0; i < 30; i++) at(300 + i * 430, () => FX.rocket(innerWidth * (.1 + Math.random() * .8), innerHeight * (.1 + Math.random() * .3), {heart: i % 3 === 1, onBurst: () => bdSfx("boom")}));
+  const ty = innerHeight * .25, ly = Math.min(ty + 112, innerHeight * .52);
+  const sub = (txt, c) => { const e = m.querySelector(".bd-sky-sub"); if (!e) return; e.style.top = ly + "px"; e.style.setProperty("--g", c); e.innerHTML = [...txt].map((ch, i) => `<span style="animation-delay:${(i * .045).toFixed(3)}s">${ch === " " ? "&nbsp;" : ch}</span>`).join(""); e.classList.remove("on"); void e.offsetWidth; e.classList.add("on"); };
+  const ln = (txt) => { const e = m.querySelector("#bdSkyLn"); if (e){ e.classList.remove("on"); void e.offsetWidth; e.textContent = txt; e.classList.add("on"); } };
+  at(700, () => { FX.text("生日快乐", {y: ty, hold: 150}); ln("Tugʻilgan kuningiz muborak! 🎉"); });
+  at(4200, () => FX.text("Dilobar", {y: ty, hold: 170}));
+  at(4700, () => { sub("Tugʻilgan kuningiz muborak!", "#FFD43B"); ln("🌸 Bugun — sizning kuningiz"); });
+  at(7900, () => FX.text("♥", {y: ty, hold: 120, size: Math.min(innerWidth * .4, 170), cols: ["#FF6B9A","#F06595","#E64980","#FF8FB5"]}));
+  at(8300, () => { sub("Siz eng zoʻr ustozsiz! 🏆", "#74C0FC"); ln("🏆 您是最好的老师"); });
+  at(9800, () => { FX.rain(160); bdSfx("ding"); m.classList.add("fin"); sub("Baxtli boʻling, Dilobar! 💖", "#FF6B9A"); ln("✨ Barcha orzularingiz ushalsin!"); });
+  at(11600, () => { FX.text("22 · 11", {y: ty, hold: 110, size: Math.min(innerWidth * .2, 90)}); bdSfx("ding"); });
+  const end = () => { T.forEach(clearTimeout); m.classList.add("bye"); setTimeout(() => m.remove(), 500); };
+  const t0 = Date.now();
+  at(15500, end);
+  m.addEventListener("click", () => { if (Date.now() - t0 > 1500) end(); });
+}
+
+/* --- tilaklar --- */
+const BD_WISH = [
+  ["☀️","Har kuningiz quyoshli va quvonchli oʻtsin!","天天开心","tiāntiān kāixīn"],
+  ["💪","Sogʻligingiz doim mustahkam boʻlsin!","身体健康","shēntǐ jiànkāng"],
+  ["✨","Barcha orzularingiz ushalsin!","心想事成","xīn xiǎng shì chéng"],
+  ["🍀","Har bir ishingizda omad yor boʻlsin!","万事如意","wànshì rúyì"],
+  ["😊","Yuzingizdan tabassum arimasin!","笑口常开","xiào kǒu cháng kāi"],
+  ["⛵","Hayot yoʻlingiz doim silliq kechsin!","一帆风顺","yì fān fēng shùn"],
+  ["💖","Baxt sizni hech qachon tark etmasin!","幸福美满","xìngfú měimǎn"],
+  ["📚","Shogirdlaringiz butun dunyoga tarqalsin!","桃李满天下","táolǐ mǎn tiānxià"],
+  ["🌸","Har yili shu kunni quvonch bilan kutib oling!","年年有今日","niánnián yǒu jīnrì"],
+  ["🌷","Doim shunday yosh va goʻzal boʻlib qoling!","青春永驻","qīngchūn yǒng zhù"],
+  ["🏡","Oilangiz tinch va baxtli boʻlsin!","阖家幸福","héjiā xìngfú"],
+  ["🏆","Siz eng zoʻr ustozsiz!","您是最好的老师","nín shì zuì hǎo de lǎoshī"],
+  ["🎯","Yangi yoshingiz yangi gʻalabalar olib kelsin!","步步高升","bùbù gāoshēng"],
+  ["🌈","Kelajagingiz gullardek goʻzal boʻlsin!","前程似锦","qiánchéng sì jǐn"],
+  ["🎂","Tugʻilgan kuningiz muborak, Dilobar!","生日快乐","shēngrì kuàilè"]
+];
+let bdWi = Math.random() * BD_WISH.length | 0;
+function bdNextWish(){ bdWi = (bdWi + 1 + (Math.random() * 3 | 0)) % BD_WISH.length; return BD_WISH[bdWi]; }
+function bdToast(w, extra){
+  document.querySelectorAll(".bd-wt").forEach(x => x.remove());
+  const t = document.createElement("div"); t.className = "bd-wt"; t.setAttribute("role", "status");
+  t.innerHTML = `<span class="bd-wt-e">${w[0]}</span><span class="bd-wt-t"><b>${w[1]}</b><small lang="zh">${w[2]} · ${w[3]}</small>${extra ? `<em>${extra}</em>` : ""}</span>`;
+  document.body.appendChild(t); setTimeout(() => t.classList.add("out"), 3600); setTimeout(() => t.remove(), 4100);
+}
+/* katta tilak: barabancha → likopcha → mushak → karta */
+function bdWishBig(){
+  if (document.querySelector(".bd-wb")) return;
+  const w = bdNextWish();
+  const m = document.createElement("div"); m.className = "bd-wb";
+  m.innerHTML = `<div class="bd-wb-c"><div class="bd-wb-drum">🥁</div><p class="bd-wb-k">Siz uchun tilak tayyorlanmoqda…</p></div>`;
+  document.body.appendChild(m);
+  const d = bdSfx("drum") || 1.8;
+  setTimeout(() => {
+    bdSfx("crash"); bdShow(3); bdConfetti(60, innerWidth / 2, innerHeight * .45); hap("ok");
+    m.querySelector(".bd-wb-c").outerHTML = `<div class="bd-wb-c show"><div class="bd-wb-e">${w[0]}</div><p class="bd-wb-k">Siz uchun tilak</p><h3>${w[1]}</h3><p class="bd-wb-zh" lang="zh">${w[2]}</p><p class="bd-wb-py">${w[3]}</p><div class="bd-c-act"><button class="bd-b1" type="button" data-wb="more">🎁 Yana tilak</button><button class="bd-b2" type="button" data-wb="x">Rahmat 💖</button></div></div>`;
+  }, d * 1000);
+  m.addEventListener("click", e => {
+    const b = e.target.closest("[data-wb]"); if (!b) return;
+    m.remove(); if (b.dataset.wb === "more") setTimeout(bdWishBig, 120);
+  });
+}
+
+/* --- yashirin tortchalar: 10 tasini toping --- */
+const BD_NEED = 10;
+function bdCakesN(){ return Math.min(BD_NEED, P.bdCakes || 0); }
+let bdCakeT = null;
+function bdSpawnCake(){
+  if (!isBday() || document.hidden || bdCakesN() >= BD_NEED || document.querySelector(".bd-mc,.bd-sp,.bd-wb,.xpop,.xatov")) return;
+  const c = document.createElement("button"); c.type = "button"; c.className = "bd-mc"; c.setAttribute("aria-label", "Tortcha — bosing!");
+  c.innerHTML = BD_CAKE + '<span class="bd-mc-g" aria-hidden="true"></span>';
+  c.style.left = 8 + Math.random() * 74 + "vw"; c.style.top = 24 + Math.random() * 46 + "vh";
+  document.body.appendChild(c);
+  const gone = setTimeout(() => { c.classList.add("bye"); setTimeout(() => c.remove(), 400); }, 9000);
+  c.addEventListener("click", e => {
+    e.stopPropagation(); clearTimeout(gone);
+    const r = c.getBoundingClientRect(), x = r.left + r.width / 2, y = r.top + r.height / 2;
+    c.classList.add("got"); setTimeout(() => c.remove(), 450);
+    P.bdCakes = bdCakesN() + 1; save();
+    bdSfx("pop"); bdConfetti(24, x, y, .6); hap("ok");
+    const n = bdCakesN();
+    if (n >= BD_NEED){ setTimeout(bdFinale, 500); }
+    else bdToast(bdNextWish(), `🎂 Tortchalar: ${n} / ${BD_NEED}`);
+    bdDecorate(true);
+  });
+}
+function bdFinale(){
+  const m = document.createElement("div"); m.className = "bd-wb";
+  m.innerHTML = `<div class="bd-wb-c"><div class="bd-wb-drum">🥁</div><p class="bd-wb-k">Barcha tortchalar topildi! Va mukofot…</p></div>`;
+  document.body.appendChild(m);
+  const d = bdSfx("drum") || 1.8;
+  setTimeout(() => {
+    bdSfx("crash"); bdShow(7); bdConfetti(120, innerWidth / 2, innerHeight * .4, 1.3); setTimeout(bdMusic, 900);
+    m.querySelector(".bd-wb-c").outerHTML = `<div class="bd-wb-c show"><div class="bd-wb-e">👑</div><p class="bd-wb-k">${BD_NEED} / ${BD_NEED} tortcha</p><h3>Barakalla, Dilobar! Siz bugungi bayram malikasisiz!</h3><p class="bd-wb-zh" lang="zh">生日快乐，我们最好的老师！</p><p class="bd-wb-py">shēngrì kuàilè, wǒmen zuì hǎo de lǎoshī!</p><div class="bd-c-act"><button class="bd-b1" type="button" data-wb="sky">🎆 Salyut!</button><button class="bd-b2" type="button" data-wb="x">💖 Rahmat</button></div></div>`;
+  }, d * 1000);
+  m.addEventListener("click", e => { const b = e.target.closest("[data-wb]"); if (!b) return; m.remove(); if (b.dataset.wb === "sky") bdSky(); });
+}
+
+/* --- shamlarni mikrofon orqali puflash (ruxsat bo'lmasa — bosish) --- */
+let bdMic = null;
+function bdMicStop(){ try { if (bdMic){ bdMic.s.getTracks().forEach(t => t.stop()); bdMic.stop = true; } } catch (_) {} bdMic = null; }
+async function bdMicStart(onBlow, onFail){
+  try {
+    const s = await navigator.mediaDevices.getUserMedia({audio: {echoCancellation: false, noiseSuppression: false}});
+    const ac = bdCtx(), src = ac.createMediaStreamSource(s), an = ac.createAnalyser(); an.fftSize = 512; src.connect(an);
+    const buf = new Uint8Array(an.fftSize); let loud = 0;
+    bdMic = {s, stop: false};
+    const me = bdMic;
+    const tick = () => {
+      if (me.stop) return;
+      an.getByteTimeDomainData(buf); let sum = 0;
+      for (let i = 0; i < buf.length; i++){ const v = (buf[i] - 128) / 128; sum += v * v; }
+      const rms = Math.sqrt(sum / buf.length);
+      loud = rms > .22 ? loud + 1 : Math.max(0, loud - 1);
+      if (loud > 6){ bdMicStop(); onBlow(); return; }
+      requestAnimationFrame(tick);
+    };
+    tick();
+  } catch (_) { onFail && onFail(); }
+}
+
+/* --- kirish sahnasi: tort → shamlar (puflash/bosish) → sovg'a qutisi → tilak --- */
+const BD_GIFT = `<svg class="bd-gift" viewBox="0 0 160 160" aria-hidden="true"><ellipse cx="80" cy="150" rx="58" ry="6" fill="rgba(0,0,0,.18)"/><rect x="26" y="70" width="108" height="76" rx="10" fill="#F06595"/><rect x="72" y="70" width="16" height="76" fill="#FFD43B"/><g class="bd-lid"><rect x="18" y="52" width="124" height="24" rx="8" fill="#D6336C"/><rect x="72" y="52" width="16" height="24" fill="#FCC419"/><path d="M80 52 C60 24 34 34 50 50 C56 55 68 54 80 52Z M80 52 C100 24 126 34 110 50 C104 55 92 54 80 52Z" fill="#FFD43B" stroke="#F59F00" stroke-width="2"/></g><g fill="#fff" opacity=".7"><circle cx="44" cy="96" r="4"/><circle cx="112" cy="118" r="4"/><circle cx="50" cy="130" r="3"/><circle cx="116" cy="88" r="3"/></g></svg>`;
+function bdSplash(){
+  if (!isBday() || document.querySelector(".bd-sp")) return;
+  try { if (sessionStorage.getItem("bdSp")) return; sessionStorage.setItem("bdSp", "1"); } catch (_) {}
+  const s = document.createElement("div"); s.className = "bd-sp"; s.setAttribute("role", "dialog"); s.setAttribute("aria-label", "Tugʻilgan kuningiz muborak");
+  const bal = Array.from({length: 8}, (_, i) => `<span class="bd-sb" style="left:${4 + i * 12}%;animation-delay:${(i * .55) % 3.2}s;animation-duration:${7 + (i * 1.3) % 4}s;width:${34 + (i * 7) % 18}px">${BD_BALLOON(BD_COLS[i % BD_COLS.length])}</span>`).join("");
+  const stars = Array.from({length: 14}, (_, i) => `<i style="left:${(i * 37) % 100}%;top:${(i * 53) % 100}%;animation-delay:${(i * .3) % 2.4}s">✦</i>`).join("");
+  s.innerHTML = `<div class="bd-sp-bg" aria-hidden="true"><div class="bd-stars">${stars}</div>${bal}</div>
+    <button class="bd-sp-x" type="button" aria-label="Yopish">✕</button>
+    <div class="bd-sp-in">
+      <p class="bd-l1">Bugun — 22-noyabr</p>
+      <h1 class="bd-l2">Tugʻilgan kuningiz<br>muborak,</h1>
+      <h1 class="bd-l3">${"Dilobar!".split("").map((c, i) => `<span style="--d:${(1 + i * .08).toFixed(2)}s;--c:${["#FFF3BF","#FFD43B","#FFA8C5","#D0BFFF","#A5D8FF","#B2F2BB","#FFC078","#FFF3BF"][i]}">${c}</span>`).join("")}</h1>
+      <p class="bd-l4" lang="zh">生日快乐 <span>shēngrì kuàilè</span></p>
+      <div class="bd-stage"><button class="bd-cakebtn" type="button" aria-label="Shamlarni puflash">${BD_CAKE}</button></div>
+      <p class="bd-hint">Bayramni boshlash uchun tugmani bosing 🎉</p>
+      <div class="bd-sp-act"><button class="bd-b1" type="button" data-bs="go">🎉 Bayramni boshlash</button></div>
+    </div>`;
+  document.body.appendChild(s);
+  let st = 0;
+  const hint = s.querySelector(".bd-hint"), act = s.querySelector(".bd-sp-act"), stage = s.querySelector(".bd-stage");
+  const close = then => { bdMicStop(); s.classList.add("bye"); setTimeout(() => { s.remove(); if (then) then(); else { bdShow(3); if (typeof xatPop === "function") setTimeout(xatPop, 1400); } }, 380); };
+  const blow = () => {
+    if (st !== 1) return; st = 2; bdMicStop();
+    s.classList.add("blown"); bdSfx("blow"); hap("ok");
+    setTimeout(() => { bdSfx("ding"); bdConfetti(90, innerWidth / 2, innerHeight * .55, 1.2); bdShow(3); }, 650);
+    hint.innerHTML = "<b>Tilagingiz albatta ushalsin! ✨</b>";
+    act.innerHTML = "";
+    setTimeout(() => {           // sovg'a qutisi
+      st = 3;
+      stage.innerHTML = `<button class="bd-giftbtn" type="button" aria-label="Sovgʻani ochish">${BD_GIFT}</button>`;
+      hint.innerHTML = "Sizga sovgʻa bor! 🎁 Qutini bosing";
+    }, 2300);
+  };
+  s.addEventListener("click", e => {
+    if (e.target.closest(".bd-sp-x")){ close(); return; }
+    const b = e.target.closest("[data-bs]");
+    if (b && b.dataset.bs === "go" && st === 0){
+      st = 1; bdMusic(); bdConfetti(70); hap("ok");
+      setTimeout(() => bdConfetti(50, innerWidth * .2, innerHeight * .3), 700);
+      setTimeout(() => bdConfetti(50, innerWidth * .8, innerHeight * .3), 1300);
+      s.classList.add("party");
+      hint.textContent = "Endi tilak tilang va shamlarni puflang! 🎂";
+      act.innerHTML = `<button class="bd-b1" type="button" data-bs="mic">🎤 Mikrofonga puflash</button><button class="bd-b2" type="button" data-bs="tap">👆 Tortni bosish</button>`;
+      return;
+    }
+    if (b && b.dataset.bs === "mic" && st === 1){
+      hint.textContent = "Telefonga qattiq puflang… 🌬️";
+      act.innerHTML = `<button class="bd-b2" type="button" data-bs="tap">👆 Bosib oʻchirish</button>`;
+      bdMicStart(blow, () => { hint.textContent = "Mikrofon ochilmadi — tortni bosing 🎂"; });
+      return;
+    }
+    if (st === 1 && (e.target.closest(".bd-cakebtn") || (b && b.dataset.bs === "tap"))){ blow(); return; }
+    const g = e.target.closest(".bd-giftbtn");
+    if (g && st === 3){
+      st = 4; g.classList.add("shake"); hint.textContent = "🥁 …";
+      const d = bdSfx("drum") || 1.8;
+      setTimeout(() => {
+        g.classList.remove("shake"); g.classList.add("open"); bdSfx("crash"); bdShow(4); bdConfetti(100, innerWidth / 2, innerHeight * .55, 1.2); hap("ok");
+        const w = bdNextWish();
+        hint.innerHTML = "";
+        stage.insertAdjacentHTML("beforeend", `<div class="bd-gw"><span>${w[0]}</span><b>${w[1]}</b><small lang="zh">${w[2]} · ${w[3]}</small><em>— Azizbek 💐</em></div>`);
+        setTimeout(() => {
+          act.innerHTML = `<button class="bd-b1 bd-wide" type="button" data-bs="sky">🎆 Osmonga salyut!</button><button class="bd-b1" type="button" data-bs="letter">💌 Maktub</button><button class="bd-b2" type="button" data-bs="in">Botga kirish ›</button>`;
+          act.style.animation = "none"; act.style.opacity = 1;
+        }, 900);
+      }, d * 1000);
+      return;
+    }
+    if (b && b.dataset.bs === "sky"){ bdSky(); return; }
+    if (b && b.dataset.bs === "letter"){ close(() => xatPop(true)); return; }
+    if (b && b.dataset.bs === "in"){ close(); return; }
+  });
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-bd]"); if (!b) return;
+  if (b.dataset.bd === "letter"){ xatPop(true); }
+  else if (b.dataset.bd === "party"){ try { sessionStorage.removeItem("bdSp"); } catch (_) {} bdSplash(); }
+  else if (b.dataset.bd === "wish"){ bdWishBig(); }
+  else if (b.dataset.bd === "sky"){ bdSky(); }
+});
+document.addEventListener("pointerdown", bdTap, {passive: true});
+let bdObs = null;
+function bdInit(){
+  bdDecorate();
+  if (isBday() && !bdObs && window.MutationObserver){
+    bdObs = new MutationObserver(() => { if (isBday()) bdDecorate(); });
+    ["#v-home", "#v-more"].forEach(q => { const el = $(q); if (el) bdObs.observe(el, {childList: true}); });
+  }
+  if (isBday()){
+    setTimeout(bdSplash, 400);
+    if (!bdCakeT){ bdCakeT = setInterval(bdSpawnCake, 7000); }
+    // kirishda kichik tabrik (sahna yopiq bo'lsa)
+    setTimeout(() => { if (!document.querySelector(".bd-sp")) bdToast(bdNextWish()); }, 2500);
+  }
+}
+setInterval(() => { const was = document.documentElement.classList.contains("bday"); if (was !== isBday()) bdInit(); }, 30000);
+
+setTimeout(bdInit, 60);
+
 const VIEWS = {home:"#v-home", more:"#v-more", cards:"#v-cards", ex:"#v-ex", write:"#v-write", spell:"#v-spell", grammar:"#v-grammar", words:"#v-words", stats:"#v-stats", tips:"#v-tips", texts:"#v-texts", rank:"#v-rank", mock:"#v-mock", mb:"#v-mb", book:"#v-book"};
 const TITLES = {home:"Bugun", cards:"Kartalar", ex:"Mashq", write:"Mashq", more:"Profil", grammar:"Grammatika", words:"Lugʻat", spell:"Yozilishi", stats:"Statistika", tips:"Usullar", texts:"Matnlar", rank:"Reyting", mock:"Mock", mb:"Xatolar", book:"Kitob"};
 const SUBTABS = ["grammar","words","spell","stats","tips","texts","mock","mb", "rank"];
-function hap(k){ try { const h = TG && TG.HapticFeedback; if (!h) return; if (k==="ok") h.notificationOccurred("success"); else if (k==="bad") h.notificationOccurred("error"); else h.selectionChanged(); } catch(_) {} }
+function hap(k){ if (k==="ok" && typeof isBday==="function" && isBday() && !document.querySelector(".bd-sp,.xpop")) bdMini(); try { const h = TG && TG.HapticFeedback; if (!h) return; if (k==="ok") h.notificationOccurred("success"); else if (k==="bad") h.notificationOccurred("error"); else h.selectionChanged(); } catch(_) {} }
 function renderTabs(){
   if (!VIEWS[P.tab]) P.tab = "home";
   const navTab = SUBTABS.includes(P.tab) ? "more" : P.tab==="write" ? "ex" : P.tab;
@@ -2958,6 +3747,7 @@ function renderTabs(){
   for (const k in VIEWS) $(VIEWS[k]).hidden = k!==P.tab;
   const dm = P.tab==="home" && P.book==="hsk5" && !!DS;
   $("#ttl").textContent = P.tab==="home" && P.book==="hsk5" ? "Dilobar 老师" : (TITLES[P.tab] || "");
+  try { if (isBday()) bdDecorate(); } catch (_) {}   // modul hali yuklanmagan bo'lsa, bdInit keyin bezaydi
   const sub = SUBTABS.includes(P.tab) || dm;
   $("#backBtn").hidden = !sub || !!(TG && TG.BackButton);
   $("#logo").hidden = !$("#backBtn").hidden;
