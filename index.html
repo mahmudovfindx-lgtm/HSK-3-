@@ -2927,11 +2927,11 @@ function xatPop(force){
     if (a && a.dataset.xp === "open"){ xatSnd("open"); setTimeout(xatShow, 200); }
   });
 }
-/* Reklama-banner: Dilobar rejimida pastda doim turadi (xat o'qilmaguncha) */
+/* Reklama-banner: barcha rejimlarda pastda doim turadi (xat o'qilmaguncha) */
 let xbnHide = false;
 function xatBanner(){
   const b = $("#xatBn"); if (!b) return;
-  const on = !!XAT && P.book === "hsk5" && !P.xatRead && !xbnHide;
+  const on = !!XAT && !P.xatRead && !xbnHide;   // hamma rejimda (egasi so'radi, 2026-11-20)
   b.hidden = !on; document.documentElement.classList.toggle("xbn-on", on);
   if (!on) return;
   const o = xatOpen(), L = xatLeft();
